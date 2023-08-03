@@ -1,0 +1,280 @@
+---
+title: "Intro to R-2"
+editor: visual
+---
+
+## Important functions 
+
+``` R
+ls() # list all the variables in the environment
+rm(x) # can be used to remove specific var
+#rm(list = ls()) # removes everything
+```
+
+## Inbuild datasets in R
+
+``` R
+#data() # checking
+# loading
+
+data(Orange)
+
+# viewing
+Orange 
+
+View(Orange) # opens a viewing window
+head(Orange) # prints out first six rows on your console
+tail(Orange) # prints out last six rows on your console
+str(Orange)  # tells you about the structure of the data
+dim(Orange)  # dimensions of the data - in terms of rows and columns
+```
+
+## Data frames
+
+A data frame is a rectangular collection of values, usually organized so that variables appear in the columns and observations appear in rows.
+
+``` R
+# Creating a new data frame that has 3 vectors of different types
+
+dat.new <- data.frame(name = c("Anna", "Bob", "Chris"),
+                    language = c("R", "C", "Java"),
+                    year = c(4, 5, 9))
+
+# View the dataframe
+head(dat.new)
+```
+
+## Writing and reading files
+
+``` R
+
+# This will add additional row names 
+write.csv(dat.new,file = "my_data.csv")
+
+read.csv("my_data.csv")
+
+# To avoid adding row names to the data, use row.names=FALSE 
+write.csv(dat.new,file = "my_data.csv", row.names = FALSE) 
+read.csv("my_data.csv") # reads into the console
+
+# To save the data into a variable:
+dat.new2<- read.csv("my_data.csv")
+```
+
+### Working with data frames 
+
+``` R
+dat.new2<- read.csv("my_data.csv") 
+
+# Note that you should have your entire path for the data under the quotes 
+
+# if your data is not saved in the working directory
+# names of the data 
+names(dat.new2) 
+
+# column names 
+colnames(dat.new2) 
+
+# rownames
+rownames(dat.new2)
+
+# type of data
+class(dat.new2) 
+
+# structure of data 
+str(dat.new2) 
+
+# accessing a vector in the dataframe
+dat.new2$name 
+
+# accessing a second element of a vector in the dataframe
+dat.new2$name[2] 
+
+# accessing the language in the dataframe
+dat.new2$language 
+
+# accessing a third element of a vector in the dataframe
+dat.new2$language[3] 
+
+# Removing rows
+dat.new2[-2,]
+
+# Removing columns
+dat.new2[,-1]
+
+# Appending to a data frame
+dat.new3<- data.frame(name = c("Diego", "Evan", "Felicia", "George"), language = c("Python", "Perl", "C++","HTML"),
+                    year = c(4, 5, 9,10))
+
+# Binding by row
+rbind(dat.new2,dat.new3)
+newdata<-rbind(dat.new2,dat.new3)
+
+# Binding by column
+cbind(dat.new2,dat.new3) # will give you error
+
+## why this error? Because to bind by column, the number of rows should be equal
+
+dat.new4<-dat.new3[-3,] # removing a row from 3rd data frame and adding to a new data frame
+cbind(dat.new4,dat.new2)
+
+# Notice that R doesn't care about the content but the structure of data 
+```
+
+### Subsetting dataframes
+
+``` R
+# The notation is nameofdata[row, column]
+newdata[4,2]
+
+# accessing more than one value
+newdata[1:4,] # gets you first four rows and all the columns
+newdata[,1:2] # all the rows and first two columns
+
+# Extracting specific information: 
+newdata[c(1,3),] # Gets you first and third row and all columns
+newdata[c(5,4),c(1,2)] # Guess
+
+## Tip: 
+
+# Remember that the order of extraction matters.
+
+## Accessing by name
+newdata["name"]
+newdata["year"]
+
+## Operator
+newdata$name
+```
+
+## Matrices
+
+In R, a matrix is a collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns. A matrix is two-dimensional, since we are only working with rows and columns.
+
+``` R
+# Creating a new empty matrix
+mat.example <- matrix(0, ncol=8, nrow=4) 
+
+# viewing the matrix
+View(mat.example) 
+
+# class
+class(mat.example) 
+
+# rows and columns
+dim(mat.example) 
+
+# accessing column number
+ncol(mat.example) 
+
+# accessing row numbers
+nrow(mat.example) 
+```
+
+### Creating data
+
+``` R
+# Creating a new matrix with data:
+
+# Using rnorm to generate 20 random numbers
+mat.dat<-rnorm(20)
+
+# Note that the random numbers will be different every time you run this code,
+
+# Note check ?rnorm ?pnorm ?dnorm for more information on using probability distribution
+mat.dat
+
+# populating the matrix by row
+mat.example2<-matrix(data = mat.dat, nrow = 4, ncol = 5, byrow = TRUE) 
+```
+
+### Subsetting Matrices
+
+``` R
+# Subsetting rows and columns
+mat.example2[2,4]
+```
+
+## Lists in R 
+
+Lists are the R objects and contain elements of different types, For example a list can have numbers, characters, strings, vectors, matrix and another list inside it. A list can also have a function as one of its elements.
+
+``` R
+list_data<-list("Red","Green", c(21,34,22), TRUE, 52.53, 193.8)
+list_data
+list_data_new<-list(dat.new2, mat.example2)
+list_data_new
+```
+
+### Subsetting lists
+
+``` R
+list_data[[3]]
+list_data_new[[2]]
+```
+
+### Questions from the workshop
+
+``` R
+# Q1: How to sort dataframes?
+
+# Use sort function to sort a vector
+x<-c(1:10,8.5,7.6,2.5,1.3,2.4)
+sort(x)
+
+# For sorting dataframes using the function order
+newdata[order(newdata$year, decreasing = TRUE), ]
+
+# Notice that the above function is used at the row position since we are sorting by row
+
+# Another example:
+newdata2<-data.frame(col1=c(31:40),col2=c(seq(1,30,by=3)))
+newdata2
+
+newdata2[order(newdata2$col1, decreasing = TRUE),]
+
+## Q2: How to increase the number or rows?
+
+## increasing the number, where n is followed by number of rows
+head(newdata2,n=9)
+```
+
+## Bonus activity - plotting in R 
+
+Base R can be used to create simple plots.
+
+``` R
+#--------Basic scatterplot
+
+# Create data for plot
+x<- seq(1,100, by=3) 
+y<- x/2
+
+# Basic x and y plot
+plot(x,y) 
+
+# Add title
+plot(x,y,main="Title of plot") 
+
+# Add x and y labels
+plot(x,y,main="Title of plot",xlab = "This is x axis label",
+     ylab="This is y label")
+
+# Change color
+
+plot(x,y,main="Title of plot",xlab = "This is x axis label",
+     ylab="This is y label",col="blue")
+```
+
+### Histograms
+
+``` R
+# rnorm generates a vector of normally distributed random numbers.
+
+x<-rnorm(1000, mean = 0, sd = 1)
+hist(x)
+hist(x, breaks = 10)
+hist(x, breaks = 100)
+hist(x, breaks = 100, col = "orange", main = "This is title", 
+     xlab = "This is x axis", ylab = "This is y axis")
+```

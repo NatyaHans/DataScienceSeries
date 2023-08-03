@@ -10,6 +10,7 @@ website:
         text: Home
       - about.qmd
       - workshop1.qmd
+      - workshop2.qmd
       - resources.qmd
 
 format:
@@ -17,8 +18,8 @@ format:
     theme: sandstone
     mainfont: arial
     fontsize: 1.5rem
-    fontcolor: "#d1672d"
-    linkcolor: "#532912"
+    fontcolor: "#532912"
+    linkcolor: "#d1672d"
     css: styles.css
     toc: true
 

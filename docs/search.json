@@ -26,5 +26,110 @@
     "title": "Resources",
     "section": "",
     "text": "1. Cran Introduction to R https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf\n2. R Cookbook http://www.cookbook-r.com/\n3. Interactively learn R https://www.programiz.com/r"
+  },
+  {
+    "objectID": "workshop1.html",
+    "href": "workshop1.html",
+    "title": "Intro to R",
+    "section": "",
+    "text": "The three panes are\n\nConsole - used for running the code\nEnvironment - has information about the loaded variables and history of commands run (it also has shortcuts for uploading datasets and saving workspace)\nHelp pane - gives you access to files, plots and package information. Also helpful in saving plots.\n\nYou can change where the console is in Rstudio by going to View-&gt;Pane-&gt;Console on Right. You can also change how the panes look in Rstudio by going to View-&gt;Pane-&gt;Pane Layout"
+  },
+  {
+    "objectID": "workshop1.html#basics-using-rstudio-and-r",
+    "href": "workshop1.html#basics-using-rstudio-and-r",
+    "title": "Intro to R",
+    "section": "",
+    "text": "The three panes are\n\nConsole - used for running the code\nEnvironment - has information about the loaded variables and history of commands run (it also has shortcuts for uploading datasets and saving workspace)\nHelp pane - gives you access to files, plots and package information. Also helpful in saving plots.\n\nYou can change where the console is in Rstudio by going to View-&gt;Pane-&gt;Console on Right. You can also change how the panes look in Rstudio by going to View-&gt;Pane-&gt;Pane Layout"
+  },
+  {
+    "objectID": "workshop1.html#arithmetic-operators-and-comparisons",
+    "href": "workshop1.html#arithmetic-operators-and-comparisons",
+    "title": "Intro to R",
+    "section": "Arithmetic operators and comparisons",
+    "text": "Arithmetic operators and comparisons\nR can do basic arithmetic calculations\n\nBasic calculation\n# Calculations\n\n1+1 # addition\n1-5 # subtraction\n1*3 # multiplication \n1/6 # division\n\n# Comparisons; evaluates the statement \n\n1==1  # equal to comparison; this statement evaluates to TRUE\n1!=1  # not equal comparison; evaluates to FALSE\n1!=2  # not equal comparison; evaluates to TRUE\n1&gt;2   # greater than comparison; evaluates to FALSE\n1&gt;=2  #\n\n\nUseful Inbuild Functions in R\n#Trig functions\nsin(1)\ncos(1)\n\n# log functions\n\nlog(1)\nlog10(2)\n\n# exponential\nexp(1)\n\n\nVariable assignment\n&lt;- is the assignment operator. You can also use = operator i.e. equals to sign.\nx &lt;- 5/9\n\nx\nx &lt;- x + 1 # variables can also be used to reassign\n\nx\n\n# Note that the following two lines of code are same\n\n# x = 8 \n# x &lt;- 8\nValid variable names cannot start with a special character or number. Periods, numbers and underscore are allowed within variable names. Please note that variable names are case sensitive in R. For example, variables names data.new and data.New are NOT the same.\nSome examples of allowed variable names:\n\nx_new\nx.new\nxNew\nxNEW\nNewx\nNEW\nNewx2\nNEW2x\nNEW2_x\n\n\n\nComments in R\n# single line comment\n# x&lt;-5\n\nx\n\n\"\nMulti line comment\n\nx&lt;- 5\n\nNot so pretty\n\n\"\n\nx\n\n\nVectors\nVectors are the most basic R data objects and there are six types of atomic vectors. They are logical, integer, double, complex, character and raw. Using function to create vectors:\n1:10 # is a sequence from 1 to 10\nx &lt;- 1:10\n\n# indexing a vector # Index in R starts at 1\nx[5] # this outputs the 5th element in the vector 5\n\n# subsetting a vector\nx &lt;- 10:20 # this is a vector from 10 to 20\nx[4:5] # subsetting the element 4th the 5th from the vector\n\n\n# Vector types\nx.num&lt;-c(1,7,8,16,245) # numeric vector\nstr(x.num)\nx.log&lt;-c(TRUE,FALSE,TRUE,FALSE,FALSE) # logical vector\nstr(x.log)\nx.char&lt;-c(\"A\", \"B\", \"C\",\"D\",\"E\",\"F\")\nstr(x.char)\n\n# changing vector types\nas.character(x.num) # changing the vector from numeric to character\nstr(as.character(x.num)) \nx.num&lt;-c(\"1\",\"7\",\"8\",\"16\",\"245\")\nstr(x.num)\nas.numeric(x.num)\nstr(as.numeric(x.num))\nseq(from=1,to=10)\nseq(from=-1,to=-10)\nseq(from=3,to=30,by=3)\ndat.seq&lt;-seq(from=1,to=300,by=4)\nlength(dat.seq)\n\n# rep function\nrep(1:3,5) # the sequence 1:3 is repeated 5 times"
+  },
+  {
+    "objectID": "workshop1.html#installing-packages",
+    "href": "workshop1.html#installing-packages",
+    "title": "Intro to R",
+    "section": "Installing packages",
+    "text": "Installing packages\n#install.packages(\"ggplot2\") # installing packages\nlibrary(ggplot2) # using packages \nrequire(ggplot2) # using packages \n#update.packages(ggplot2) # updating packages\n#remove.packages(ggplot2) # removing packages"
+  },
+  {
+    "objectID": "workshop1.html#file-and-project-management",
+    "href": "workshop1.html#file-and-project-management",
+    "title": "Intro to R",
+    "section": "File and Project management",
+    "text": "File and Project management\n\nRscript\nCreating a new R script in RStudio:\n\nClick the “File” menu button, then “New File”.\nClick “R script”.\n\n\n\nR Notebook and R markdown\nCreating a new R script in RStudio:\n\nClick the “File” menu button, then “New File”.\nClick “R markdown”.\nEnter “title” and “author” name\nChoose output format\n\n\n\nR Project\nCreating a new project in RStudio:\n\nClick the “File” menu button, then “New Project”.\nClick “New Directory”.\nClick “New Project”.\nType in the name of the directory to store your project, e.g. “my_project”.\nSelect the checkbox for “Create a git repository” for version control.\nClick the “Create Project” button."
+  },
+  {
+    "objectID": "workshop1.html#getting-help",
+    "href": "workshop1.html#getting-help",
+    "title": "Intro to R",
+    "section": "Getting help",
+    "text": "Getting help\n? # help with a function\n?? # Fuzzy search\nsessionInfo() # prints out current version and packages loaded"
+  },
+  {
+    "objectID": "workshop1.html#common-r-mistakes-and-how-to-avoid-them",
+    "href": "workshop1.html#common-r-mistakes-and-how-to-avoid-them",
+    "title": "Intro to R",
+    "section": "Common R mistakes and how to avoid them",
+    "text": "Common R mistakes and how to avoid them\n\nWrong paths: Make sure you understand the difference between absolute and relative paths of files. Most common errors the beginners face are not being able to load their data because of being in the wrong working directory. Set your working directory at the beginning of R session and make sure your file paths are correctly set.\nPay attention to Errors: If you are a new user or running a new script, make sure to run it line by line to troubleshoot the line giving you the error. Read the error if you are not able to figure it out, copy and paste the error into the search engine.\nNot Utilizing available help: Use Help pane, Stackoverflow , Rbloogers or R community available online and at your institution."
+  },
+  {
+    "objectID": "workshop2.html",
+    "href": "workshop2.html",
+    "title": "Intro to R-2",
+    "section": "",
+    "text": "ls() # list all the variables in the environment\nrm(x) # can be used to remove specific var\n#rm(list = ls()) # removes everything"
+  },
+  {
+    "objectID": "workshop2.html#matrices",
+    "href": "workshop2.html#matrices",
+    "title": "Intro to R-2",
+    "section": "Matrices",
+    "text": "Matrices\nIn R, a matrix is a collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns. A matrix is two-dimensional, since we are only working with rows and columns.\n# Creating a new empty matrix\nmat.example &lt;- matrix(0, ncol=8, nrow=4) \n\n# viewing the matrix\nView(mat.example) \n\n# class\nclass(mat.example) \n\n# rows and columns\ndim(mat.example) \n\n# accessing column number\nncol(mat.example) \n\n# accessing row numbers\nnrow(mat.example) \n\nCreating data\n# Creating a new matrix with data:\n\n# Using rnorm to generate 20 random numbers\nmat.dat&lt;-rnorm(20)\n\n# Note that the random numbers will be different every time you run this code,\n\n# Note check ?rnorm ?pnorm ?dnorm for more information on using probability distribution\nmat.dat\n\n# populating the matrix by row\nmat.example2&lt;-matrix(data = mat.dat, nrow = 4, ncol = 5, byrow = TRUE) \n\n\nSubsetting Matrices\n# Subsetting rows and columns\nmat.example2[2,4]"
+  },
+  {
+    "objectID": "workshop2.html#lists-in-r",
+    "href": "workshop2.html#lists-in-r",
+    "title": "Intro to R-2",
+    "section": "Lists in R",
+    "text": "Lists in R\nLists are the R objects and contain elements of different types, For example a list can have numbers, characters, strings, vectors, matrix and another list inside it. A list can also have a function as one of its elements.\nlist_data&lt;-list(\"Red\",\"Green\", c(21,34,22), TRUE, 52.53, 193.8)\nlist_data\nlist_data_new&lt;-list(dat.new2, mat.example2)\nlist_data_new\n\nSubsetting lists\nlist_data[[3]]\nlist_data_new[[2]]\n\n\nQuestions from the workshop\n# Q1: How to sort dataframes?\n\n# Use sort function to sort a vector\nx&lt;-c(1:10,8.5,7.6,2.5,1.3,2.4)\nsort(x)\n\n# For sorting dataframes using the function order\nnewdata[order(newdata$year, decreasing = TRUE), ]\n\n# Notice that the above function is used at the row position since we are sorting by row\n\n# Another example:\nnewdata2&lt;-data.frame(col1=c(31:40),col2=c(seq(1,30,by=3)))\nnewdata2\n\nnewdata2[order(newdata2$col1, decreasing = TRUE),]\n\n## Q2: How to increase the number or rows?\n\n## increasing the number, where n is followed by number of rows\nhead(newdata2,n=9)"
+  },
+  {
+    "objectID": "workshop2.html#bonus-activity---plotting-in-r",
+    "href": "workshop2.html#bonus-activity---plotting-in-r",
+    "title": "Intro to R-2",
+    "section": "Bonus activity - plotting in R",
+    "text": "Bonus activity - plotting in R\nBase R can be used to create simple plots.\n#--------Basic scatterplot\n\n# Create data for plot\nx&lt;- seq(1,100, by=3) \ny&lt;- x/2\n\n# Basic x and y plot\nplot(x,y) \n\n# Add title\nplot(x,y,main=\"Title of plot\") \n\n# Add x and y labels\nplot(x,y,main=\"Title of plot\",xlab = \"This is x axis label\",\n     ylab=\"This is y label\")\n\n# Change color\n\nplot(x,y,main=\"Title of plot\",xlab = \"This is x axis label\",\n     ylab=\"This is y label\",col=\"blue\")\n\nHistograms\n# rnorm generates a vector of normally distributed random numbers.\n\nx&lt;-rnorm(1000, mean = 0, sd = 1)\nhist(x)\nhist(x, breaks = 10)\nhist(x, breaks = 100)\nhist(x, breaks = 100, col = \"orange\", main = \"This is title\", \n     xlab = \"This is x axis\", ylab = \"This is y axis\")"
+  },
+  {
+    "objectID": "workshop2.html#important-functions",
+    "href": "workshop2.html#important-functions",
+    "title": "Intro to R-2",
+    "section": "",
+    "text": "ls() # list all the variables in the environment\nrm(x) # can be used to remove specific var\n#rm(list = ls()) # removes everything"
+  },
+  {
+    "objectID": "workshop2.html#inbuild-datasets-in-r",
+    "href": "workshop2.html#inbuild-datasets-in-r",
+    "title": "Intro to R-2",
+    "section": "Inbuild datasets in R",
+    "text": "Inbuild datasets in R\n#data() # checking\n# loading\n\ndata(Orange)\n\n# viewing\nOrange \n\nView(Orange) # opens a viewing window\nhead(Orange) # prints out first six rows on your console\ntail(Orange) # prints out last six rows on your console\nstr(Orange)  # tells you about the structure of the data\ndim(Orange)  # dimensions of the data - in terms of rows and columns"
+  },
+  {
+    "objectID": "workshop2.html#data-frames",
+    "href": "workshop2.html#data-frames",
+    "title": "Intro to R-2",
+    "section": "Data frames",
+    "text": "Data frames\nA data frame is a rectangular collection of values, usually organized so that variables appear in the columns and observations appear in rows.\n# Creating a new data frame that has 3 vectors of different types\n\ndat.new &lt;- data.frame(name = c(\"Anna\", \"Bob\", \"Chris\"),\n                    language = c(\"R\", \"C\", \"Java\"),\n                    year = c(4, 5, 9))\n\n# View the dataframe\nhead(dat.new)"
+  },
+  {
+    "objectID": "workshop2.html#writing-and-reading-files",
+    "href": "workshop2.html#writing-and-reading-files",
+    "title": "Intro to R-2",
+    "section": "Writing and reading files",
+    "text": "Writing and reading files\n\n# This will add additional row names \nwrite.csv(dat.new,file = \"my_data.csv\")\n\nread.csv(\"my_data.csv\")\n\n# To avoid adding row names to the data, use row.names=FALSE \nwrite.csv(dat.new,file = \"my_data.csv\", row.names = FALSE) \nread.csv(\"my_data.csv\") # reads into the console\n\n# To save the data into a variable:\ndat.new2&lt;- read.csv(\"my_data.csv\")\n\nWorking with data frames\ndat.new2&lt;- read.csv(\"my_data.csv\") \n\n# Note that you should have your entire path for the data under the quotes \n\n# if your data is not saved in the working directory\n# names of the data \nnames(dat.new2) \n\n# column names \ncolnames(dat.new2) \n\n# rownames\nrownames(dat.new2)\n\n# type of data\nclass(dat.new2) \n\n# structure of data \nstr(dat.new2) \n\n# accessing a vector in the dataframe\ndat.new2$name \n\n# accessing a second element of a vector in the dataframe\ndat.new2$name[2] \n\n# accessing the language in the dataframe\ndat.new2$language \n\n# accessing a third element of a vector in the dataframe\ndat.new2$language[3] \n\n# Removing rows\ndat.new2[-2,]\n\n# Removing columns\ndat.new2[,-1]\n\n# Appending to a data frame\ndat.new3&lt;- data.frame(name = c(\"Diego\", \"Evan\", \"Felicia\", \"George\"), language = c(\"Python\", \"Perl\", \"C++\",\"HTML\"),\n                    year = c(4, 5, 9,10))\n\n# Binding by row\nrbind(dat.new2,dat.new3)\nnewdata&lt;-rbind(dat.new2,dat.new3)\n\n# Binding by column\ncbind(dat.new2,dat.new3) # will give you error\n\n## why this error? Because to bind by column, the number of rows should be equal\n\ndat.new4&lt;-dat.new3[-3,] # removing a row from 3rd data frame and adding to a new data frame\ncbind(dat.new4,dat.new2)\n\n# Notice that R doesn't care about the content but the structure of data \n\n\nSubsetting dataframes\n# The notation is nameofdata[row, column]\nnewdata[4,2]\n\n# accessing more than one value\nnewdata[1:4,] # gets you first four rows and all the columns\nnewdata[,1:2] # all the rows and first two columns\n\n# Extracting specific information: \nnewdata[c(1,3),] # Gets you first and third row and all columns\nnewdata[c(5,4),c(1,2)] # Guess\n\n## Tip: \n\n# Remember that the order of extraction matters.\n\n## Accessing by name\nnewdata[\"name\"]\nnewdata[\"year\"]\n\n## Operator\nnewdata$name"
   }
 ]

@@ -23,23 +23,16 @@ R can do basic arithmetic calculations
 # Calculations
 
 1+1 # addition
-
 1-5 # subtraction
-
 1*3 # multiplication 
-
 1/6 # division
 
 # Comparisons; evaluates the statement 
 
 1==1  # equal to comparison; this statement evaluates to TRUE
-
 1!=1  # not equal comparison; evaluates to FALSE
-
 1!=2  # not equal comparison; evaluates to TRUE
-
 1>2   # greater than comparison; evaluates to FALSE
-
 1>=2  #
 ```
 
@@ -47,19 +40,15 @@ R can do basic arithmetic calculations
 
 ``` R
 #Trig functions
-
 sin(1)
-
 cos(1)
 
 # log functions
 
 log(1)
-
 log10(2)
 
 # exponential
-
 exp(1)
 ```
 
@@ -71,7 +60,6 @@ exp(1)
 x <- 5/9
 
 x
-
 x <- x + 1 # variables can also be used to reassign
 
 x
@@ -79,7 +67,6 @@ x
 # Note that the following two lines of code are same
 
 # x = 8 
-
 # x <- 8
 ```
 
@@ -87,194 +74,132 @@ Valid variable names cannot start with a special character or number. Periods, n
 
 Some examples of allowed variable names:
 
-\* x_new
+-    x_new
+-    x.new
+-   xNew
+-   xNEW
+-   Newx
+-   NEW
+-   Newx2
+-   NEW2x
+-   NEW2_x
 
-\* x.new
+###  Comments in R
 
-\* xNew
-
-\* xNEW
-
-\* Newx
-
-\* NEW
-
-\* Newx2
-
-\* NEW2x
-
-\* NEW2_x
-
-\### Comments in R
-
-\`\`\`{r}
-
-\# single line comment
-
-\# x\<-5
+``` R
+# single line comment
+# x<-5
 
 x
 
 "
-
 Multi line comment
 
-x\<- 5
+x<- 5
 
 Not so pretty
 
 "
 
 x
+```
 
-\`\`\`
-
-\### Vectors
+### Vectors
 
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are logical, integer, double, complex, character and raw. Using function to create vectors:
 
-\`\`\`{r}
+``` R
+1:10 # is a sequence from 1 to 10
+x <- 1:10
 
-1:10 \# is a sequence from 1 to 10
+# indexing a vector # Index in R starts at 1
+x[5] # this outputs the 5th element in the vector 5
 
-x \<- 1:10
+# subsetting a vector
+x <- 10:20 # this is a vector from 10 to 20
+x[4:5] # subsetting the element 4th the 5th from the vector
 
-\# indexing a vector \# Index in R starts at 1
 
-x\[5\] \# this outputs the 5th element in the vector 5
-
-\# subsetting a vector
-
-x \<- 10:20 \# this is a vector from 10 to 20
-
-x\[4:5\] \# subsetting the element 4th the 5th from the vector
-
-\# Vector types
-
-x.num\<-c(1,7,8,16,245) \# numeric vector
-
+# Vector types
+x.num<-c(1,7,8,16,245) # numeric vector
 str(x.num)
-
-x.log\<-c(TRUE,FALSE,TRUE,FALSE,FALSE) \# logical vector
-
+x.log<-c(TRUE,FALSE,TRUE,FALSE,FALSE) # logical vector
 str(x.log)
-
-x.char\<-c("A", "B", "C","D","E","F")
-
+x.char<-c("A", "B", "C","D","E","F")
 str(x.char)
 
-\# changing vector types
-
-as.character(x.num) \# changing the vector from numeric to character
-
-str(as.character(x.num))
-
-x.num\<-c("1","7","8","16","245")
-
+# changing vector types
+as.character(x.num) # changing the vector from numeric to character
+str(as.character(x.num)) 
+x.num<-c("1","7","8","16","245")
 str(x.num)
-
 as.numeric(x.num)
-
 str(as.numeric(x.num))
-
 seq(from=1,to=10)
-
 seq(from=-1,to=-10)
-
 seq(from=3,to=30,by=3)
-
-dat.seq\<-seq(from=1,to=300,by=4)
-
+dat.seq<-seq(from=1,to=300,by=4)
 length(dat.seq)
 
-\# rep function
+# rep function
+rep(1:3,5) # the sequence 1:3 is repeated 5 times
+```
 
-rep(1:3,5) \# the sequence 1:3 is repeated 5 times
+## Installing packages
 
-\`\`\`
+``` R
+#install.packages("ggplot2") # installing packages
+library(ggplot2) # using packages 
+require(ggplot2) # using packages 
+#update.packages(ggplot2) # updating packages
+#remove.packages(ggplot2) # removing packages
+```
 
-\## Installing packages
+##  File and Project management
 
-\`\`\`{r}
-
-#install.packages("ggplot2") \# installing packages
-
-library(ggplot2) \# using packages
-
-require(ggplot2) \# using packages
-
-#update.packages(ggplot2) \# updating packages
-
-#remove.packages(ggplot2) \# removing packages
-
-\`\`\`
-
-\## File and Project management
-
-\### Rscript
+### Rscript
 
 Creating a new R script in RStudio:
 
-1\. Click the "File" menu button, then "New File".
+1.  Click the "File" menu button, then "New File".
 
-2\. Click "R script".
+2.  Click "R script".
 
-\### R Notebook and R markdown
+### R Notebook and R markdown
 
 Creating a new R script in RStudio:
 
-1\. Click the "File" menu button, then "New File".
+1.  Click the "File" menu button, then "New File".
 
-2\. Click "R markdown".
+2.  Click "R markdown".
 
-3\. Enter "title" and "author" name
+3.  Enter "title" and "author" name
 
-4\. Choose output format
+4.  Choose output format
 
-\### R Project
+### R Project
 
 Creating a new project in RStudio:
 
-1\. Click the "File" menu button, then "New Project".
+1.  Click the "File" menu button, then "New Project".
+2.  Click "New Directory".
+3.  Click "New Project".
+4.  Type in the name of the directory to store your project, e.g. "my_project".
+5.  Select the checkbox for "Create a git repository" for version control.
+6.  Click the "Create Project" button.
 
-2\. Click "New Directory".
+## Getting help
 
-3\. Click "New Project".
+``` R
+? # help with a function
+?? # Fuzzy search
+sessionInfo() # prints out current version and packages loaded
+```
 
-4\. Type in the name of the directory to store your project, e.g. "my_project".
+##  Common R mistakes and how to avoid them
 
-5\. Select the checkbox for "Create a git repository" for version control.
+1.  Wrong paths: Make sure you understand the difference between absolute and relative paths of files. Most common errors the beginners face are not being able to load their data because of being in the wrong working directory. Set your working directory at the beginning of R session and make sure your file paths are correctly set.
 
-6\. Click the "Create Project" button.
+2.  Pay attention to Errors: If you are a new user or running a new script, make sure to run it line by line to troubleshoot the line giving you the error. Read the error if you are not able to figure it out, copy and paste the error into the search engine.
 
-\## Getting help
-
-\`\`\`{r, eval = FALSE}
-
-? \# help with a function
-
-?? \# Fuzzy search
-
-sessionInfo() \# prints out current version and packages loaded
-
-\`\`\`
-
-\## Common R mistakes and how to avoid them
-
-1\. Wrong paths: Make sure you understand the difference between absolute and relative paths of files. Most common errors the beginners face are not being able to load their data because of being in the wrong working directory. Set your working directory at the beginning of R session and make sure your file paths are correctly set.
-
-2\. Pay attention to Errors: If you are a new user or running a new script, make sure to run it line by line to troubleshoot the line giving you the error. Read the error if you are not able to figure it out, copy and paste the error into the search engine.
-
-3\. Not Utilizing available help: Use Help pane, Stackoverflow , Rbloogers or R community available online and at your institution.
-
-\## Sign up for the workshop series:
-
-https://libcal.uflib.ufl.edu/profile/104805
-
-\## Resources
-
-1\. Cran Introduction to R https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf
-
-2\. R Cookbook http://www.cookbook-r.com/
-
-3\. Interactively learn R https://www.programiz.com/r
+3.  Not Utilizing available help: Use Help pane, Stackoverflow , Rbloogers or R community available online and at your institution.

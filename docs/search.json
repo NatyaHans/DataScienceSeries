@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Science Series",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Cran Introduction to R https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf\nR Cookbook http://www.cookbook-r.com/\nInteractively learn R https://www.programiz.com/r"
+  },
+  {
+    "objectID": "resources.html#resources",
+    "href": "resources.html#resources",
+    "title": "Resources",
+    "section": "",
+    "text": "1. Cran Introduction to R https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf\n2. R Cookbook http://www.cookbook-r.com/\n3. Interactively learn R https://www.programiz.com/r"
+  }
+]

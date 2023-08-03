@@ -1,0 +1,8 @@
+---
+title: "Resources"
+editor: visual
+---
+
+1.  Cran Introduction to R https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf
+2.  R Cookbook http://www.cookbook-r.com/
+3.  Interactively learn R https://www.programiz.com/r

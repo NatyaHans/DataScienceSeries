@@ -3,3 +3,8 @@ title: "Data Science Series with R"
 author: "Natya Hans"
 ---
 
+Links to the workshop series:
+1.[Intro to R](https://natyahans.github.io/DataScienceSeries/workshop1.html)
+2.[Intro to R-2](https://natyahans.github.io/DataScienceSeries/workshop2.html)
+3.[Data Visualization](https://natyahans.github.io/DataScienceSeries/workshop3.html)
+4.[Exploratory Data Analysis](https://natyahans.github.io/DataScienceSeries/workshop4.html)

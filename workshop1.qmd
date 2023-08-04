@@ -3,11 +3,11 @@ title: "Intro to R"
 editor: visual
 ---
 
-##  Basics : Using RStudio and R
+## Basics : Using RStudio and R
 
 The three panes are
 
-1.   Console - used for running the code
+1.  Console - used for running the code
 2.  Environment - has information about the loaded variables and history of commands run (it also has shortcuts for uploading datasets and saving workspace)
 3.  Help pane - gives you access to files, plots and package information. Also helpful in saving plots.
 
@@ -17,9 +17,9 @@ You can change where the console is in Rstudio by going to View-\>Pane-\>Console
 
 R can do basic arithmetic calculations
 
-###  Basic calculation
+### Basic calculation
 
-``` R
+```{r}
 # Calculations
 
 1+1 # addition
@@ -36,15 +36,14 @@ R can do basic arithmetic calculations
 1>=2  #
 ```
 
-###  Useful Inbuild Functions in R
+### Useful Inbuild Functions in R
 
-``` R
+```{r}
 #Trig functions
 sin(1)
 cos(1)
 
 # log functions
-
 log(1)
 log10(2)
 
@@ -56,12 +55,11 @@ exp(1)
 
 \<- is the assignment operator. You can also use = operator i.e. equals to sign.
 
-``` R
+```{r}
 x <- 5/9
-
 x
-x <- x + 1 # variables can also be used to reassign
 
+x <- x + 1 # variables can also be used to reassign
 x
 
 # Note that the following two lines of code are same
@@ -74,8 +72,8 @@ Valid variable names cannot start with a special character or number. Periods, n
 
 Some examples of allowed variable names:
 
--    x_new
--    x.new
+-   x_new
+-   x.new
 -   xNew
 -   xNEW
 -   Newx
@@ -84,9 +82,9 @@ Some examples of allowed variable names:
 -   NEW2x
 -   NEW2_x
 
-###  Comments in R
+### Comments in R
 
-``` R
+```{r}
 # single line comment
 # x<-5
 
@@ -97,7 +95,7 @@ Multi line comment
 
 x<- 5
 
-Not so pretty
+Everything between quotes
 
 "
 
@@ -108,7 +106,7 @@ x
 
 Vectors are the most basic R data objects and there are six types of atomic vectors. They are logical, integer, double, complex, character and raw. Using function to create vectors:
 
-``` R
+```{r}
 1:10 # is a sequence from 1 to 10
 x <- 1:10
 
@@ -147,7 +145,7 @@ rep(1:3,5) # the sequence 1:3 is repeated 5 times
 
 ## Installing packages
 
-``` R
+```{r}
 #install.packages("ggplot2") # installing packages
 library(ggplot2) # using packages 
 require(ggplot2) # using packages 
@@ -155,14 +153,13 @@ require(ggplot2) # using packages
 #remove.packages(ggplot2) # removing packages
 ```
 
-##  File and Project management
+## File and Project management
 
 ### Rscript
 
 Creating a new R script in RStudio:
 
 1.  Click the "File" menu button, then "New File".
-
 2.  Click "R script".
 
 ### R Notebook and R markdown
@@ -170,11 +167,8 @@ Creating a new R script in RStudio:
 Creating a new R script in RStudio:
 
 1.  Click the "File" menu button, then "New File".
-
 2.  Click "R markdown".
-
 3.  Enter "title" and "author" name
-
 4.  Choose output format
 
 ### R Project
@@ -190,13 +184,13 @@ Creating a new project in RStudio:
 
 ## Getting help
 
-``` R
-? # help with a function
-?? # Fuzzy search
-sessionInfo() # prints out current version and packages loaded
+```{r}
+#? # help with a function
+#?? # Fuzzy search
+#sessionInfo() # prints out current version and packages loaded
 ```
 
-##  Common R mistakes and how to avoid them
+## Common R mistakes and how to avoid them
 
 1.  Wrong paths: Make sure you understand the difference between absolute and relative paths of files. Most common errors the beginners face are not being able to load their data because of being in the wrong working directory. Set your working directory at the beginning of R session and make sure your file paths are correctly set.
 

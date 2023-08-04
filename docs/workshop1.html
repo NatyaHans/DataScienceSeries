@@ -210,49 +210,96 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>R can do basic arithmetic calculations</p>
 <section id="basic-calculation" class="level3">
 <h3 class="anchored" data-anchor-id="basic-calculation">Basic calculation</h3>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculations</span></span>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculations</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span> <span class="co"># addition</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="dv">1-5</span> <span class="co"># subtraction</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">*</span><span class="dv">3</span> <span class="co"># multiplication </span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">/</span><span class="dv">6</span> <span class="co"># division</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparisons; evaluates the statement </span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">==</span><span class="dv">1</span>  <span class="co"># equal to comparison; this statement evaluates to TRUE</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">!=</span><span class="dv">1</span>  <span class="co"># not equal comparison; evaluates to FALSE</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">!=</span><span class="dv">2</span>  <span class="co"># not equal comparison; evaluates to TRUE</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">&gt;</span><span class="dv">2</span>   <span class="co"># greater than comparison; evaluates to FALSE</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">&gt;=</span><span class="dv">2</span>  <span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">+</span><span class="dv">1</span> <span class="co"># addition</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1-5</span> <span class="co"># subtraction</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -4</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">*</span><span class="dv">3</span> <span class="co"># multiplication </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">/</span><span class="dv">6</span> <span class="co"># division</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1666667</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Comparisons; evaluates the statement </span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">==</span><span class="dv">1</span>  <span class="co"># equal to comparison; this statement evaluates to TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">!=</span><span class="dv">1</span>  <span class="co"># not equal comparison; evaluates to FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">!=</span><span class="dv">2</span>  <span class="co"># not equal comparison; evaluates to TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">&gt;</span><span class="dv">2</span>   <span class="co"># greater than comparison; evaluates to FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">&gt;=</span><span class="dv">2</span>  <span class="co">#</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
 </section>
 <section id="useful-inbuild-functions-in-r" class="level3">
 <h3 class="anchored" data-anchor-id="useful-inbuild-functions-in-r">Useful Inbuild Functions in R</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Trig functions</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sin</span>(<span class="dv">1</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cos</span>(<span class="dv">1</span>)</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># log functions</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">1</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">log10</span>(<span class="dv">2</span>)</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># exponential</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Trig functions</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sin</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.841471</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cos</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5403023</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># log functions</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">log</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">log10</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.30103</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># exponential</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">exp</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.718282</code></pre>
+</div>
+</div>
 </section>
 <section id="variable-assignment" class="level3">
 <h3 class="anchored" data-anchor-id="variable-assignment">Variable assignment</h3>
 <p>&lt;- is the assignment operator. You can also use = operator i.e.&nbsp;equals to sign.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">9</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">1</span> <span class="co"># variables can also be used to reassign</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the following two lines of code are same</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># x = 8 </span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># x &lt;- 8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span><span class="sc">/</span><span class="dv">9</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.5555556</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> x <span class="sc">+</span> <span class="dv">1</span> <span class="co"># variables can also be used to reassign</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.555556</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note that the following two lines of code are same</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="co"># x = 8 </span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># x &lt;- 8</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Valid variable names cannot start with a special character or number. Periods, numbers and underscore are allowed within variable names. Please note that variable names are case sensitive in R. For example, variables names data.new and data.New are NOT the same.</p>
 <p>Some examples of allowed variable names:</p>
 <ul>
@@ -269,68 +316,124 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="comments-in-r" class="level3">
 <h3 class="anchored" data-anchor-id="comments-in-r">Comments in R</h3>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># single line comment</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># x&lt;-5</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="st">"</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="st">Multi line comment</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="st">x&lt;- 5</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="st">Not so pretty</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="st">"</span></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># single line comment</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="co"># x&lt;-5</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.555556</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="st">"</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="st">Multi line comment</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="st">x&lt;- 5</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="st">Everything between quotes</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="st">"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "\nMulti line comment\n\nx&lt;- 5\n\nEverything between quotes\n\n"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.555556</code></pre>
+</div>
+</div>
 </section>
 <section id="vectors" class="level3">
 <h3 class="anchored" data-anchor-id="vectors">Vectors</h3>
 <p>Vectors are the most basic R data objects and there are six types of atomic vectors. They are logical, integer, double, complex, character and raw. Using function to create vectors:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> <span class="co"># is a sequence from 1 to 10</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># indexing a vector # Index in R starts at 1</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">5</span>] <span class="co"># this outputs the 5th element in the vector 5</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># subsetting a vector</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">20</span> <span class="co"># this is a vector from 10 to 20</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>] <span class="co"># subsetting the element 4th the 5th from the vector</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector types</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>x.num<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">16</span>,<span class="dv">245</span>) <span class="co"># numeric vector</span></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x.num)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>x.log<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">FALSE</span>) <span class="co"># logical vector</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x.log)</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>x.char<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>,<span class="st">"D"</span>,<span class="st">"E"</span>,<span class="st">"F"</span>)</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x.char)</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="co"># changing vector types</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(x.num) <span class="co"># changing the vector from numeric to character</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(<span class="fu">as.character</span>(x.num)) </span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>x.num<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"1"</span>,<span class="st">"7"</span>,<span class="st">"8"</span>,<span class="st">"16"</span>,<span class="st">"245"</span>)</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x.num)</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(x.num)</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(<span class="fu">as.numeric</span>(x.num))</span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>,<span class="at">to=</span><span class="dv">10</span>)</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from=</span><span class="sc">-</span><span class="dv">1</span>,<span class="at">to=</span><span class="sc">-</span><span class="dv">10</span>)</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">3</span>,<span class="at">to=</span><span class="dv">30</span>,<span class="at">by=</span><span class="dv">3</span>)</span>
-<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>dat.seq<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>,<span class="at">to=</span><span class="dv">300</span>,<span class="at">by=</span><span class="dv">4</span>)</span>
-<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(dat.seq)</span>
-<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co"># rep function</span></span>
-<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">5</span>) <span class="co"># the sequence 1:3 is repeated 5 times</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span><span class="sc">:</span><span class="dv">10</span> <span class="co"># is a sequence from 1 to 10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="co"># indexing a vector # Index in R starts at 1</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">5</span>] <span class="co"># this outputs the 5th element in the vector 5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># subsetting a vector</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">:</span><span class="dv">20</span> <span class="co"># this is a vector from 10 to 20</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>x[<span class="dv">4</span><span class="sc">:</span><span class="dv">5</span>] <span class="co"># subsetting the element 4th the 5th from the vector</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 13 14</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vector types</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>x.num<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">16</span>,<span class="dv">245</span>) <span class="co"># numeric vector</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x.num)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> num [1:5] 1 7 8 16 245</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>x.log<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">FALSE</span>) <span class="co"># logical vector</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x.log)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> logi [1:5] TRUE FALSE TRUE FALSE FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>x.char<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>,<span class="st">"D"</span>,<span class="st">"E"</span>,<span class="st">"F"</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x.char)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> chr [1:6] "A" "B" "C" "D" "E" "F"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># changing vector types</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(x.num) <span class="co"># changing the vector from numeric to character</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "1"   "7"   "8"   "16"  "245"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(<span class="fu">as.character</span>(x.num)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> chr [1:5] "1" "7" "8" "16" "245"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>x.num<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"1"</span>,<span class="st">"7"</span>,<span class="st">"8"</span>,<span class="st">"16"</span>,<span class="st">"245"</span>)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(x.num)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> chr [1:5] "1" "7" "8" "16" "245"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(x.num)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1]   1   7   8  16 245</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(<span class="fu">as.numeric</span>(x.num))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> num [1:5] 1 7 8 16 245</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>,<span class="at">to=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from=</span><span class="sc">-</span><span class="dv">1</span>,<span class="at">to=</span><span class="sc">-</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  -1  -2  -3  -4  -5  -6  -7  -8  -9 -10</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">3</span>,<span class="at">to=</span><span class="dv">30</span>,<span class="at">by=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  3  6  9 12 15 18 21 24 27 30</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>dat.seq<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="at">from=</span><span class="dv">1</span>,<span class="at">to=</span><span class="dv">300</span>,<span class="at">by=</span><span class="dv">4</span>)</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(dat.seq)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 75</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rep function</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rep</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,<span class="dv">5</span>) <span class="co"># the sequence 1:3 is repeated 5 times</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 1 2 3 1 2 3 1 2 3 1 2 3 1 2 3</code></pre>
+</div>
+</div>
 </section>
 </section>
 <section id="installing-packages" class="level2">
 <h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("ggplot2") # installing packages</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># using packages </span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2) <span class="co"># using packages </span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#update.packages(ggplot2) # updating packages</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#remove.packages(ggplot2) # removing packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("ggplot2") # installing packages</span></span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># using packages </span></span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2) <span class="co"># using packages </span></span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="co">#update.packages(ggplot2) # updating packages</span></span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="co">#remove.packages(ggplot2) # removing packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="file-and-project-management" class="level2">
 <h2 class="anchored" data-anchor-id="file-and-project-management">File and Project management</h2>
@@ -338,18 +441,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="rscript">Rscript</h3>
 <p>Creating a new R script in RStudio:</p>
 <ol type="1">
-<li><p>Click the “File” menu button, then “New File”.</p></li>
-<li><p>Click “R script”.</p></li>
+<li>Click the “File” menu button, then “New File”.</li>
+<li>Click “R script”.</li>
 </ol>
 </section>
 <section id="r-notebook-and-r-markdown" class="level3">
 <h3 class="anchored" data-anchor-id="r-notebook-and-r-markdown">R Notebook and R markdown</h3>
 <p>Creating a new R script in RStudio:</p>
 <ol type="1">
-<li><p>Click the “File” menu button, then “New File”.</p></li>
-<li><p>Click “R markdown”.</p></li>
-<li><p>Enter “title” and “author” name</p></li>
-<li><p>Choose output format</p></li>
+<li>Click the “File” menu button, then “New File”.</li>
+<li>Click “R markdown”.</li>
+<li>Enter “title” and “author” name</li>
+<li>Choose output format</li>
 </ol>
 </section>
 <section id="r-project" class="level3">
@@ -367,9 +470,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="getting-help" class="level2">
 <h2 class="anchored" data-anchor-id="getting-help">Getting help</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>? <span class="co"># help with a function</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>?? <span class="co"># Fuzzy search</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>() <span class="co"># prints out current version and packages loaded</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co">#? # help with a function</span></span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="co">#?? # Fuzzy search</span></span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="co">#sessionInfo() # prints out current version and packages loaded</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="common-r-mistakes-and-how-to-avoid-them" class="level2">
 <h2 class="anchored" data-anchor-id="common-r-mistakes-and-how-to-avoid-them">Common R mistakes and how to avoid them</h2>

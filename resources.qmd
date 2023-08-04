@@ -3,12 +3,12 @@ title: "Resources"
 editor: visual
 ---
 
-1.  **Cran Introduction to R https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf**
-2.  **R Cookbook http://www.cookbook-r.com/**
-3.  **Interactively learn R https://www.programiz.com/r**
-4.  **ggplot2 tutorials https://r-graph-gallery.com/ggplot2-package.html**
-5.  **ggplot2 https://ggplot2.tidyverse.org/**
-6.  **Color Brewer https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3**
-7.  **Rcolorbrewer palette https://r-graph-gallery.com/38-rcolorbrewers-palettes.html**
-8.  **Color Hex https://www.color-hex.com/**
-9.  **ggsci package https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html**
+1.  Cran Introduction to R https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf
+2.  R Cookbook http://www.cookbook-r.com/
+3.  Interactively learn R https://www.programiz.com/r
+4.  ggplot2 tutorials https://r-graph-gallery.com/ggplot2-package.html
+5.  ggplot2 https://ggplot2.tidyverse.org/
+6.  Color Brewer https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3
+7.  Rcolorbrewer palette https://r-graph-gallery.com/38-rcolorbrewers-palettes.html
+8.  Color Hex https://www.color-hex.com/
+9.  ggsci package https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html

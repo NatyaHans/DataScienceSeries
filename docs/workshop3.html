@@ -154,12 +154,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#workshop-plan" id="toc-workshop-plan" class="nav-link active" data-scroll-target="#workshop-plan">Workshop plan</a></li>
-  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up">Set up</a>
-  <ul class="collapse">
-  <li><a href="#installing-required-packages" id="toc-installing-required-packages" class="nav-link" data-scroll-target="#installing-required-packages">Installing required packages</a></li>
+  <li><a href="#installing-required-packages" id="toc-installing-required-packages" class="nav-link active" data-scroll-target="#installing-required-packages">Installing required packages</a></li>
   <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading packages</a></li>
   <li><a href="#installing-and-loading-multiple-packages-at-once" id="toc-installing-and-loading-multiple-packages-at-once" class="nav-link" data-scroll-target="#installing-and-loading-multiple-packages-at-once">Installing and loading multiple packages at once</a></li>
+  <li><a href="#note-about-apply-functions" id="toc-note-about-apply-functions" class="nav-link" data-scroll-target="#note-about-apply-functions">Note about apply functions</a></li>
+  <li><a href="#color-palettes-in-r" id="toc-color-palettes-in-r" class="nav-link" data-scroll-target="#color-palettes-in-r">Color palettes in R</a></li>
+  <li><a href="#creating-your-own-color-palette" id="toc-creating-your-own-color-palette" class="nav-link" data-scroll-target="#creating-your-own-color-palette">Creating your own color palette</a></li>
+  <li><a href="#dataset-working-with-inbuild-dataset" id="toc-dataset-working-with-inbuild-dataset" class="nav-link" data-scroll-target="#dataset-working-with-inbuild-dataset">Dataset: Working with Inbuild dataset</a></li>
+  <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2">ggplot2</a>
+  <ul class="collapse">
+  <li><a href="#changing-aes-function-by-adding-color" id="toc-changing-aes-function-by-adding-color" class="nav-link" data-scroll-target="#changing-aes-function-by-adding-color">Changing aes function by adding color:</a></li>
+  <li><a href="#geom_line" id="toc-geom_line" class="nav-link" data-scroll-target="#geom_line">geom_line</a></li>
+  <li><a href="#geom_boxplot" id="toc-geom_boxplot" class="nav-link" data-scroll-target="#geom_boxplot">geom_boxplot</a></li>
+  <li><a href="#adding-more-layer" id="toc-adding-more-layer" class="nav-link" data-scroll-target="#adding-more-layer">Adding more layer</a></li>
+  </ul></li>
+  <li><a href="#hypothesis-how-is-sepal-length-varying-with-petal-length" id="toc-hypothesis-how-is-sepal-length-varying-with-petal-length" class="nav-link" data-scroll-target="#hypothesis-how-is-sepal-length-varying-with-petal-length"><em>HYPOTHESIS: How is sepal length varying with petal length?</em></a>
+  <ul class="collapse">
+  <li><a href="#adding-group-aesthetics" id="toc-adding-group-aesthetics" class="nav-link" data-scroll-target="#adding-group-aesthetics">Adding group aesthetics</a></li>
+  <li><a href="#adding-a-line-on-top-of-points" id="toc-adding-a-line-on-top-of-points" class="nav-link" data-scroll-target="#adding-a-line-on-top-of-points">Adding a line on top of points:</a></li>
+  <li><a href="#adding-grouping" id="toc-adding-grouping" class="nav-link" data-scroll-target="#adding-grouping">Adding grouping</a></li>
+  <li><a href="#changing-aesthetics-within-layers" id="toc-changing-aesthetics-within-layers" class="nav-link" data-scroll-target="#changing-aesthetics-within-layers">Changing aesthetics within layers</a></li>
+  <li><a href="#changing-transparency" id="toc-changing-transparency" class="nav-link" data-scroll-target="#changing-transparency">Changing transparency</a></li>
+  <li><a href="#adding-transformation" id="toc-adding-transformation" class="nav-link" data-scroll-target="#adding-transformation">Adding transformation</a></li>
+  <li><a href="#without-grouping" id="toc-without-grouping" class="nav-link" data-scroll-target="#without-grouping">Without grouping</a></li>
+  <li><a href="#with-grouping" id="toc-with-grouping" class="nav-link" data-scroll-target="#with-grouping">With grouping</a></li>
+  <li><a href="#linear-relationship" id="toc-linear-relationship" class="nav-link" data-scroll-target="#linear-relationship">Linear relationship</a></li>
+  <li><a href="#multipanel-figures" id="toc-multipanel-figures" class="nav-link" data-scroll-target="#multipanel-figures">Multipanel figures</a></li>
+  <li><a href="#changing-figure-aesthetics" id="toc-changing-figure-aesthetics" class="nav-link" data-scroll-target="#changing-figure-aesthetics">Changing figure aesthetics</a></li>
+  <li><a href="#adding-themes" id="toc-adding-themes" class="nav-link" data-scroll-target="#adding-themes">Adding themes</a></li>
+  <li><a href="#adding-figure-title" id="toc-adding-figure-title" class="nav-link" data-scroll-target="#adding-figure-title">Adding figure title</a></li>
+  <li><a href="#adding-more-theme-elements" id="toc-adding-more-theme-elements" class="nav-link" data-scroll-target="#adding-more-theme-elements">Adding more theme elements</a></li>
+  <li><a href="#saving-and-publishing-plots" id="toc-saving-and-publishing-plots" class="nav-link" data-scroll-target="#saving-and-publishing-plots">Saving and publishing plots</a></li>
+  <li><a href="#multiple-plots-together-in-r" id="toc-multiple-plots-together-in-r" class="nav-link" data-scroll-target="#multiple-plots-together-in-r">Multiple plots together in R</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -184,8 +210,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="workshop-plan" class="level1">
-<h1>Workshop plan</h1>
+<section id="workshop-plan" class="level4">
+<h4 class="anchored" data-anchor-id="workshop-plan">Workshop plan</h4>
 <p>3 main types of plotting in R:</p>
 <ol type="1">
 <li>base</li>
@@ -194,343 +220,733 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>For this workshop series we are focusing on ggplot2 package for learning how to create publication quality plots.</p>
 </section>
-<section id="set-up" class="level1">
-<h1>Set up</h1>
 <section id="installing-required-packages" class="level3">
 <h3 class="anchored" data-anchor-id="installing-required-packages">Installing required packages</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="loading-packages" class="level3">
 <h3 class="anchored" data-anchor-id="loading-packages">Loading packages</h3>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="installing-and-loading-multiple-packages-at-once" class="level3">
 <h3 class="anchored" data-anchor-id="installing-and-loading-multiple-packages-at-once">Installing and loading multiple packages at once</h3>
-<p>```{r ,results=‘hide’,warning=FALSE}</p>
-<p># Create a vector of package names</p>
-<p>all.lib&lt;-c(“reshape2”,“ggplot2”,“gridExtra”,“ggpubr”,“ggthemes”,</p>
-<p>“scales”,“RColorBrewer”,“tidyverse”,“hrbrthemes”,</p>
-<p>“extrafont”,“ggtext”)</p>
-<p># install packages at once</p>
-<p>#install.packages(all.lib)</p>
-<p># Load packages at once</p>
-<p>lapply(all.lib,require,character.only=TRUE)</p>
-<p>```</p>
-<p>### Note about apply functions</p>
-<p>* lapply() function is useful for performing operations on list objects and returns a list object of same length of original set. lappy() returns a list of the similar length as input list object, each element of which is the result of applying FUN to the corresponding element of list. Lapply in R takes list, vector or data frame as input and gives output in list.</p>
-<p>* sapply() function takes list, vector or data frame as input and gives output in vector or matrix. It is useful for operations on list objects and returns a list object of same length of original set. Sapply function in R does the same job as lapply() function but returns a vector.</p>
-<p>```{r}</p>
-<p># Creating a data frame</p>
-<p># lapply(list, function)</p>
-<p>x &lt;- list(a = 1:10, beta = exp(-3:3), logic = c(TRUE,FALSE,FALSE,TRUE))</p>
-<p># compute the list mean for each list element</p>
-<p>lapply(x, mean)</p>
-<p># sapply(list, function)</p>
-<p>```</p>
-<p>## Color palettes in R</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a vector of package names</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>all.lib<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"reshape2"</span>,<span class="st">"ggplot2"</span>,<span class="st">"gridExtra"</span>,<span class="st">"ggpubr"</span>,<span class="st">"ggthemes"</span>, <span class="st">"scales"</span>,<span class="st">"RColorBrewer"</span>,<span class="st">"tidyverse"</span>,<span class="st">"hrbrthemes"</span>,<span class="st">"extrafont"</span>,<span class="st">"ggtext"</span>) </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># install packages at once </span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages(all.lib)</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages at once</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(all.lib,require,<span class="at">character.only=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: reshape2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: gridExtra</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggpubr</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggthemes</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: scales</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: RColorBrewer</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: tidyverse</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ tibble  3.1.8     ✔ dplyr   1.0.9
+✔ tidyr   1.2.0     ✔ stringr 1.4.0
+✔ readr   2.1.2     ✔ forcats 0.5.1
+✔ purrr   0.3.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ readr::col_factor() masks scales::col_factor()
+✖ dplyr::combine()    masks gridExtra::combine()
+✖ purrr::discard()    masks scales::discard()
+✖ dplyr::filter()     masks stats::filter()
+✖ dplyr::lag()        masks stats::lag()
+Loading required package: hrbrthemes
+
+NOTE: Either Arial Narrow or Roboto Condensed fonts are required to use these themes.
+
+      Please use hrbrthemes::import_roboto_condensed() to install Roboto Condensed and
+
+      if Arial Narrow is not on your system, please see https://bit.ly/arialnarrow
+
+Loading required package: extrafont
+
+Registering fonts with R
+
+Loading required package: ggtext</code></pre>
+</div>
+</div>
+</section>
+<section id="note-about-apply-functions" class="level3">
+<h3 class="anchored" data-anchor-id="note-about-apply-functions">Note about apply functions</h3>
+<ul>
+<li><p><strong>lapply()</strong> function is useful for performing operations on list objects and returns a list object of same length of original set. lappy() returns a list of the similar length as input list object, each element of which is the result of applying FUN to the corresponding element of list. Lapply in R takes list, vector or data frame as input and gives output in list.</p></li>
+<li><p><strong>sapply()</strong> function takes list, vector or data frame as input and gives output in vector or matrix. It is useful for operations on list objects and returns a list object of same length of original set. Sapply function in R does the same job as lapply() function but returns a vector.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creating a data frame </span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># lapply(list, function)</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">a =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, <span class="at">beta =</span> <span class="fu">exp</span>(<span class="sc">-</span><span class="dv">3</span><span class="sc">:</span><span class="dv">3</span>), <span class="at">logic =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>,<span class="cn">FALSE</span>,<span class="cn">FALSE</span>,<span class="cn">TRUE</span>))</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># compute the list mean for each list element</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(x, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>$a
+[1] 5.5
+
+$beta
+[1] 4.535125
+
+$logic
+[1] 0.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sapply(list, function)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="color-palettes-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="color-palettes-in-r">Color palettes in R</h2>
 <p>R colorbrewer is a good option</p>
-<p>```{r}</p>
-<p>library(RColorBrewer)</p>
-<p>par(mar=c(3,4,2,2))</p>
-<p>display.brewer.all()</p>
-<p>```</p>
-<p>## Creating your own color palette</p>
-<p>```{r}</p>
-<p># COLOR PALETTES</p>
-<p>pastel.colpal&lt;-c(“#355070”, “#6d597a”, “#b56576”, “#e56b6f”, “#eaac8b”,“#a44200”)</p>
-<p>sage.colpal&lt;-c(“#cb997e”, “#ddbea9”, “#ffe8d6”, “#b7b7a4”, “#6b705c”,“#585123”)</p>
-<p>tog&lt;-rbind(pastel.colpal,sage.colpal)</p>
-<p>#show_col(tog,labels = FALSE)</p>
-<p>show_col(tog,cex_label=0.5)</p>
-<p>```</p>
-<p>## Dataset: Working with Inbuild dataset</p>
-<p>```{r}</p>
-<p>data() # Exploring different inbuild dataset</p>
-<p>data(“iris”) # attaching inbuild dataset</p>
-<p>head(iris)</p>
-<p># Iris data set is a dataset with 150 observation with 5 variables as columns</p>
-<p># Each observation is a row (150)</p>
-<p># Each variable is a column (5): Sepal.Length; Sepal.Width, Petal.Length, Petal.Width and Species</p>
-<p>#View(iris) # Viewing dataset</p>
-<p>str(iris) # structure of data</p>
-<p>dim(iris) # dimensions rows and columns</p>
-<p>```</p>
-<p>## ggplot2</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">display.brewer.all</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="workshop3_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+</section>
+<section id="creating-your-own-color-palette" class="level2">
+<h2 class="anchored" data-anchor-id="creating-your-own-color-palette">Creating your own color palette</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># COLOR PALETTES</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>pastel.colpal<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"#355070"</span>, <span class="st">"#6d597a"</span>, <span class="st">"#b56576"</span>, <span class="st">"#e56b6f"</span>, <span class="st">"#eaac8b"</span>,<span class="st">"#a44200"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>sage.colpal<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"#cb997e"</span>, <span class="st">"#ddbea9"</span>, <span class="st">"#ffe8d6"</span>, <span class="st">"#b7b7a4"</span>, <span class="st">"#6b705c"</span>,<span class="st">"#585123"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>tog<span class="ot">&lt;-</span><span class="fu">rbind</span>(pastel.colpal,sage.colpal)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">#show_col(tog,labels = FALSE)</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">show_col</span>(tog,<span class="at">cex_label=</span><span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="workshop3_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="576"></p>
+</div>
+</div>
+</section>
+<section id="dataset-working-with-inbuild-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="dataset-working-with-inbuild-dataset">Dataset: Working with Inbuild dataset</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>()  <span class="co"># Exploring different inbuild dataset</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"iris"</span>) <span class="co"># attaching inbuild dataset</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+1          5.1         3.5          1.4         0.2  setosa
+2          4.9         3.0          1.4         0.2  setosa
+3          4.7         3.2          1.3         0.2  setosa
+4          4.6         3.1          1.5         0.2  setosa
+5          5.0         3.6          1.4         0.2  setosa
+6          5.4         3.9          1.7         0.4  setosa</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Iris data set is a dataset with 150 observation with 5 variables as columns</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Each observation is a row (150)</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Each variable is a column (5): Sepal.Length; Sepal.Width, Petal.Length, Petal.Width and Species</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co">#View(iris) # Viewing dataset</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iris) <span class="co"># structure of data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   150 obs. of  5 variables:
+ $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
+ $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
+ $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
+ $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
+ $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(iris) <span class="co"># dimensions rows and columns</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 150   5</code></pre>
+</div>
+</div>
+</section>
+<section id="ggplot2" class="level2">
+<h2 class="anchored" data-anchor-id="ggplot2">ggplot2</h2>
 <p>ggplot2 function works with figures in layers. We are first calling the ggplot function to create a new plot.</p>
-<p>Adding a base layer:</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Species , y = Sepal.Length))</p>
-<p>```</p>
+<p><strong>Adding a base layer:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Species , <span class="at">y =</span> Sepal.Length))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-firstfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-firstfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Base Layer in ggplot2</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <p>ggplot tells R, we are working with a new plot. All the parameters and arguments given inside of the ggplot function are global parameters.</p>
 <p>Two arguments passed:</p>
-<p>* data : what data to work with</p>
-<p>* aes function : how variables in the data map to aesthetic properties of the figure, in this case the x and y locations</p>
-<p>Adding geom_point function:</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Species , y = Petal.Length)) +</p>
-<p>geom_point()</p>
-<p>```</p>
-<p>### Changing aes function by adding color:</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Species , y = Petal.Length, color=Species)) +</p>
-<p>geom_point()</p>
-<p>```</p>
-<p>### geom_line</p>
-<p>Changing the geom parameters from point to line:</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Species , y = Petal.Length, color=Species)) +</p>
-<p>geom_line()</p>
-<p>```</p>
-<p>### geom_boxplot</p>
-<p>Changing the geom parameters from point to boxplot:</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Species , y = Petal.Length, color=Species)) +</p>
-<p>geom_boxplot()</p>
-<p>```</p>
-<p>### Adding more layer</p>
-<p>Adding additional layers of points on top of boxplots</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Species , y = Petal.Length, color=Species)) +</p>
-<p>geom_boxplot() +</p>
-<p>geom_point()</p>
-<p>```</p>
-<p>## HYPOTHESIS: How is sepal length varying with petal length?</p>
-<p>### Adding group aesthetics</p>
-<p>We are testing for the following hypothesis.</p>
-<p>Hypothesis: How is sepal length varying with petal length?</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length)) +</p>
-<p>geom_point()</p>
-<p>```</p>
-<p>### Adding a line on top of points:</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length)) +</p>
-<p>geom_point()+</p>
-<p>geom_line()</p>
-<p>```</p>
+<ul>
+<li>data : what data to work with</li>
+<li>aes function : how variables in the data map to aesthetic properties of the figure, in this case the x and y locations</li>
+</ul>
+<p><strong>Adding geom_point function:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Species , <span class="at">y =</span> Petal.Length))<span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-secondfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-secondfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: Adding geom plot</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="changing-aes-function-by-adding-color" class="level3">
+<h3 class="anchored" data-anchor-id="changing-aes-function-by-adding-color">Changing aes function by adding color:</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Species , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-thirdfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-thirdfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;3: Adding color</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="geom_line" class="level3">
+<h3 class="anchored" data-anchor-id="geom_line">geom_line</h3>
+<p><strong>Changing the geom parameters from point to line:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Species , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-fourthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-fourthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;4: Adding line</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="geom_boxplot" class="level3">
+<h3 class="anchored" data-anchor-id="geom_boxplot">geom_boxplot</h3>
+<p><strong>Changing the geom parameters from point to boxplot:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Species , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-fifthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-fifthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;5: Adding boxplot</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-more-layer" class="level3">
+<h3 class="anchored" data-anchor-id="adding-more-layer">Adding more layer</h3>
+<p><strong>Adding additional layers of points on top of boxplots:</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Species , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-sixthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-sixthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;6: Data on Boxplots</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="hypothesis-how-is-sepal-length-varying-with-petal-length" class="level2">
+<h2 class="anchored" data-anchor-id="hypothesis-how-is-sepal-length-varying-with-petal-length"><em>HYPOTHESIS: How is sepal length varying with petal length?</em></h2>
+<section id="adding-group-aesthetics" class="level3">
+<h3 class="anchored" data-anchor-id="adding-group-aesthetics">Adding group aesthetics</h3>
+<p>We are testing for the following hypothesis. <strong>Hypothesis:</strong> How is sepal length varying with petal length?</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length)) <span class="sc">+</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-seventhfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-seventhfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;7: Sepal length variation with petal length</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-a-line-on-top-of-points" class="level3">
+<h3 class="anchored" data-anchor-id="adding-a-line-on-top-of-points">Adding a line on top of points:</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length)) <span class="sc">+</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-eigthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-eigthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;8: Sepal length variation with petal length, line added</figcaption>
+</figure>
+</div>
+</div>
+</div>
 <p>The above graph doesn’t make sense unless you are looking for an overall pattern without breaking it down by species.</p>
-<p>### Adding grouping</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length, group=Species)) +</p>
-<p>geom_point() +</p>
-<p>geom_line()</p>
-<p>```</p>
-<p>### Changing aesthetics within layers</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length, group=Species)) +</p>
-<p>geom_point() +</p>
-<p>geom_line(aes(color=Species))</p>
-<p>```</p>
-<p>### Changing transparency</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length, group=Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))</p>
-<p>```</p>
-<p>### Adding transformation</p>
-<p>geom_smooth: fitting a relationship between data; by default formula is y~x and method is loess</p>
-<p>### Without grouping</p>
+</section>
+<section id="adding-grouping" class="level3">
+<h3 class="anchored" data-anchor-id="adding-grouping">Adding grouping</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">group=</span>Species)) <span class="sc">+</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-ninthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-ninthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;9: Sepal length variation with petal length, grouped by species</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="changing-aesthetics-within-layers" class="level3">
+<h3 class="anchored" data-anchor-id="changing-aesthetics-within-layers">Changing aesthetics within layers</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">group=</span>Species)) <span class="sc">+</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-tenthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-tenthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;10: Sepal length variation with petal length, grouped by species, colored line</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="changing-transparency" class="level3">
+<h3 class="anchored" data-anchor-id="changing-transparency">Changing transparency</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">group=</span>Species)) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-eleventhfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-eleventhfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;11: Sepal length variation with petal length, grouped by species, transparency added</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-transformation" class="level3">
+<h3 class="anchored" data-anchor-id="adding-transformation">Adding transformation</h3>
+<p><strong>geom_smooth:</strong> fitting a relationship between data; by default formula is y~x and method is loess</p>
+</section>
+<section id="without-grouping" class="level3">
+<h3 class="anchored" data-anchor-id="without-grouping">Without grouping</h3>
 <p>This doesn’t make sense unless you are looking for an overall pattern in the data.</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth()</p>
-<p>```</p>
-<p>### With grouping</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length)) <span class="sc">+</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'loess' and formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-twelthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twelthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;12: Trends in data, without grouping</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="with-grouping" class="level3">
+<h3 class="anchored" data-anchor-id="with-grouping">With grouping</h3>
 <p>If you are looking for a relationship between sepal length and petal length for each species</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length, group = Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth()</p>
-<p>```</p>
-<p>### Linear relationship</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length, group = Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=1)</p>
-<p>```</p>
-<p>```{r include=FALSE}</p>
-<p>knitr::opts_chunk$set(fig.width=8, fig.height=4)</p>
-<p>```</p>
-<p>### Multipanel figures</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=1)+</p>
-<p>facet_wrap(~Species)</p>
-<p>```</p>
-<p>### Changing figure aesthetics</p>
-<p>### Colors</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Species , y = Petal.Length, color=Species)) +</p>
-<p>geom_point()+</p>
-<p>scale_color_manual(values=pastel.colpal)</p>
-<p>```</p>
-<p>### Understanding colors</p>
-<p>Here only line changes color since geom_line has the color aesthesics</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=1)+</p>
-<p>facet_wrap(~Species)+</p>
-<p>scale_color_manual(values=pastel.colpal)</p>
-<p>```</p>
-<p>Let’s specify color as a global aesthetic</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length, color=Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=0.4,color=“black”)+</p>
-<p>facet_wrap(~Species)+</p>
-<p>scale_color_manual(values=pastel.colpal)</p>
-<p>```</p>
-<p>### Changing x and y labels</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">group =</span> Species)) <span class="sc">+</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using method = 'loess' and formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-thirteenthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-thirteenthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;13: Trends in data, with grouping</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="linear-relationship" class="level3">
+<h3 class="anchored" data-anchor-id="linear-relationship">Linear relationship</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">group =</span> Species)) <span class="sc">+</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-fourtheenthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-fourtheenthfig-1.png" class="img-fluid figure-img" width="576"></p>
+<figcaption class="figure-caption">Figure&nbsp;14: Linear relationship in data, without grouping</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="multipanel-figures" class="level3">
+<h3 class="anchored" data-anchor-id="multipanel-figures">Multipanel figures</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length)) <span class="sc">+</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-fifteenthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-fifteenthfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;15: Multipanel figure, facet wrap</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="changing-figure-aesthetics" class="level3">
+<h3 class="anchored" data-anchor-id="changing-figure-aesthetics">Changing figure aesthetics</h3>
+<p><strong>Colors</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Species , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-sixteenthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-sixteenthfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;16: Changing colors</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Understanding colors</strong></p>
+<p>Here only line changes color since geom_line has the color aesthetics</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length)) <span class="sc">+</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species)<span class="sc">+</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-seventheenthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-seventheenthfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;17: Color aesthetics for only lines</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Let’s specify color as a global aesthetic</strong></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="fl">0.4</span>,<span class="at">color=</span><span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species)<span class="sc">+</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-eighteenthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-eighteenthfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;18: Color as global aesthetic</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Changing x and y labels</strong></p>
 <p>using xlab(), ylab()</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length, color=Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=0.4,color=“black”)+</p>
-<p>facet_wrap(~Species)+</p>
-<p>scale_color_manual(values=pastel.colpal)+</p>
-<p>xlab(“This is Sepal Length”) +</p>
-<p>ylab(“This s Petal Length”)</p>
-<p>```</p>
-<p>## Adding themes</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="fl">0.4</span>,<span class="at">color=</span><span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species)<span class="sc">+</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)<span class="sc">+</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"This is Sepal Length"</span>) <span class="sc">+</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"This s Petal Length"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-nineteenthfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-nineteenthfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;19: Changing x and y label</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-themes" class="level3">
+<h3 class="anchored" data-anchor-id="adding-themes">Adding themes</h3>
 <p>ggthemes package has several pre-specified themes</p>
-<p>### ipsum theme</p>
-<p>```{r}</p>
-<p>library(hrbrthemes)</p>
-<p>fig1&lt;-ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length, color=Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line()+</p>
-<p>geom_smooth(method = “lm”,linewidth=0.4,color=“black”)+</p>
-<p>facet_wrap(~Species)+</p>
-<p>scale_color_manual(values=pastel.colpal)+</p>
-<p>xlab(“This is Sepal Length”) +</p>
-<p>ylab(“This s Petal Length”) +</p>
-<p>theme_ipsum()</p>
-<p>fig1</p>
-<p>```</p>
-<p>### Classic theme</p>
-<p>```{r}</p>
-<p>library(ggthemes)</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length,</p>
-<p>color=Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=0.4,color=“black”)+</p>
-<p>facet_wrap(~Species)+</p>
-<p>scale_color_manual(values=pastel.colpal)+</p>
-<p>xlab(“This is Sepal Length”) +</p>
-<p>ylab(“This s Petal Length”) +</p>
-<p>theme_classic()</p>
-<p>```</p>
-<p>### Adding figure title</p>
-<p>```{r}</p>
-<p>ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length,</p>
-<p>color=Species,group=Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=0.4,color=“black”)+</p>
-<p>#facet_wrap(~Species)+</p>
-<p>scale_color_manual(values=pastel.colpal)+</p>
-<p>xlab(“Sepal Length”) +</p>
-<p>ylab(“Petal Length”) +</p>
-<p>ggtitle(“Relationship between Sepal Length and Petal Length”)+</p>
-<p>theme_classic()</p>
-<p>```</p>
-<p>### Adding more theme elements</p>
-<p>```{r}</p>
-<p>fig1&lt;-ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length,</p>
-<p>color=Species,group=Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=0.4,color=“black”)+</p>
-<p>#facet_wrap(~Species)+</p>
-<p>scale_color_manual(values=pastel.colpal)+</p>
-<p>xlab(“Sepal Length”) +</p>
-<p>ylab(“Petal Length”) +</p>
-<p>ggtitle(“Relationship between Sepal Length and Petal Length”)+</p>
-<p>theme_ipsum()+</p>
-<p>theme(axis.ticks.x=element_blank(),</p>
-<p>legend.title = element_text(size=14,face = “bold”),</p>
-<p>legend.text = element_markdown(size=12,face=“bold”),</p>
-<p>axis.text.x = element_text(size=14,face=“bold”),</p>
-<p>axis.text.y = element_text(size=14,face=“bold”),</p>
-<p>axis.title.y = element_text(size=18,face=“bold”),</p>
-<p>axis.title.x = element_text(size = 18,face=“bold”))</p>
-<p>fig1</p>
-<p>```</p>
-<p>## Saving and publishing plots</p>
-<p>```{r}</p>
-<p>figure1&lt;-ggplot(data = iris, mapping = aes(x = Sepal.Length , y = Petal.Length,</p>
-<p>color=Species,group=Species)) +</p>
-<p>geom_point(alpha = 0.5) +</p>
-<p>geom_line(aes(color=Species))+</p>
-<p>geom_smooth(method = “lm”,linewidth=0.4,color=“black”)+</p>
-<p>#facet_wrap(~Species)+</p>
-<p>scale_color_manual(values=pastel.colpal)+</p>
-<p>xlab(“Sepal Length”) +</p>
-<p>ylab(“Petal Length”) +</p>
-<p>ggtitle(“Relationship between Sepal Length and Petal Length”)+</p>
-<p>theme_ipsum()+</p>
-<p>theme(axis.ticks.x=element_blank(),</p>
-<p>legend.title = element_text(size=14,face = “bold”),</p>
-<p>legend.text = element_markdown(size=12,face=“bold”),</p>
-<p>axis.text.x = element_text(size=14,face=“bold”),</p>
-<p>axis.text.y = element_text(size=14,face=“bold”),</p>
-<p>axis.title.y = element_text(size=18,face=“bold”),</p>
-<p>axis.title.x = element_text(size = 18,face=“bold”))</p>
-<p>figure1</p>
-<p>ggsave(filename=“My_publishable_figure.jpeg”, plot=figure1, width=10, height=6,dpi=700)</p>
-<p>```</p>
-<p>## Multiple plots together in R</p>
+<section id="ipsum-theme" class="level4">
+<h4 class="anchored" data-anchor-id="ipsum-theme">ipsum theme</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(hrbrthemes)</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-tweentyfig</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Ipsum theme"</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: "center"</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="fl">0.4</span>,<span class="at">color=</span><span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species)<span class="sc">+</span></span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)<span class="sc">+</span></span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"This is Sepal Length"</span>) <span class="sc">+</span></span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"This s Petal Length"</span>) <span class="sc">+</span></span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ipsum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="workshop3_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+</section>
+<section id="classic-theme" class="level4">
+<h4 class="anchored" data-anchor-id="classic-theme">Classic theme</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-twentyonefig</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Classic theme"</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-align: "center"</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length, <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="fl">0.4</span>,<span class="at">color=</span><span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>Species)<span class="sc">+</span></span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)<span class="sc">+</span></span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"This is Sepal Length"</span>) <span class="sc">+</span></span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"This s Petal Length"</span>) <span class="sc">+</span></span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="workshop3_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="768"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="adding-figure-title" class="level3">
+<h3 class="anchored" data-anchor-id="adding-figure-title">Adding figure title</h3>
+<p>Using ggtitle,</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species,<span class="at">group=</span>Species)) <span class="sc">+</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="fl">0.4</span>,<span class="at">color=</span><span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_wrap(~Species)+</span></span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)<span class="sc">+</span></span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Sepal Length"</span>) <span class="sc">+</span></span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Petal Length"</span>) <span class="sc">+</span></span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Relationship between Sepal Length and Petal Length"</span>)<span class="sc">+</span></span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-twentytwofig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twentytwofig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;20: Adding figure title</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-more-theme-elements" class="level3">
+<h3 class="anchored" data-anchor-id="adding-more-theme-elements">Adding more theme elements</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>fig1<span class="ot">&lt;-</span><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length,<span class="at">color=</span>Species,<span class="at">group=</span>Species)) <span class="sc">+</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="fl">0.4</span>,<span class="at">color=</span><span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_wrap(~Species)+</span></span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)<span class="sc">+</span></span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Sepal Length"</span>) <span class="sc">+</span></span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Petal Length"</span>) <span class="sc">+</span></span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Relationship between Sepal Length and Petal Length"</span>)<span class="sc">+</span></span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ipsum</span>()<span class="sc">+</span></span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks.x=</span><span class="fu">element_blank</span>(),</span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>        <span class="co">#legend.text = element_markdown(size=12,face="bold"),</span></span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">18</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>,<span class="at">face=</span><span class="st">"bold"</span>))</span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a>fig1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-twentythreefig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twentythreefig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;21: Adding more elements</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="saving-and-publishing-plots" class="level3">
+<h3 class="anchored" data-anchor-id="saving-and-publishing-plots">Saving and publishing plots</h3>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>figure1<span class="ot">&lt;-</span><span class="fu">ggplot</span>(<span class="at">data =</span> iris, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> Sepal.Length , <span class="at">y =</span> Petal.Length, <span class="at">color=</span>Species,<span class="at">group=</span>Species)) <span class="sc">+</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color=</span>Species))<span class="sc">+</span></span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>,<span class="at">size=</span><span class="fl">0.4</span>,<span class="at">color=</span><span class="st">"black"</span>)<span class="sc">+</span></span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">#facet_wrap(~Species)+</span></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values=</span>pastel.colpal)<span class="sc">+</span></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Sepal Length"</span>) <span class="sc">+</span></span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Petal Length"</span>) <span class="sc">+</span></span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">"Relationship between Sepal Length and Petal Length"</span>)<span class="sc">+</span></span>
+<span id="cb57-10"><a href="#cb57-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ipsum</span>()<span class="sc">+</span></span>
+<span id="cb57-11"><a href="#cb57-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.ticks.x=</span><span class="fu">element_blank</span>(),</span>
+<span id="cb57-12"><a href="#cb57-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb57-13"><a href="#cb57-13" aria-hidden="true" tabindex="-1"></a>       <span class="co"># legend.text = element_markdown(size=12,face="bold"),</span></span>
+<span id="cb57-14"><a href="#cb57-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb57-15"><a href="#cb57-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.text.y =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">14</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb57-16"><a href="#cb57-16" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.y =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">18</span>,<span class="at">face=</span><span class="st">"bold"</span>),</span>
+<span id="cb57-17"><a href="#cb57-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>,<span class="at">face=</span><span class="st">"bold"</span>))</span>
+<span id="cb57-18"><a href="#cb57-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-19"><a href="#cb57-19" aria-hidden="true" tabindex="-1"></a>figure1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="at">filename=</span><span class="st">"My_publishable_figure.jpeg"</span>, <span class="at">plot=</span>figure1, <span class="at">width=</span><span class="dv">10</span>, <span class="at">height=</span><span class="dv">6</span>,<span class="at">dpi=</span><span class="dv">700</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-twentyfourfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twentyfourfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;22: Saving and publishing plot</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="multiple-plots-together-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="multiple-plots-together-in-r">Multiple plots together in R</h3>
 <p>You can add multiple figures together from different data sets as well.</p>
-<p>```{r}</p>
-<p># Renaming the figures</p>
-<p>## Geom plot using mtcars data</p>
-<p>fig1&lt;-ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) +</p>
-<p>geom_boxplot(fill=“slateblue”, alpha=0.2) +</p>
-<p>xlab(“cyl”)</p>
-<p>## Building a dataset with different distributions</p>
-<p>data &lt;- data.frame(</p>
-<p>type = c( rep(“variable 1”, 1000), rep(“variable 2”, 1000) ),</p>
-<p>value = c( rnorm(1000), rnorm(1000, mean=4) )</p>
-<p>)</p>
-<p>fig2&lt;- data %&gt;%</p>
-<p>ggplot( aes(x=value, fill=type)) +</p>
-<p>geom_histogram( color=“#e9ecef”, alpha=0.6, position = ‘identity’) +</p>
-<p>scale_fill_manual(values=c(“#69b3a2”, “#404080”)) +</p>
-<p>theme_ipsum() +</p>
-<p>labs(fill=““)</p>
-<p>## Loading dataset from github</p>
-<p>path&lt;-“https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/1_OneNum.csv”</p>
-<p>data &lt;- read.table(path, header=TRUE)</p>
-<p># Make the histogram</p>
-<p>fig3&lt;- data %&gt;%</p>
-<p>filter( price&lt;300 ) %&gt;%</p>
-<p>ggplot( aes(x=price)) +</p>
-<p>geom_density(fill=“#69b3a2”, color=“#e9ecef”, alpha=0.8)</p>
-<p>## Loading dataset from your computer</p>
-<p># Note you will have to specify a dataset here from your computer for this to work</p>
-<p>data&lt;-read.csv(file = “/Users/nhans/12-Teaching/IntrotoR/newlysaved.csv”)</p>
-<p>fig4&lt;- data %&gt;%</p>
-<p>ggplot(aes(x=Tree,y=circumference,color=Tree))+</p>
-<p>geom_boxplot(aes(factor(Tree)))</p>
-<p>```</p>
-<p>```{r}</p>
-<p>all.fig&lt;-ggarrange(nrow = 2,ncol = 2,</p>
-<p>fig1,fig2,fig3,fig4,</p>
-<p>labels = c(“a)”,“b)”,“c)”,“d)”))</p>
-<p>all.fig</p>
-<p>#ggsave(filename=“MultipleFigures.jpeg”, plot=all.fig, width=15, height=8,dpi=600)</p>
-<p>```</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming the figures</span></span>
+<span id="cb61-2"><a href="#cb61-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Geom plot using mtcars data</span></span>
+<span id="cb61-3"><a href="#cb61-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-4"><a href="#cb61-4" aria-hidden="true" tabindex="-1"></a>fig1<span class="ot">&lt;-</span><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">as.factor</span>(cyl), <span class="at">y=</span>mpg)) <span class="sc">+</span> </span>
+<span id="cb61-5"><a href="#cb61-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>(<span class="at">fill=</span><span class="st">"slateblue"</span>, <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span> </span>
+<span id="cb61-6"><a href="#cb61-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"cyl"</span>)</span>
+<span id="cb61-7"><a href="#cb61-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-8"><a href="#cb61-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Building a dataset with different distributions</span></span>
+<span id="cb61-9"><a href="#cb61-9" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb61-10"><a href="#cb61-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">c</span>( <span class="fu">rep</span>(<span class="st">"variable 1"</span>, <span class="dv">1000</span>), <span class="fu">rep</span>(<span class="st">"variable 2"</span>, <span class="dv">1000</span>) ),</span>
+<span id="cb61-11"><a href="#cb61-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">c</span>( <span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean=</span><span class="dv">4</span>) ))</span>
+<span id="cb61-12"><a href="#cb61-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-13"><a href="#cb61-13" aria-hidden="true" tabindex="-1"></a>fig2<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb61-14"><a href="#cb61-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>type)) <span class="sc">+</span></span>
+<span id="cb61-15"><a href="#cb61-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>( <span class="at">color=</span><span class="st">"#e9ecef"</span>, <span class="at">alpha=</span><span class="fl">0.6</span>, <span class="at">position =</span> <span class="st">'identity'</span>) <span class="sc">+</span></span>
+<span id="cb61-16"><a href="#cb61-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"#69b3a2"</span>, <span class="st">"#404080"</span>)) <span class="sc">+</span></span>
+<span id="cb61-17"><a href="#cb61-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ipsum</span>() <span class="sc">+</span></span>
+<span id="cb61-18"><a href="#cb61-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill=</span><span class="st">""</span>)</span>
+<span id="cb61-19"><a href="#cb61-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-20"><a href="#cb61-20" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading dataset from github</span></span>
+<span id="cb61-21"><a href="#cb61-21" aria-hidden="true" tabindex="-1"></a>path<span class="ot">&lt;-</span><span class="st">"https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/1_OneNum.csv"</span></span>
+<span id="cb61-22"><a href="#cb61-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-23"><a href="#cb61-23" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.table</span>(path, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb61-24"><a href="#cb61-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-25"><a href="#cb61-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the histogram</span></span>
+<span id="cb61-26"><a href="#cb61-26" aria-hidden="true" tabindex="-1"></a>fig3<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb61-27"><a href="#cb61-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>( price<span class="sc">&lt;</span><span class="dv">300</span> ) <span class="sc">%&gt;%</span></span>
+<span id="cb61-28"><a href="#cb61-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x=</span>price)) <span class="sc">+</span></span>
+<span id="cb61-29"><a href="#cb61-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">fill=</span><span class="st">"#69b3a2"</span>, <span class="at">color=</span><span class="st">"#e9ecef"</span>, <span class="at">alpha=</span><span class="fl">0.8</span>)</span>
+<span id="cb61-30"><a href="#cb61-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-31"><a href="#cb61-31" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading dataset from your computer</span></span>
+<span id="cb61-32"><a href="#cb61-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Note you will have to specify a dataset here from your computer for this to work</span></span>
+<span id="cb61-33"><a href="#cb61-33" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Orange"</span>)</span>
+<span id="cb61-34"><a href="#cb61-34" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(Orange,<span class="st">"newlysaved.csv"</span>,<span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb61-35"><a href="#cb61-35" aria-hidden="true" tabindex="-1"></a>data<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"newlysaved.csv"</span>)</span>
+<span id="cb61-36"><a href="#cb61-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-37"><a href="#cb61-37" aria-hidden="true" tabindex="-1"></a>fig4<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb61-38"><a href="#cb61-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Tree,<span class="at">y=</span>circumference,<span class="at">color=</span>Tree))<span class="sc">+</span></span>
+<span id="cb61-39"><a href="#cb61-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="fu">factor</span>(Tree)))</span>
+<span id="cb61-40"><a href="#cb61-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-41"><a href="#cb61-41" aria-hidden="true" tabindex="-1"></a>all.fig<span class="ot">&lt;-</span><span class="fu">ggarrange</span>(<span class="at">nrow =</span> <span class="dv">2</span>,<span class="at">ncol =</span> <span class="dv">2</span>, </span>
+<span id="cb61-42"><a href="#cb61-42" aria-hidden="true" tabindex="-1"></a>                  fig1,fig2,fig3,fig4,</span>
+<span id="cb61-43"><a href="#cb61-43" aria-hidden="true" tabindex="-1"></a>                  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"a)"</span>,<span class="st">"b)"</span>,<span class="st">"c)"</span>,<span class="st">"d)"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a>all.fig</span>
+<span id="cb63-2"><a href="#cb63-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb63-3"><a href="#cb63-3" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(filename="MultipleFigures.jpeg", plot=all.fig, width=15, height=8,dpi=600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-twentyfivefig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twentyfivefig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption">Figure&nbsp;23: Multiple plot together</figcaption>
+</figure>
+</div>
+</div>
+</div>
 
 
 </section>

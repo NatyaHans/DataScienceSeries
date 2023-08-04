@@ -13,13 +13,17 @@ website:
       - workshop3.qmd
       - workshop4.qmd
       - resources.qmd
+    background: "#532912"
+    foreground: "#f5e0d5"
 
 format:
   html:
-    theme: sandstone
+    theme: 
+     light: flatly
+     dark: darkly
     mainfont: arial
     fontsize: 1rem
-    fontcolor: "#532912"
+    fontcolor: "#a75224"
     linkcolor: "#d1672d"
     css: styles.css
     toc: true

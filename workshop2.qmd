@@ -1,11 +1,15 @@
 ---
 title: "Intro to R-2"
 editor: visual
+crossref: 
+  fig-title: '**Figure**'
+  fig-labels: arabic
+  title-delim: "**.**"
 ---
 
-## Important functions 
+## Important functions
 
-```{r}
+``` R
 ls() # list all the variables in the environment
 rm(x) # can be used to remove specific var
 #rm(list = ls()) # removes everything
@@ -58,7 +62,7 @@ read.csv("my_data.csv") # reads into the console
 dat.new2<- read.csv("my_data.csv")
 ```
 
-### Working with data frames 
+### Working with data frames
 
 ```{r}
 dat.new2<- read.csv("my_data.csv") 
@@ -192,7 +196,7 @@ mat.example2<-matrix(data = mat.dat, nrow = 4, ncol = 5, byrow = TRUE)
 mat.example2[2,4]
 ```
 
-## Lists in R 
+## Lists in R
 
 Lists are the R objects and contain elements of different types, For example a list can have numbers, characters, strings, vectors, matrix and another list inside it. A list can also have a function as one of its elements.
 
@@ -236,7 +240,7 @@ newdata2[order(newdata2$col1, decreasing = TRUE),]
 head(newdata2,n=9)
 ```
 
-## Bonus activity - plotting in R 
+## Bonus activity - plotting in R
 
 Base R can be used to create simple plots.
 

@@ -1,6 +1,10 @@
 ---
 title: "Intro to R"
 editor: visual
+crossref: 
+  fig-title: '**Figure**'
+  fig-labels: arabic
+  title-delim: "**.**"
 ---
 
 ## Basics : Using RStudio and R

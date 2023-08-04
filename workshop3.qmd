@@ -1,6 +1,10 @@
 ---
 title: "Data Visualization"
 editor: visual
+crossref: 
+  fig-title: '**Figure**'
+  fig-labels: arabic
+  title-delim: "**.**"
 ---
 
 #### Workshop plan

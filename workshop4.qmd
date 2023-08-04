@@ -1,11 +1,15 @@
 ---
 title: "Exploratory Data Analysis"
 editor: visual
+crossref: 
+  fig-title: '**Figure**'
+  fig-labels: arabic
+  title-delim: "**.**"
 ---
 
 ## Setup
 
-```{r}
+```{r,output=FALSE}
 # Save packages as a vector
 all.lib<-c("tidyverse","ggplot2", "dplyr","tidyr","modelr")
 
@@ -33,7 +37,7 @@ data("mpg")
 mpg
 ```
 
-## Exploring the data 
+## Exploring the data
 
 ```{r}
 # Useful functions in exploring the data
@@ -398,7 +402,7 @@ plot(residuals(model1)) # residuals plots
 
 ```{r}
 #| label: fig-fourteenfig
-#| fig-cap: "Adding residuals to ggplot,mpg."
+#| fig-cap: "Adding residuals to ggplot, mpg."
 #| fig-align: "center"
 # Using ggplot2 and add_residual function
 mpg.model1 <- mpg %>% 
@@ -409,7 +413,7 @@ ggplot(data = mpg.model1) +
   geom_point(mapping = aes(x = hwy, y = resid))
 ```
 
-### Is there a logarithmic relationship? 
+### Is there a logarithmic relationship?
 
 ```{r}
 lm(log(hwy)~cty,data = mpg)
@@ -514,7 +518,7 @@ cor(mydat$x, mydat$y, method="spearman")
 cor.test(mydat$x, mydat$y, method="spearman")
 ```
 
-#### Kendall's 
+#### Kendall's
 
 ```{r}
 # Kendall's correlation

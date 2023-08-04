@@ -31,7 +31,7 @@ library(ggplot2)
 
 ### Installing and loading multiple packages at once
 
-```{r,results='hide',warning=FALSE}
+```{r,output=FALSE,warning=FALSE}
 # Create a vector of package names
 all.lib<-c("reshape2","ggplot2","gridExtra","ggpubr","ggthemes", "scales","RColorBrewer","tidyverse","hrbrthemes","extrafont","ggtext") 
 

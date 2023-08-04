@@ -8,9 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
       - workshop1.qmd
       - workshop2.qmd
+      - workshop3.qmd
+      - workshop4.qmd
       - resources.qmd
 
 format:

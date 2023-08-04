@@ -1,0 +1,491 @@
+---
+title: "Exploratory Data Analysis"
+editor: visual
+---
+
+# Setup
+
+```         
+# Save packages as a vector
+all.lib<-c("tidyverse","ggplot2", "dplyr","tidyr","modelr")
+
+# Load packages
+lapply(all.lib,require,character.only=TRUE)
+```
+
+# Introduction:
+
+Steps to exploratory data analysis:
+
+1.  Generate questions and hypothesis about the data.
+2.  Understand your data
+3.  Read the metadata if the data is not yours
+4.  Think about the analysis plan led by questions
+5.  Make sure your hypothesis-driven studies are clearly stated
+
+## Load your data: Example 1
+
+a\. Fuel economy data from 1999 to 2008 for 38 popular models of cars. The subset dataset from EPA. Full data available \[here\](https://fueleconomy.gov)
+
+```         
+# Load data
+data("mpg")
+mpg
+```
+
+## Exploring the data 
+
+```         
+# Useful functions in exploring the data
+ncol(mpg)
+nrow(mpg)
+dim(mpg)
+str(mpg)
+summary(mpg)
+head(mpg)
+tail(mpg)
+```
+
+## Load your data: Example 2
+
+b\. Flow of the River Nile, measurements of the annual flow of the river Nile at Aswan from Balke, N. S. (1993) and Cobb, G. W. (1978)
+
+## Another example of time series data
+
+```         
+data("Nile")
+head(Nile)
+table(Nile)
+```
+
+## Creating a tibble
+
+```         
+data <- data.frame(a = 1:3, b = letters[1:3], c = Sys.Date() - 1:3)
+
+data
+
+#>   a b          c
+#> 1 1 a 2023-02-21
+#> 2 2 b 2023-02-20
+#> 3 3 c 2023-02-19
+
+as_tibble(data)
+
+#> # A tibble: 3 × 3
+#>       a b     c         
+#>   <int> <chr> <date>    
+#> 1     1 a     2023-02-21
+#> 2     2 b     2023-02-20
+#> 3     3 c     2023-02-19
+
+## Creating a tibble from preloaded dataset
+data(iris)
+head(iris)
+as_tibble(iris)
+
+# Saving the tibble a new dataset
+iris.updated<-as_tibble(iris)
+```
+
+## Finding patterns in data through visualization and transformations
+
+### Categorical variable
+
+Using geom_bar for displaying categorical variable,
+
+```         
+ggplot(data = mpg) +
+  geom_bar(mapping = aes(x = manufacturer))
+```
+
+Using the same above example for iris dataset, using the categorical variable,
+
+```         
+ggplot(data = iris) +
+  geom_bar(mapping = aes(x = Species))
+```
+
+Notice how the bars are equal because the y axis that shows the count is same (i.e 50) for each of the species.
+
+### Count function
+
+The height of the bars displays how many observations occurred with each x value.
+
+```         
+mpg %>% 
+  count(manufacturer)
+```
+
+```         
+iris.updated %>% 
+  count(Species)
+```
+
+### Continuous variable
+
+Using geom_bar for a continuous variable,
+
+```         
+ggplot(data = iris.updated) +
+  geom_bar(mapping = aes(x = Sepal.Length))
+```
+
+Using histogram is better here for continuous variable,
+
+``` R
+iris.updated %>%
+  ggplot()+
+  geom_histogram(mapping = aes(x = Sepal.Length),binwidth= 0.1)
+```
+
+Using mpg dataset,
+
+``` R
+mpg %>%
+ ggplot()+
+ geom_histogram(mapping = aes(x = displ), binwidth = 0.5)
+```
+
+### cut_width function
+
+Display how the histogram was made
+
+For iris dataset,
+
+```         
+iris.updated %>% 
+count(cut_width(Sepal.Length, 0.1))
+```
+
+For mpg dataset,
+
+```         
+mpg %>% 
+count(cut_width(displ, 0.5))
+```
+
+-   Note here that the numbers correspond to the binwidth used in each histogram
+
+### Filter function
+
+smaller dataset by filtering. The filter function evaluates a condition inside the bracket.
+
+```         
+mpg %>% 
+  filter(cty >20)
+
+mpg.sub<- mpg %>%
+  filter(cty >20)
+```
+
+```         
+iris.updated %>%
+  filter(Petal.Width > 1)
+
+iris.sub<- iris.updated %>%
+  filter(Petal.Width >1)
+```
+
+Plotting a subset of the dataset
+
+```         
+# plotting 
+
+ggplot(data = mpg.sub, mapping = aes(x = cty)) +
+  geom_histogram(binwidth = 0.25)
+```
+
+```         
+#  plotting 
+
+ggplot(data = iris.sub, mapping = aes(x = Petal.Width)) +
+  geom_histogram(binwidth = 0.1)
+```
+
+### Expanding the x-y limits
+
+```         
+# Seeing unusual values
+
+ggplot(mpg) + 
+
+  geom_histogram(mapping = aes(x = displ), binwidth = 0.5) +
+
+  coord_cartesian(ylim = c(0, 50), xlim=c(0,100))
+```
+
+### Select function
+
+Used for subsetting a dataset, by selecting column names
+
+```         
+mpg.filtered1 <- mpg %>% 
+  filter(cty < 10 | cty > 15) %>% 
+  select(manufacturer,cty, displ)
+
+mpg.filtered1
+```
+
+### Arrange function
+
+Sorts in ascending order by the column name provided
+
+```         
+mpg.filtered2.asc <- mpg %>% 
+  filter(cty < 10 | cty > 15) %>% 
+  select(manufacturer,cty, displ) %>%
+  arrange(cty)
+
+mpg.filtered2.asc
+```
+
+Using arrange to sort in descending order, use the function across within arrange.
+
+-   Note remember you can nest the functions within another function.
+
+```         
+mpg.filtered2.dsc <- mpg %>% 
+  filter(cty < 10 | cty > 15) %>% 
+  select(manufacturer,cty, displ) %>%
+  arrange(across(cty,desc))
+
+mpg.filtered2.dsc
+```
+
+### Mutate function
+
+Used for adding more columns using a condition.Note here that the notation for ifelse(CONDITION, VALUE_IF_TRUE, VALUE_IF_FALSE)
+
+```         
+# Mutate - add more columns
+
+mpg.filtered3 <- mpg.filtered2.asc %>% 
+  mutate(newcol = ifelse(cty < 10, NA, 0))
+
+mpg.filtered3
+```
+
+You can add multiple columns using mutate function
+
+```         
+iris.updated %>%
+  mutate(order.name="Asparagales",
+         height=Sepal.Length*5)
+```
+
+### Boxplot
+
+Using function geom_boxplot to look at trends in data:
+
+```         
+# Boxplot
+
+ggplot(data = mpg, mapping = aes(x = manufacturer, y = hwy)) +
+  geom_boxplot()+
+  xlab("highway miles")+
+  ylab("manufacturer")
+```
+
+### Reorder function
+
+-   Using function reorder to see a clear trend.
+-   Note that reorder is a special case of the function factor.
+-   The factor function is in base R and is used for ordering vector data.
+
+```         
+# Easy to see trend
+
+ggplot(data = mpg) +
+  geom_boxplot(mapping = aes(x = reorder(manufacturer, hwy, FUN = median), y = hwy))+
+  xlab("highway miles")+
+  ylab("manufacturer")
+```
+
+### Flip the coordinates
+
+```         
+# Flip coordinates
+
+ggplot(data = mpg) +
+  geom_boxplot(mapping = aes(x = reorder(manufacturer, hwy, FUN = median), y = hwy))+
+  coord_flip()+
+  xlab("highway miles")+
+  ylab("manufacturer")
+```
+
+### Scatterplot of the data
+
+Geom point is used for looking at a scatterplot
+
+```         
+# Scatterplot
+
+ggplot(data = mpg) +
+  geom_point(mapping = aes(x = manufacturer, y = hwy))+
+   xlab("highway miles")+
+   ylab("manufacturer")
+```
+
+## Finding patterns in data through modelling
+
+Refine the questions based on what you learn and repeat the process. Let's ask a new question.
+
+*How highway miles are varying with city miles?*
+
+```         
+# How highway miles are varying with city miles
+
+ggplot(data = mpg)+ 
+  geom_point(mapping = aes(x = hwy,y=cty))+
+   xlab("highway miles")+
+   ylab("city miles")
+```
+
+### Linear regression
+
+*Are highway miles linearly related with city miles?*
+
+### Defining a linear model
+
+```         
+lm(hwy~cty,data = mpg) 
+model1<-lm(hwy~cty,data = mpg)
+summary(model1)
+plot(model1)
+
+# Other useful functions
+coefficients(model1) # model coefficients
+confint(model1, level=0.95) # Confidence Intervals for model parameters
+
+residuals(model1) # residuals values
+plot(residuals(model1)) # residuals plots
+```
+
+### Using add_residual function within tidyverse
+
+```         
+# Using ggplot2 and add_residual function
+
+mpg.model1 <- mpg %>% 
+  add_residuals(model1) %>% 
+  mutate(resid = exp(resid))
+
+ggplot(data = mpg.model1) + 
+  geom_point(mapping = aes(x = hwy, y = resid))
+```
+
+### Is there a logarithmic relationship? 
+
+```         
+lm(log(hwy)~cty,data = mpg)
+```
+
+### Finding correlation
+
+-   cor() : computes the correlation coefficient
+-   cor.test() : test for association/correlation between paired samples. It returns both the correlation coefficient and the significance level(or p-value) of the correlation.
+
+```         
+# Default method: Pearson
+cor(mpg$cty, mpg$hwy)
+cor.test(mpg$cty, mpg$hwy, method="pearson")
+
+# Save into a vector
+cor.result<-cor.test(mpg$cty, mpg$hwy, method="pearson")
+```
+
+-   t is the t-test statistic value;
+-   df is the degrees of freedom;
+-   p-value is the significance level of the t-test;
+-   conf.int is the confidence interval of the correlation coefficient at 95%;
+-   sample estimates is the correlation coefficient(Cor.coeff)
+
+```         
+# Extract the p.value
+cor.result$p.value
+
+# Extract the correlation coefficient
+cor.result$estimate
+```
+
+### T-test
+
+```         
+t.test(mpg$cty, mpg$hwy) # here both the variable are numeric
+
+# paired t-test
+t.test(mpg$cty,mpg$hwy,paired=TRUE) # both the variable are numeric
+```
+
+1.  You can use the var.equal = TRUE option to specify equal variances and a pooled variance estimate.
+2.  You can use the alternative="less" or alternative="greater" option to specify a one tailed test.
+
+## Simulated dataset using probability distribution
+
+```         
+# Creating simulated data to work
+set.seed(5)
+
+xvar <- 1:20 + rnorm(20,sd=3)
+zvar <- (1:20)/4 + rnorm(20,sd=2)
+yvar <- -2*xvar + xvar*zvar/5 + 3 + rnorm(20,sd=4)
+
+# Make a data frame 
+mydat <- data.frame(x=xvar, y=yvar, z=zvar)
+
+# first 6 rows
+head(mydat)
+```
+
+### T-test
+
+```         
+# independent 2-group t-test
+t.test(y~x) # where y is numeric and x is a binary factor
+
+# independent 2-group t-test
+t.test(yvar,xvar) # where y1 and y2 are numeric
+
+# paired t-test
+t.test(yvar,xvar,paired=TRUE) # where yvar,xvar are numeric
+```
+
+### Correlation
+
+#### Pearson's
+
+```         
+# Correlation between xvar and yvar 
+# Default method: Pearson
+cor(mydat$x, mydat$y)
+cor.test(mydat$x, mydat$y, method="pearson")
+
+# Save into a vector
+cor.result<-cor.test(mydat$x, mydat$y, method="pearson")
+
+# Extract the p.value
+cor.result$p.value
+
+# Extract the correlation coefficient
+cor.result$estimate
+```
+
+#### Spearman's
+
+```         
+# Spearman's correlation
+
+cor(mydat$x, mydat$y, method="spearman")
+cor.test(mydat$x, mydat$y, method="spearman")
+```
+
+#### Kendall's 
+
+``` R
+# Kendall's correlation
+
+cor(mydat$x, mydat$y, method="kendall")
+cor.test(mydat$x, mydat$y, method="kendall")
+
+```

@@ -9,7 +9,7 @@ crossref:
 
 ## Important functions
 
-``` R
+``` r
 ls() # list all the variables in the environment
 rm(x) # can be used to remove specific var
 #rm(list = ls()) # removes everything

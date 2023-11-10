@@ -6,13 +6,27 @@ editor:
     wrap: 72
 ---
 
+This workshop series is creating for beginners
+Disclaimer: This workshop series does not teach statistics. Prior knowledge of basic statistics is recommended especially for getting through the fourth workshop
+
 Links to the workshop series:
 
 1.   [Intro to
     R](https://natyahans.github.io/DataScienceSeries/workshop1.html)
+Start your data science journey with learning R. This workshop gets you familiarized with R statistical programming language, R syntax, common data structures in R.  This workshop is open to everyone; No previous experience with R scripting programming language is required. 
+
 2.  [Intro to
     R-2](https://natyahans.github.io/DataScienceSeries/workshop2.html)
+In this workshop we continue to learn about different data structures in R like data.frame, matrices and lists. The students will also learn uploading and working with different datasets in R. 
+
 3.  [Data
     Visualization](https://natyahans.github.io/DataScienceSeries/workshop3.html)
+Learn the nuances of ggplot2 for making visually appealing graphics and figures for publication. This workshop is open to everyone; Previous experience with R scripting programming language is required.
+
+
 4.  [Exploratory Data
     Analysis](https://natyahans.github.io/DataScienceSeries/workshop4.html)
+Learn how visualization and data transformation techniques can be used for exploring your data and quality. This workshop is open to everyone; Previous experience with R scripting programming language is required.
+
+
+

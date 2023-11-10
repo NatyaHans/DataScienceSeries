@@ -24,8 +24,8 @@ format:
      dark: darkly
     mainfont: arial
     fontsize: 1rem
-    fontcolor: "#a75224"
-    linkcolor: "#d1672d"
+    fontcolor: "#b7b7a4"
+    linkcolor: "#585123"
     css: styles.css
     toc: true
 

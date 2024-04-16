@@ -7,19 +7,25 @@ crossref:
   title-delim: "**.**"
 ---
 
-## R & RStudio 
-
-R programming lanuaRStudio is IDE for R programming
-
 ## Installing R and R studio
 
-## Basics : Using RStudio and R
+R programming language which originally started as a statistical computing language. RStudio is the IDE (integrated development environment) used for coding and running analysis in R programming language. You can either download a desktop version ( open source, free of cost) or can use the RStudio remote server using a web browser. You can download [R](https://cran.r-project.org/) and [RStudio](https://posit.co/download/rstudio-desktop/).
+
+## The basics : Using RStudio and R
 
 The three panes are
 
 1.  Console - used for running the code
+
+    ![](images/Console.PNG){width="336"}
+
 2.  Environment - has information about the loaded variables and history of commands run (it also has shortcuts for uploading datasets and saving workspace)
+
+    ![](images/Environment.PNG){width="342"}
+
 3.  Help pane - gives you access to files, plots and package information. Also helpful in saving plots.
+
+    ![](images/FilePanes.PNG){width="345"}
 
 You can change where the console is in Rstudio by going to View-\>Pane-\>Console on Right. You can also change how the panes look in Rstudio by going to View-\>Pane-\>Pane Layout
 

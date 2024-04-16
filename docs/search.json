@@ -32,7 +32,7 @@
     "href": "workshop1.html",
     "title": "Intro to R",
     "section": "",
-    "text": "R programming lanuaRStudio is IDE for R programming"
+    "text": "R programming language which originally started as a statistical computing language. RStudio is the IDE (integrated development environment) used for coding and running analysis in R programming language. You can either download a desktop version ( open source, free of cost) or can use the RStudio remote server using a web browser. You can download R and RStudio."
   },
   {
     "objectID": "workshop1.html#basics-using-rstudio-and-r",
@@ -262,7 +262,14 @@
     "objectID": "workshop1.html#installing-r-and-r-studio",
     "href": "workshop1.html#installing-r-and-r-studio",
     "title": "Intro to R",
-    "section": "Installing R and R studio",
-    "text": "Installing R and R studio"
+    "section": "",
+    "text": "R programming language which originally started as a statistical computing language. RStudio is the IDE (integrated development environment) used for coding and running analysis in R programming language. You can either download a desktop version ( open source, free of cost) or can use the RStudio remote server using a web browser. You can download R and RStudio."
+  },
+  {
+    "objectID": "workshop1.html#the-basics-using-rstudio-and-r",
+    "href": "workshop1.html#the-basics-using-rstudio-and-r",
+    "title": "Intro to R",
+    "section": "The basics : Using RStudio and R",
+    "text": "The basics : Using RStudio and R\nThe three panes are\n\nConsole - used for running the code\n\nEnvironment - has information about the loaded variables and history of commands run (it also has shortcuts for uploading datasets and saving workspace)\n\nHelp pane - gives you access to files, plots and package information. Also helpful in saving plots.\n\n\nYou can change where the console is in Rstudio by going to View-&gt;Pane-&gt;Console on Right. You can also change how the panes look in Rstudio by going to View-&gt;Pane-&gt;Pane Layout"
   }
 ]

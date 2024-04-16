@@ -7,7 +7,8 @@ editor:
 ---
 
 
-This workshop series is creating for beginners
+This workshop series is creating for beginners.
+
 Disclaimer: This workshop series does not teach statistics. Prior knowledge of basic statistics is recommended especially for getting through the fourth workshop
 
 Links to the workshop series:

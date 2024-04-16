@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.3.450">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -64,6 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./bookfavicon.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -91,7 +92,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -157,7 +159,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#basics-using-rstudio-and-r" id="toc-basics-using-rstudio-and-r" class="nav-link active" data-scroll-target="#basics-using-rstudio-and-r">Basics : Using RStudio and R</a></li>
+  <li><a href="#r-rstudio" id="toc-r-rstudio" class="nav-link active" data-scroll-target="#r-rstudio">R &amp; RStudio</a></li>
+  <li><a href="#installing-r-and-r-studio" id="toc-installing-r-and-r-studio" class="nav-link" data-scroll-target="#installing-r-and-r-studio">Installing R and R studio</a></li>
+  <li><a href="#basics-using-rstudio-and-r" id="toc-basics-using-rstudio-and-r" class="nav-link" data-scroll-target="#basics-using-rstudio-and-r">Basics : Using RStudio and R</a></li>
   <li><a href="#arithmetic-operators-and-comparisons" id="toc-arithmetic-operators-and-comparisons" class="nav-link" data-scroll-target="#arithmetic-operators-and-comparisons">Arithmetic operators and comparisons</a>
   <ul class="collapse">
   <li><a href="#basic-calculation" id="toc-basic-calculation" class="nav-link" data-scroll-target="#basic-calculation">Basic calculation</a></li>
@@ -198,6 +202,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<section id="r-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="r-rstudio">R &amp; RStudio</h2>
+<p>R programming lanuaRStudio is IDE for R programming</p>
+</section>
+<section id="installing-r-and-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="installing-r-and-r-studio">Installing R and R studio</h2>
+</section>
 <section id="basics-using-rstudio-and-r" class="level2">
 <h2 class="anchored" data-anchor-id="basics-using-rstudio-and-r">Basics : Using RStudio and R</h2>
 <p>The three panes are</p>
@@ -432,10 +443,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="installing-packages">Installing packages</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co">#install.packages("ggplot2") # installing packages</span></span>
-<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># using packages </span></span>
-<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2) <span class="co"># using packages </span></span>
-<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a><span class="co">#update.packages(ggplot2) # updating packages</span></span>
-<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a><span class="co">#remove.packages(ggplot2) # removing packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) <span class="co"># using packages </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(ggplot2) <span class="co"># using packages </span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="co">#update.packages(ggplot2) # updating packages</span></span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a><span class="co">#remove.packages(ggplot2) # removing packages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="file-and-project-management" class="level2">
@@ -474,9 +488,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="getting-help" class="level2">
 <h2 class="anchored" data-anchor-id="getting-help">Getting help</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co">#? # help with a function</span></span>
-<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="co">#?? # Fuzzy search</span></span>
-<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a><span class="co">#sessionInfo() # prints out current version and packages loaded</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co">#? # help with a function</span></span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a><span class="co">#?? # Fuzzy search</span></span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a><span class="co">#sessionInfo() # prints out current version and packages loaded</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="common-r-mistakes-and-how-to-avoid-them" class="level2">

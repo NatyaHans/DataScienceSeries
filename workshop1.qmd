@@ -7,6 +7,12 @@ crossref:
   title-delim: "**.**"
 ---
 
+## R & RStudio 
+
+R programming lanuaRStudio is IDE for R programming
+
+## Installing R and R studio
+
 ## Basics : Using RStudio and R
 
 The three panes are

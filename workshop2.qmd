@@ -265,6 +265,7 @@ fig1 <- ggplot(df, aes(x, y)) + geom_point() + ggtitle("Graph 1")
 fig2 <- ggplot(df, aes(x, y)) + geom_point() + ggtitle("Graph 2")
 
 figlist <- list(fig1,fig2)
+figlist
 
 
 ```

@@ -262,7 +262,7 @@ hist(x, breaks = 100, col = "orange", main = "This is title",
 
 ### Questions from the workshop
 
-##### Q1: How to sort dataframes?
+#### Q1: How to sort dataframes?
 
 ```{r}
 # Use sort function to sort a vector
@@ -282,7 +282,7 @@ newdata2[order(newdata2$col1, decreasing = TRUE),]
 
 ```
 
-##### Q2: How to increase the number of rows displaying on console?
+#### Q2: How to increase the number of rows displaying on console?
 
 ```{r}
 # Using the head command, where n is followed by number of rows
@@ -293,7 +293,7 @@ head(newdata2,n=9)# would yield the first 9 rows
 
 ```
 
-##### Q3: Can I use a graph in list?
+#### Q3: Can I use a graph in list?
 
 ```{r}
 # Answer: Not as an image but you can add a figure/graph as an object
@@ -311,9 +311,11 @@ df <- data.frame(x = rnorm(10), y = rnorm(10))
 fig1 <- ggplot(df, aes(x, y)) + geom_point() + ggtitle("Graph 1")
 fig2 <- ggplot(df, aes(x, y)) + geom_point() + ggtitle("Graph 2")
 
-fig1
-fig2
 figlist <- list(fig1,fig2)
 figlist
 
 ```
+
+#### Q4: Difference between data.frame and data.table?
+
+The stackoverflow post provided an excellent answer of the syntax differences between data frame and data table, so I highly encourage folks to read the information [on this link](https://stackoverflow.com/questions/13618488/what-you-can-do-with-a-data-frame-that-you-cant-with-a-data-table) along with the beginner's FAQs for data.table [here](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html)

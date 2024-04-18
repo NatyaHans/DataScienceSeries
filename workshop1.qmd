@@ -120,6 +120,8 @@ exp(1)
 
 \<- is the assignment operator. You can also use = operator i.e. equals to sign. Please make sure there is no space between \< and -
 
+**Shortcut:** Press alt and - together and you will get \<-
+
 ```{r}
 x <- 5/9
 x

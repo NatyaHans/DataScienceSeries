@@ -22,9 +22,9 @@ rm(x) # can be used to remove specific var
 
 data(Orange) # loading
 
-# viewing
-Orange 
+```
 
+```{r}
 View(Orange) # opens a viewing window
 head(Orange) # prints out first six rows on your console
 tail(Orange) # prints out last six rows on your console
@@ -36,6 +36,7 @@ dim(Orange)  # dimensions of the data - in terms of rows and columns
 
 A data frame is a rectangular collection of values, usually organized so that variables appear in the columns and observations appear in rows.
 
+### Creating a data frame
 ```{r}
 # Creating a new data frame that has 3 vectors of different types
 dat.new <- data.frame(name = c("Anna", "Bob", "Chris"),
@@ -46,7 +47,7 @@ dat.new <- data.frame(name = c("Anna", "Bob", "Chris"),
 head(dat.new)
 ```
 
-## Writing and reading files
+### Reading and writing a dataframe to a file 
 
 ```{r}
 # This will add additional row names 
@@ -62,7 +63,7 @@ read.csv("my_data.csv") # reads into the console
 dat.new2<- read.csv("my_data.csv")
 ```
 
-### Working with data frames
+### Working with data frames 
 
 ```{r}
 dat.new2<- read.csv("my_data.csv") 
@@ -84,7 +85,10 @@ class(dat.new2)
 
 # structure of data 
 str(dat.new2) 
+```
 
+### Accessing values in a dataframe
+```{r}
 # accessing a vector in the dataframe
 dat.new2$name 
 
@@ -172,7 +176,7 @@ ncol(mat.example)
 nrow(mat.example) 
 ```
 
-### Creating data
+### Creating data using rnorm
 
 ```{r}
 # Creating a new matrix with data:
@@ -214,7 +218,7 @@ list_data[[3]]
 list_data_new[[2]]
 ```
 
-### Questions from the workshop
+### Questions from the workshop 
 
 ```{r}
 # Q1: How to sort dataframes?
@@ -239,6 +243,8 @@ newdata2[order(newdata2$col1, decreasing = TRUE),]
 ## increasing the number, where n is followed by number of rows
 head(newdata2,n=9)
 ```
+
+## Q3: 
 
 ## Bonus activity - plotting in R
 

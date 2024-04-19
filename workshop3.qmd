@@ -21,6 +21,8 @@ For this workshop series we are focusing on ggplot2 package for learning how to 
 knitr::opts_chunk$set(fig.width=6, fig.height=3,warning = FALSE) 
 ```
 
+## Setting up (packages and color palettes)
+
 ### Installing required packages
 
 ``` r
@@ -483,15 +485,28 @@ ggsave(filename="My_publishable_figure.jpeg", plot=figure1, width=10, height=6,d
 
 You can add multiple figures together from different data sets as well.
 
+#### Using geom plot using mtcars data
+
 ```{r}
+#| label: fig-twentyfivefig
+#| fig-cap: "mtcars boxplot"
+#| fig-align: "center"
 # Renaming the figures
 ## Geom plot using mtcars data
 
 fig1<-ggplot(mtcars, aes(x=as.factor(cyl), y=mpg)) + 
     geom_boxplot(fill="slateblue", alpha=0.2) + 
     xlab("cyl")
+fig1
+```
 
-## Building a dataset with different distributions
+#### Building a dataset with different distributions
+
+```{r}
+#| label: fig-twentysixfig
+#| fig-cap: "dataset with different distributions"
+#| fig-align: "center"
+
 data <- data.frame(
   type = c( rep("variable 1", 1000), rep("variable 2", 1000) ),
   value = c( rnorm(1000), rnorm(1000, mean=4) ))
@@ -502,8 +517,16 @@ fig2<- data %>%
   scale_fill_manual(values=c("#69b3a2", "#404080")) +
   theme_ipsum() +
   labs(fill="")
+fig2
+```
 
-## Loading dataset from github
+#### Loading dataset from github
+
+```{r}
+#| label: fig-twentysevenfig
+#| fig-cap: "Data from github"
+#| fig-align: "center"
+
 path<-"https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/1_OneNum.csv"
 
 data <- read.table(path, header=TRUE)
@@ -513,8 +536,17 @@ fig3<- data %>%
   filter( price<300 ) %>%
   ggplot( aes(x=price)) +
   geom_density(fill="#69b3a2", color="#e9ecef", alpha=0.8)
+fig3
 
-## Loading dataset from your computer
+```
+
+#### Loading dataset from your computer
+
+```{r}
+#| label: fig-twentyeightfig
+#| fig-cap: "Using dataset from your computer"
+#| fig-align: "center"
+
 # Note you will have to specify a dataset here from your computer for this to work
 data("Orange")
 write.csv(Orange,"newlysaved.csv",row.names = FALSE)
@@ -523,16 +555,18 @@ data<-read.csv(file = "newlysaved.csv")
 fig4<- data %>%
   ggplot(aes(x=Tree,y=circumference,color=Tree))+
   geom_boxplot(aes(factor(Tree)))
+fig4
+
+```
+
+```{r}
+#| label: fig-twentyninefig
+#| fig-cap: "Multiple plot together"
+#| fig-align: "center"
 
 all.fig<-ggarrange(nrow = 2,ncol = 2, 
                   fig1,fig2,fig3,fig4,
                   labels = c("a)","b)","c)","d)"))
-```
-
-```{r}
-#| label: fig-twentyfivefig
-#| fig-cap: "Multiple plot together"
-#| fig-align: "center"
 all.fig
 
 #ggsave(filename="MultipleFigures.jpeg", plot=all.fig, width=15, height=8,dpi=600)

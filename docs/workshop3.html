@@ -160,12 +160,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#plotting-in-r" id="toc-plotting-in-r" class="nav-link active" data-scroll-target="#plotting-in-r">Plotting in R</a></li>
+  <li><a href="#setting-up-packages-and-color-palettes" id="toc-setting-up-packages-and-color-palettes" class="nav-link" data-scroll-target="#setting-up-packages-and-color-palettes">Setting up (packages and color palettes)</a>
+  <ul class="collapse">
   <li><a href="#installing-required-packages" id="toc-installing-required-packages" class="nav-link" data-scroll-target="#installing-required-packages">Installing required packages</a></li>
   <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading packages</a></li>
   <li><a href="#installing-and-loading-multiple-packages-at-once" id="toc-installing-and-loading-multiple-packages-at-once" class="nav-link" data-scroll-target="#installing-and-loading-multiple-packages-at-once">Installing and loading multiple packages at once</a></li>
   <li><a href="#color-palettes-in-r" id="toc-color-palettes-in-r" class="nav-link" data-scroll-target="#color-palettes-in-r">Color palettes in R</a></li>
   <li><a href="#creating-your-own-color-palette" id="toc-creating-your-own-color-palette" class="nav-link" data-scroll-target="#creating-your-own-color-palette">Creating your own color palette</a></li>
   <li><a href="#dataset-working-with-inbuild-dataset" id="toc-dataset-working-with-inbuild-dataset" class="nav-link" data-scroll-target="#dataset-working-with-inbuild-dataset">Dataset: Working with Inbuild dataset</a></li>
+  </ul></li>
   <li><a href="#ggplot2" id="toc-ggplot2" class="nav-link" data-scroll-target="#ggplot2">ggplot2</a>
   <ul class="collapse">
   <li><a href="#changing-aes-function-by-adding-color" id="toc-changing-aes-function-by-adding-color" class="nav-link" data-scroll-target="#changing-aes-function-by-adding-color">Changing aes function by adding color:</a></li>
@@ -225,6 +228,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>For this workshop series we are focusing on ggplot2 package for learning how to create publication quality plots.</p>
 </section>
+<section id="setting-up-packages-and-color-palettes" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-packages-and-color-palettes">Setting up (packages and color palettes)</h2>
 <section id="installing-required-packages" class="level3">
 <h3 class="anchored" data-anchor-id="installing-required-packages">Installing required packages</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -337,6 +342,7 @@ $logic
 <pre><code>[1] 150   5</code></pre>
 </div>
 </div>
+</section>
 </section>
 <section id="ggplot2" class="level2">
 <h2 class="anchored" data-anchor-id="ggplot2">ggplot2</h2>
@@ -844,69 +850,119 @@ $logic
 <section id="multiple-plots-together-in-r" class="level3">
 <h3 class="anchored" data-anchor-id="multiple-plots-together-in-r">Multiple plots together in R</h3>
 <p>You can add multiple figures together from different data sets as well.</p>
-<div class="cell">
+<section id="using-geom-plot-using-mtcars-data" class="level4">
+<h4 class="anchored" data-anchor-id="using-geom-plot-using-mtcars-data">Using geom plot using mtcars data</h4>
+<div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Renaming the figures</span></span>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Geom plot using mtcars data</span></span>
 <span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>fig1<span class="ot">&lt;-</span><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">as.factor</span>(cyl), <span class="at">y=</span>mpg)) <span class="sc">+</span> </span>
 <span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>(<span class="at">fill=</span><span class="st">"slateblue"</span>, <span class="at">alpha=</span><span class="fl">0.2</span>) <span class="sc">+</span> </span>
 <span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">xlab</span>(<span class="st">"cyl"</span>)</span>
-<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Building a dataset with different distributions</span></span>
-<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">c</span>( <span class="fu">rep</span>(<span class="st">"variable 1"</span>, <span class="dv">1000</span>), <span class="fu">rep</span>(<span class="st">"variable 2"</span>, <span class="dv">1000</span>) ),</span>
-<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">c</span>( <span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean=</span><span class="dv">4</span>) ))</span>
-<span id="cb53-12"><a href="#cb53-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-13"><a href="#cb53-13" aria-hidden="true" tabindex="-1"></a>fig2<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb53-14"><a href="#cb53-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>type)) <span class="sc">+</span></span>
-<span id="cb53-15"><a href="#cb53-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>( <span class="at">color=</span><span class="st">"#e9ecef"</span>, <span class="at">alpha=</span><span class="fl">0.6</span>, <span class="at">position =</span> <span class="st">'identity'</span>) <span class="sc">+</span></span>
-<span id="cb53-16"><a href="#cb53-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"#69b3a2"</span>, <span class="st">"#404080"</span>)) <span class="sc">+</span></span>
-<span id="cb53-17"><a href="#cb53-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ipsum</span>() <span class="sc">+</span></span>
-<span id="cb53-18"><a href="#cb53-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill=</span><span class="st">""</span>)</span>
-<span id="cb53-19"><a href="#cb53-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-20"><a href="#cb53-20" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading dataset from github</span></span>
-<span id="cb53-21"><a href="#cb53-21" aria-hidden="true" tabindex="-1"></a>path<span class="ot">&lt;-</span><span class="st">"https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/1_OneNum.csv"</span></span>
-<span id="cb53-22"><a href="#cb53-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-23"><a href="#cb53-23" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.table</span>(path, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
-<span id="cb53-24"><a href="#cb53-24" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-25"><a href="#cb53-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the histogram</span></span>
-<span id="cb53-26"><a href="#cb53-26" aria-hidden="true" tabindex="-1"></a>fig3<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb53-27"><a href="#cb53-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>( price<span class="sc">&lt;</span><span class="dv">300</span> ) <span class="sc">%&gt;%</span></span>
-<span id="cb53-28"><a href="#cb53-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x=</span>price)) <span class="sc">+</span></span>
-<span id="cb53-29"><a href="#cb53-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">fill=</span><span class="st">"#69b3a2"</span>, <span class="at">color=</span><span class="st">"#e9ecef"</span>, <span class="at">alpha=</span><span class="fl">0.8</span>)</span>
-<span id="cb53-30"><a href="#cb53-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-31"><a href="#cb53-31" aria-hidden="true" tabindex="-1"></a><span class="do">## Loading dataset from your computer</span></span>
-<span id="cb53-32"><a href="#cb53-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Note you will have to specify a dataset here from your computer for this to work</span></span>
-<span id="cb53-33"><a href="#cb53-33" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Orange"</span>)</span>
-<span id="cb53-34"><a href="#cb53-34" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(Orange,<span class="st">"newlysaved.csv"</span>,<span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb53-35"><a href="#cb53-35" aria-hidden="true" tabindex="-1"></a>data<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"newlysaved.csv"</span>)</span>
-<span id="cb53-36"><a href="#cb53-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-37"><a href="#cb53-37" aria-hidden="true" tabindex="-1"></a>fig4<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb53-38"><a href="#cb53-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Tree,<span class="at">y=</span>circumference,<span class="at">color=</span>Tree))<span class="sc">+</span></span>
-<span id="cb53-39"><a href="#cb53-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="fu">factor</span>(Tree)))</span>
-<span id="cb53-40"><a href="#cb53-40" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb53-41"><a href="#cb53-41" aria-hidden="true" tabindex="-1"></a>all.fig<span class="ot">&lt;-</span><span class="fu">ggarrange</span>(<span class="at">nrow =</span> <span class="dv">2</span>,<span class="at">ncol =</span> <span class="dv">2</span>, </span>
-<span id="cb53-42"><a href="#cb53-42" aria-hidden="true" tabindex="-1"></a>                  fig1,fig2,fig3,fig4,</span>
-<span id="cb53-43"><a href="#cb53-43" aria-hidden="true" tabindex="-1"></a>                  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"a)"</span>,<span class="st">"b)"</span>,<span class="st">"c)"</span>,<span class="st">"d)"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>all.fig</span>
-<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(filename="MultipleFigures.jpeg", plot=all.fig, width=15, height=8,dpi=600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>fig1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-twentyfivefig" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><img src="workshop3_files/figure-html/fig-twentyfivefig-1.png" class="img-fluid figure-img" width="768"></p>
-<figcaption class="figure-caption"><strong>Figure</strong>&nbsp;23<strong>.</strong> Multiple plot together</figcaption>
+<figcaption class="figure-caption"><strong>Figure</strong>&nbsp;23<strong>.</strong> mtcars boxplot</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="building-a-dataset-with-different-distributions" class="level4">
+<h4 class="anchored" data-anchor-id="building-a-dataset-with-different-distributions">Building a dataset with different distributions</h4>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="fu">c</span>( <span class="fu">rep</span>(<span class="st">"variable 1"</span>, <span class="dv">1000</span>), <span class="fu">rep</span>(<span class="st">"variable 2"</span>, <span class="dv">1000</span>) ),</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">value =</span> <span class="fu">c</span>( <span class="fu">rnorm</span>(<span class="dv">1000</span>), <span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean=</span><span class="dv">4</span>) ))</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>fig2<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x=</span>value, <span class="at">fill=</span>type)) <span class="sc">+</span></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>( <span class="at">color=</span><span class="st">"#e9ecef"</span>, <span class="at">alpha=</span><span class="fl">0.6</span>, <span class="at">position =</span> <span class="st">'identity'</span>) <span class="sc">+</span></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values=</span><span class="fu">c</span>(<span class="st">"#69b3a2"</span>, <span class="st">"#404080"</span>)) <span class="sc">+</span></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_ipsum</span>() <span class="sc">+</span></span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill=</span><span class="st">""</span>)</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>fig2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<div id="fig-twentysixfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twentysixfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption"><strong>Figure</strong>&nbsp;24<strong>.</strong> dataset with different distributions</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="loading-dataset-from-github" class="level4">
+<h4 class="anchored" data-anchor-id="loading-dataset-from-github">Loading dataset from github</h4>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>path<span class="ot">&lt;-</span><span class="st">"https://raw.githubusercontent.com/holtzy/data_to_viz/master/Example_dataset/1_OneNum.csv"</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.table</span>(path, <span class="at">header=</span><span class="cn">TRUE</span>)</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Make the histogram</span></span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>fig3<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>( price<span class="sc">&lt;</span><span class="dv">300</span> ) <span class="sc">%&gt;%</span></span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>( <span class="fu">aes</span>(<span class="at">x=</span>price)) <span class="sc">+</span></span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density</span>(<span class="at">fill=</span><span class="st">"#69b3a2"</span>, <span class="at">color=</span><span class="st">"#e9ecef"</span>, <span class="at">alpha=</span><span class="fl">0.8</span>)</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>fig3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-twentysevenfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twentysevenfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption"><strong>Figure</strong>&nbsp;25<strong>.</strong> Data from github</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="loading-dataset-from-your-computer" class="level4">
+<h4 class="anchored" data-anchor-id="loading-dataset-from-your-computer">Loading dataset from your computer</h4>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Note you will have to specify a dataset here from your computer for this to work</span></span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Orange"</span>)</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(Orange,<span class="st">"newlysaved.csv"</span>,<span class="at">row.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>data<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">"newlysaved.csv"</span>)</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>fig4<span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Tree,<span class="at">y=</span>circumference,<span class="at">color=</span>Tree))<span class="sc">+</span></span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="fu">factor</span>(Tree)))</span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>fig4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-twentyeightfig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twentyeightfig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption"><strong>Figure</strong>&nbsp;26<strong>.</strong> Using dataset from your computer</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>all.fig<span class="ot">&lt;-</span><span class="fu">ggarrange</span>(<span class="at">nrow =</span> <span class="dv">2</span>,<span class="at">ncol =</span> <span class="dv">2</span>, </span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>                  fig1,fig2,fig3,fig4,</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>                  <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"a)"</span>,<span class="st">"b)"</span>,<span class="st">"c)"</span>,<span class="st">"d)"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>all.fig</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a><span class="co">#ggsave(filename="MultipleFigures.jpeg", plot=all.fig, width=15, height=8,dpi=600)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-twentyninefig" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="workshop3_files/figure-html/fig-twentyninefig-1.png" class="img-fluid figure-img" width="768"></p>
+<figcaption class="figure-caption"><strong>Figure</strong>&nbsp;27<strong>.</strong> Multiple plot together</figcaption>
 </figure>
 </div>
 </div>
 </div>
 
 
+</section>
 </section>
 </section>
 

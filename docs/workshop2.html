@@ -181,8 +181,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#bonus-activity---plotting-in-r-using-base-r" id="toc-bonus-activity---plotting-in-r-using-base-r" class="nav-link" data-scroll-target="#bonus-activity---plotting-in-r-using-base-r">Bonus activity - Plotting in R (using base R)</a>
   <ul class="collapse">
   <li><a href="#histograms" id="toc-histograms" class="nav-link" data-scroll-target="#histograms">Histograms</a></li>
-  <li><a href="#questions-from-the-workshop" id="toc-questions-from-the-workshop" class="nav-link" data-scroll-target="#questions-from-the-workshop">Questions from the workshop</a></li>
   </ul></li>
+  <li><a href="#questions-from-the-workshop" id="toc-questions-from-the-workshop" class="nav-link" data-scroll-target="#questions-from-the-workshop">Questions from the workshop</a></li>
   </ul>
 </nav>
     </div>
@@ -539,10 +539,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb69-8"><a href="#cb69-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Note check ?rnorm ?pnorm ?dnorm for more information on using probability distribution</span></span>
 <span id="cb69-9"><a href="#cb69-9" aria-hidden="true" tabindex="-1"></a>mat.dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1]  0.09885482 -0.67925465  0.46164634  0.64247878 -0.55222158  1.69364548
- [7]  1.07179548 -0.03286795  0.50295096 -1.23764391  0.13137494 -0.81057390
-[13]  1.74413874  0.31184054 -1.31639873 -0.37916934  0.42454604 -0.33769565
-[19]  0.23118504 -0.50784337</code></pre>
+<pre><code> [1]  1.29609747  1.10365481 -2.02880832 -1.29160212 -0.37954786  0.42798445
+ [7] -0.21279220 -0.05206884 -0.12243237 -1.01648228 -0.83820196  0.98699999
+[13] -0.55725134  1.19378723 -0.25376620  1.50198228 -1.57086939  1.42074561
+[19]  1.16966486  0.30449234</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co"># populating the matrix by row</span></span>
 <span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>mat.example2<span class="ot">&lt;-</span><span class="fu">matrix</span>(<span class="at">data =</span> mat.dat, <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">ncol =</span> <span class="dv">5</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -554,7 +554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Subsetting rows and columns</span></span>
 <span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>mat.example2[<span class="dv">2</span>,<span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.502951</code></pre>
+<pre><code>[1] -0.1224324</code></pre>
 </div>
 </div>
 </section>
@@ -594,11 +594,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 3 Chris     Java    9
 
 [[2]]
-            [,1]       [,2]        [,3]      [,4]       [,5]
-[1,]  0.09885482 -0.6792546  0.46164634 0.6424788 -0.5522216
-[2,]  1.69364548  1.0717955 -0.03286795 0.5029510 -1.2376439
-[3,]  0.13137494 -0.8105739  1.74413874 0.3118405 -1.3163987
-[4,] -0.37916934  0.4245460 -0.33769565 0.2311850 -0.5078434</code></pre>
+           [,1]       [,2]        [,3]       [,4]       [,5]
+[1,]  1.2960975  1.1036548 -2.02880832 -1.2916021 -0.3795479
+[2,]  0.4279845 -0.2127922 -0.05206884 -0.1224324 -1.0164823
+[3,] -0.8382020  0.9870000 -0.55725134  1.1937872 -0.2537662
+[4,]  1.5019823 -1.5708694  1.42074561  1.1696649  0.3044923</code></pre>
 </div>
 </div>
 <section id="subsetting-lists" class="level3">
@@ -610,11 +610,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode cell-code" id="cb80"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a>list_data_new[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            [,1]       [,2]        [,3]      [,4]       [,5]
-[1,]  0.09885482 -0.6792546  0.46164634 0.6424788 -0.5522216
-[2,]  1.69364548  1.0717955 -0.03286795 0.5029510 -1.2376439
-[3,]  0.13137494 -0.8105739  1.74413874 0.3118405 -1.3163987
-[4,] -0.37916934  0.4245460 -0.33769565 0.2311850 -0.5078434</code></pre>
+<pre><code>           [,1]       [,2]        [,3]       [,4]       [,5]
+[1,]  1.2960975  1.1036548 -2.02880832 -1.2916021 -0.3795479
+[2,]  0.4279845 -0.2127922 -0.05206884 -0.1224324 -1.0164823
+[3,] -0.8382020  0.9870000 -0.55725134  1.1937872 -0.2537662
+[4,]  1.5019823 -1.5708694  1.42074561  1.1696649  0.3044923</code></pre>
 </div>
 </div>
 </section>
@@ -659,38 +659,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb86"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a href="#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="co"># rnorm generates a vector of normally distributed random numbers.</span></span>
 <span id="cb86-2"><a href="#cb86-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb86-3"><a href="#cb86-3" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rnorm</span>(<span class="dv">1000</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span>
-<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb86-4"><a href="#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x)</span>
+<span id="cb86-5"><a href="#cb86-5" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">breaks =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="workshop2_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">breaks =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">breaks =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="workshop2_files/figure-html/unnamed-chunk-14-2.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">breaks =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">breaks =</span> <span class="dv">100</span>, <span class="at">col =</span> <span class="st">"orange"</span>, <span class="at">main =</span> <span class="st">"This is title"</span>, </span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"This is x axis"</span>, <span class="at">ylab =</span> <span class="st">"This is y axis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="workshop2_files/figure-html/unnamed-chunk-14-3.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x, <span class="at">breaks =</span> <span class="dv">100</span>, <span class="at">col =</span> <span class="st">"orange"</span>, <span class="at">main =</span> <span class="st">"This is title"</span>, </span>
-<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"This is x axis"</span>, <span class="at">ylab =</span> <span class="st">"This is y axis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="workshop2_files/figure-html/unnamed-chunk-14-4.png" class="img-fluid" width="672"></p>
-</div>
 </div>
 </section>
-<section id="questions-from-the-workshop" class="level3">
-<h3 class="anchored" data-anchor-id="questions-from-the-workshop">Questions from the workshop</h3>
+</section>
+<section id="questions-from-the-workshop" class="level2">
+<h2 class="anchored" data-anchor-id="questions-from-the-workshop">Questions from the workshop</h2>
 <section id="q1-how-to-sort-dataframes" class="level4">
 <h4 class="anchored" data-anchor-id="q1-how-to-sort-dataframes">Q1: How to sort dataframes?</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use sort function to sort a vector</span></span>
-<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="fl">8.5</span>,<span class="fl">7.6</span>,<span class="fl">2.5</span>,<span class="fl">1.3</span>,<span class="fl">2.4</span>)</span>
-<span id="cb90-3"><a href="#cb90-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb89"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb89-1"><a href="#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Use sort function to sort a vector</span></span>
+<span id="cb89-2"><a href="#cb89-2" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,<span class="fl">8.5</span>,<span class="fl">7.6</span>,<span class="fl">2.5</span>,<span class="fl">1.3</span>,<span class="fl">2.4</span>)</span>
+<span id="cb89-3"><a href="#cb89-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sort</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1]  1.0  1.3  2.0  2.4  2.5  3.0  4.0  5.0  6.0  7.0  7.6  8.0  8.5  9.0 10.0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For sorting dataframes using the function order</span></span>
-<span id="cb92-2"><a href="#cb92-2" aria-hidden="true" tabindex="-1"></a>newdata[<span class="fu">order</span>(newdata<span class="sc">$</span>year, <span class="at">decreasing =</span> <span class="cn">TRUE</span>), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb91"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For sorting dataframes using the function order</span></span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>newdata[<span class="fu">order</span>(newdata<span class="sc">$</span>year, <span class="at">decreasing =</span> <span class="cn">TRUE</span>), ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     name language year
 7  George     HTML   10
@@ -701,11 +699,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 1    Anna        R    4
 4   Diego   Python    4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb94"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb94-1"><a href="#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice that the above function is used at the row position since we are sorting by row</span></span>
-<span id="cb94-2"><a href="#cb94-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb94-3"><a href="#cb94-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Another example:</span></span>
-<span id="cb94-4"><a href="#cb94-4" aria-hidden="true" tabindex="-1"></a>newdata2<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">col1=</span><span class="fu">c</span>(<span class="dv">31</span><span class="sc">:</span><span class="dv">40</span>),<span class="at">col2=</span><span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">30</span>,<span class="at">by=</span><span class="dv">3</span>)))</span>
-<span id="cb94-5"><a href="#cb94-5" aria-hidden="true" tabindex="-1"></a>newdata2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb93"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb93-1"><a href="#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Notice that the above function is used at the row position since we are sorting by row</span></span>
+<span id="cb93-2"><a href="#cb93-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb93-3"><a href="#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Another example:</span></span>
+<span id="cb93-4"><a href="#cb93-4" aria-hidden="true" tabindex="-1"></a>newdata2<span class="ot">&lt;-</span><span class="fu">data.frame</span>(<span class="at">col1=</span><span class="fu">c</span>(<span class="dv">31</span><span class="sc">:</span><span class="dv">40</span>),<span class="at">col2=</span><span class="fu">c</span>(<span class="fu">seq</span>(<span class="dv">1</span>,<span class="dv">30</span>,<span class="at">by=</span><span class="dv">3</span>)))</span>
+<span id="cb93-5"><a href="#cb93-5" aria-hidden="true" tabindex="-1"></a>newdata2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   col1 col2
 1    31    1
@@ -719,7 +717,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 9    39   25
 10   40   28</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb96"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb96-1"><a href="#cb96-1" aria-hidden="true" tabindex="-1"></a>newdata2[<span class="fu">order</span>(newdata2<span class="sc">$</span>col1, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb95"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb95-1"><a href="#cb95-1" aria-hidden="true" tabindex="-1"></a>newdata2[<span class="fu">order</span>(newdata2<span class="sc">$</span>col1, <span class="at">decreasing =</span> <span class="cn">TRUE</span>),]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   col1 col2
 10   40   28
@@ -738,9 +736,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="q2-how-to-increase-the-number-of-rows-displaying-on-console" class="level4">
 <h4 class="anchored" data-anchor-id="q2-how-to-increase-the-number-of-rows-displaying-on-console">Q2: How to increase the number of rows displaying on console?</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb98"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb98-1"><a href="#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using the head command, where n is followed by number of rows</span></span>
-<span id="cb98-2"><a href="#cb98-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb98-3"><a href="#cb98-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(newdata2) <span class="co"># normally yields the first 6 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using the head command, where n is followed by number of rows</span></span>
+<span id="cb97-2"><a href="#cb97-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb97-3"><a href="#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(newdata2) <span class="co"># normally yields the first 6 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  col1 col2
 1   31    1
@@ -750,7 +748,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 5   35   13
 6   36   16</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb100"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb100-1"><a href="#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(newdata2,<span class="at">n=</span><span class="dv">9</span>)<span class="co"># would yield the first 9 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb99"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb99-1"><a href="#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(newdata2,<span class="at">n=</span><span class="dv">9</span>)<span class="co"># would yield the first 9 rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  col1 col2
 1   31    1
@@ -768,31 +766,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="q3-can-i-use-a-graph-in-list" class="level4">
 <h4 class="anchored" data-anchor-id="q3-can-i-use-a-graph-in-list">Q3: Can I use a graph in list?</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Answer: Not as an image but you can add a figure/graph as an object</span></span>
-<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="co"># For example:</span></span>
-<span id="cb102-3"><a href="#cb102-3" aria-hidden="true" tabindex="-1"></a>h1<span class="ot">&lt;-</span><span class="fu">hist</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb101"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb101-1"><a href="#cb101-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Answer: Not as an image but you can add a figure/graph as an object</span></span>
+<span id="cb101-2"><a href="#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="co"># For example:</span></span>
+<span id="cb101-3"><a href="#cb101-3" aria-hidden="true" tabindex="-1"></a>h1<span class="ot">&lt;-</span><span class="fu">hist</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="workshop2_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb103"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb103-1"><a href="#cb103-1" aria-hidden="true" tabindex="-1"></a>h2<span class="ot">&lt;-</span><span class="fu">hist</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>))</span>
-<span id="cb103-2"><a href="#cb103-2" aria-hidden="true" tabindex="-1"></a>list.example<span class="ot">&lt;-</span><span class="fu">list</span>(h1,h2)</span>
-<span id="cb103-3"><a href="#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="co"># The above example won't save the graph but the attributes</span></span>
-<span id="cb103-4"><a href="#cb103-4" aria-hidden="true" tabindex="-1"></a>list.example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb102"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb102-1"><a href="#cb102-1" aria-hidden="true" tabindex="-1"></a>h2<span class="ot">&lt;-</span><span class="fu">hist</span>(<span class="fu">rnorm</span>(<span class="dv">1000</span>))</span>
+<span id="cb102-2"><a href="#cb102-2" aria-hidden="true" tabindex="-1"></a>list.example<span class="ot">&lt;-</span><span class="fu">list</span>(h1,h2)</span>
+<span id="cb102-3"><a href="#cb102-3" aria-hidden="true" tabindex="-1"></a><span class="co"># The above example won't save the graph but the attributes</span></span>
+<span id="cb102-4"><a href="#cb102-4" aria-hidden="true" tabindex="-1"></a>list.example</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]
 $breaks
- [1] -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5
+ [1] -3.5 -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5
 
 $counts
- [1]   5  21  36 103 161 169 203 156  83  35  19   7   2
+ [1]   4   3  18  45  92 167 167 193 129 110  42  23   6   1
 
 $density
- [1] 0.010 0.042 0.072 0.206 0.322 0.338 0.406 0.312 0.166 0.070 0.038 0.014
-[13] 0.004
+ [1] 0.008 0.006 0.036 0.090 0.184 0.334 0.334 0.386 0.258 0.220 0.084 0.046
+[13] 0.012 0.002
 
 $mids
- [1] -2.75 -2.25 -1.75 -1.25 -0.75 -0.25  0.25  0.75  1.25  1.75  2.25  2.75
-[13]  3.25
+ [1] -3.25 -2.75 -2.25 -1.75 -1.25 -0.75 -0.25  0.25  0.75  1.25  1.75  2.25
+[13]  2.75  3.25
 
 $xname
 [1] "rnorm(1000)"
@@ -805,18 +803,18 @@ attr(,"class")
 
 [[2]]
 $breaks
- [1] -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5  4.0
+ [1] -3.5 -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5
 
 $counts
- [1]   4  17  33  94 143 215 182 155  94  42  12   7   1   1
+ [1]   2   6  15  38  74 148 201 217 136  94  45  17   6   1
 
 $density
- [1] 0.008 0.034 0.066 0.188 0.286 0.430 0.364 0.310 0.188 0.084 0.024 0.014
-[13] 0.002 0.002
+ [1] 0.004 0.012 0.030 0.076 0.148 0.296 0.402 0.434 0.272 0.188 0.090 0.034
+[13] 0.012 0.002
 
 $mids
- [1] -2.75 -2.25 -1.75 -1.25 -0.75 -0.25  0.25  0.75  1.25  1.75  2.25  2.75
-[13]  3.25  3.75
+ [1] -3.25 -2.75 -2.25 -1.75 -1.25 -0.75 -0.25  0.25  0.75  1.25  1.75  2.25
+[13]  2.75  3.25
 
 $xname
 [1] "rnorm(1000)"
@@ -827,21 +825,21 @@ $equidist
 attr(,"class")
 [1] "histogram"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb105"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb105-1"><a href="#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using ggplot2 you can save the graph information as well</span></span>
-<span id="cb105-2"><a href="#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb104"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb104-1"><a href="#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using ggplot2 you can save the graph information as well</span></span>
+<span id="cb104-2"><a href="#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="workshop2_files/figure-html/unnamed-chunk-17-2.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb107"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb107-1"><a href="#cb107-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>))</span>
-<span id="cb107-2"><a href="#cb107-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb107-3"><a href="#cb107-3" aria-hidden="true" tabindex="-1"></a>fig1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Graph 1"</span>)</span>
-<span id="cb107-4"><a href="#cb107-4" aria-hidden="true" tabindex="-1"></a>fig2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Graph 2"</span>)</span>
-<span id="cb107-5"><a href="#cb107-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb107-6"><a href="#cb107-6" aria-hidden="true" tabindex="-1"></a>figlist <span class="ot">&lt;-</span> <span class="fu">list</span>(fig1,fig2)</span>
-<span id="cb107-7"><a href="#cb107-7" aria-hidden="true" tabindex="-1"></a>figlist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb106"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb106-1"><a href="#cb106-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>), <span class="at">y =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>))</span>
+<span id="cb106-2"><a href="#cb106-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-3"><a href="#cb106-3" aria-hidden="true" tabindex="-1"></a>fig1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Graph 1"</span>)</span>
+<span id="cb106-4"><a href="#cb106-4" aria-hidden="true" tabindex="-1"></a>fig2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(df, <span class="fu">aes</span>(x, y)) <span class="sc">+</span> <span class="fu">geom_point</span>() <span class="sc">+</span> <span class="fu">ggtitle</span>(<span class="st">"Graph 2"</span>)</span>
+<span id="cb106-5"><a href="#cb106-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-6"><a href="#cb106-6" aria-hidden="true" tabindex="-1"></a>figlist <span class="ot">&lt;-</span> <span class="fu">list</span>(fig1,fig2)</span>
+<span id="cb106-7"><a href="#cb106-7" aria-hidden="true" tabindex="-1"></a>figlist</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1]]</code></pre>
 </div>
@@ -862,7 +860,6 @@ attr(,"class")
 <p>The stackoverflow post provided an excellent answer of the syntax differences between data frame and data table, so I highly encourage folks to read the information <a href="https://stackoverflow.com/questions/13618488/what-you-can-do-with-a-data-frame-that-you-cant-with-a-data-table">on this link</a> along with the beginner’s FAQs for data.table <a href="https://cran.r-project.org/web/packages/data.table/vignettes/datatable-faq.html">here</a></p>
 
 
-</section>
 </section>
 </section>
 

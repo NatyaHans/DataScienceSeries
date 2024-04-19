@@ -159,10 +159,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#installing-required-packages" id="toc-installing-required-packages" class="nav-link active" data-scroll-target="#installing-required-packages">Installing required packages</a></li>
+  <li><a href="#plotting-in-r" id="toc-plotting-in-r" class="nav-link active" data-scroll-target="#plotting-in-r">Plotting in R</a></li>
+  <li><a href="#installing-required-packages" id="toc-installing-required-packages" class="nav-link" data-scroll-target="#installing-required-packages">Installing required packages</a></li>
   <li><a href="#loading-packages" id="toc-loading-packages" class="nav-link" data-scroll-target="#loading-packages">Loading packages</a></li>
   <li><a href="#installing-and-loading-multiple-packages-at-once" id="toc-installing-and-loading-multiple-packages-at-once" class="nav-link" data-scroll-target="#installing-and-loading-multiple-packages-at-once">Installing and loading multiple packages at once</a></li>
-  <li><a href="#note-about-apply-functions" id="toc-note-about-apply-functions" class="nav-link" data-scroll-target="#note-about-apply-functions">Note about apply functions</a></li>
   <li><a href="#color-palettes-in-r" id="toc-color-palettes-in-r" class="nav-link" data-scroll-target="#color-palettes-in-r">Color palettes in R</a></li>
   <li><a href="#creating-your-own-color-palette" id="toc-creating-your-own-color-palette" class="nav-link" data-scroll-target="#creating-your-own-color-palette">Creating your own color palette</a></li>
   <li><a href="#dataset-working-with-inbuild-dataset" id="toc-dataset-working-with-inbuild-dataset" class="nav-link" data-scroll-target="#dataset-working-with-inbuild-dataset">Dataset: Working with Inbuild dataset</a></li>
@@ -215,9 +215,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="workshop-plan" class="level4">
-<h4 class="anchored" data-anchor-id="workshop-plan">Workshop plan</h4>
-<p>3 main types of plotting in R:</p>
+<section id="plotting-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="plotting-in-r">Plotting in R</h3>
+<p>There are 3 main types of plotting in R:</p>
 <ol type="1">
 <li>base</li>
 <li>lattice</li>
@@ -247,9 +247,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages at once</span></span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(all.lib,require,<span class="at">character.only=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="note-about-apply-functions" class="level3">
-<h3 class="anchored" data-anchor-id="note-about-apply-functions">Note about apply functions</h3>
+<section id="sidenote-about-apply-functions" class="level5">
+<h5 class="anchored" data-anchor-id="sidenote-about-apply-functions">Sidenote about apply functions</h5>
 <ul>
 <li><p><strong>lapply()</strong> function is useful for performing operations on list objects and returns a list object of same length of original set. lappy() returns a list of the similar length as input list object, each element of which is the result of applying FUN to the corresponding element of list. Lapply in R takes list, vector or data frame as input and gives output in list.</p></li>
 <li><p><strong>sapply()</strong> function takes list, vector or data frame as input and gives output in vector or matrix. It is useful for operations on list objects and returns a list object of same length of original set. Sapply function in R does the same job as lapply() function but returns a vector.</p></li>
@@ -275,8 +274,9 @@ $logic
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># sapply(list, function)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="color-palettes-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="color-palettes-in-r">Color palettes in R</h2>
+</section>
+<section id="color-palettes-in-r" class="level3">
+<h3 class="anchored" data-anchor-id="color-palettes-in-r">Color palettes in R</h3>
 <p>R colorbrewer is a good option</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
@@ -287,8 +287,8 @@ $logic
 </div>
 </div>
 </section>
-<section id="creating-your-own-color-palette" class="level2">
-<h2 class="anchored" data-anchor-id="creating-your-own-color-palette">Creating your own color palette</h2>
+<section id="creating-your-own-color-palette" class="level3">
+<h3 class="anchored" data-anchor-id="creating-your-own-color-palette">Creating your own color palette</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># COLOR PALETTES</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>pastel.colpal<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">"#355070"</span>, <span class="st">"#6d597a"</span>, <span class="st">"#b56576"</span>, <span class="st">"#e56b6f"</span>, <span class="st">"#eaac8b"</span>,<span class="st">"#a44200"</span>)</span>
@@ -304,8 +304,8 @@ $logic
 </div>
 </div>
 </section>
-<section id="dataset-working-with-inbuild-dataset" class="level2">
-<h2 class="anchored" data-anchor-id="dataset-working-with-inbuild-dataset">Dataset: Working with Inbuild dataset</h2>
+<section id="dataset-working-with-inbuild-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-working-with-inbuild-dataset">Dataset: Working with Inbuild dataset</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>()  <span class="co"># Exploring different inbuild dataset</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"iris"</span>) <span class="co"># attaching inbuild dataset</span></span>

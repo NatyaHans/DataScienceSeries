@@ -137,7 +137,7 @@
     "href": "workshop3.html",
     "title": "Data Visualization",
     "section": "",
-    "text": "3 main types of plotting in R:\n\nbase\nlattice\nggplot2\n\nFor this workshop series we are focusing on ggplot2 package for learning how to create publication quality plots."
+    "text": "There are 3 main types of plotting in R:\n\nbase\nlattice\nggplot2\n\nFor this workshop series we are focusing on ggplot2 package for learning how to create publication quality plots."
   },
   {
     "objectID": "workshop4.html",

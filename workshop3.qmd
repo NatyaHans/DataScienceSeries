@@ -7,9 +7,9 @@ crossref:
   title-delim: "**.**"
 ---
 
-#### Workshop plan
+### Plotting in R 
 
-3 main types of plotting in R:
+There are 3 main types of plotting in R:
 
 1.  base
 2.  lattice
@@ -46,7 +46,7 @@ all.lib<-c("reshape2","ggplot2","gridExtra","ggpubr","ggthemes", "scales","RColo
 lapply(all.lib,require,character.only=TRUE)
 ```
 
-### Note about apply functions
+##### Sidenote about apply functions
 
 -   **lapply()** function is useful for performing operations on list objects and returns a list object of same length of original set. lappy() returns a list of the similar length as input list object, each element of which is the result of applying FUN to the corresponding element of list. Lapply in R takes list, vector or data frame as input and gives output in list.
 
@@ -64,7 +64,7 @@ lapply(x, mean)
 # sapply(list, function)
 ```
 
-## Color palettes in R
+### Color palettes in R
 
 R colorbrewer is a good option
 
@@ -74,7 +74,7 @@ par(mar=c(3,4,2,2))
 display.brewer.all()
 ```
 
-## Creating your own color palette
+### Creating your own color palette
 
 ```{r}
 # COLOR PALETTES
@@ -88,7 +88,7 @@ tog<-rbind(pastel.colpal,sage.colpal)
 show_col(tog,cex_label=0.5)
 ```
 
-## Dataset: Working with Inbuild dataset
+### Dataset: Working with Inbuild dataset
 
 ```{r}
 data()  # Exploring different inbuild dataset

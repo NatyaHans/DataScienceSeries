@@ -260,7 +260,7 @@ hist(x, breaks = 100, col = "orange", main = "This is title",
      xlab = "This is x axis", ylab = "This is y axis")
 ```
 
-### Questions from the workshop
+## Questions from the workshop
 
 #### Q1: How to sort dataframes?
 

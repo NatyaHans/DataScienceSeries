@@ -144,7 +144,7 @@
     "href": "workshop4.html",
     "title": "Exploratory Data Analysis",
     "section": "",
-    "text": "# Save packages as a vector\nall.lib&lt;-c(\"tidyverse\",\"ggplot2\", \"dplyr\",\"tidyr\",\"modelr\")\n\n# Load packages\nlapply(all.lib,require,character.only=TRUE)"
+    "text": "Download PDF file."
   },
   {
     "objectID": "workshop4.html#load-your-data-example-1",
@@ -206,8 +206,8 @@
     "objectID": "workshop4.html#setup",
     "href": "workshop4.html#setup",
     "title": "Exploratory Data Analysis",
-    "section": "",
-    "text": "# Save packages as a vector\nall.lib&lt;-c(\"tidyverse\",\"ggplot2\", \"dplyr\",\"tidyr\",\"modelr\")\n\n# Load packages\nlapply(all.lib,require,character.only=TRUE)"
+    "section": "Setup",
+    "text": "Setup\n\n# Save packages as a vector\nall.lib&lt;-c(\"tidyverse\",\"ggplot2\", \"dplyr\",\"tidyr\",\"modelr\")\n\n# Load packages\nlapply(all.lib,require,character.only=TRUE)"
   },
   {
     "objectID": "workshop4.html#introduction",

@@ -29,37 +29,38 @@ Steps to exploratory data analysis:
 
 ## Load your data: Example 1
 
-a\. Fuel economy data from 1999 to 2008 for 38 popular models of cars. The subset dataset from EPA. Full data available \[here\](https://fueleconomy.gov)
+a\. Fuel economy data from 1999 to 2008 for 38 popular models of cars. The subset dataset from EPA. Full data available \[here\](https://fueleconomy.gov). A dataframe with 234 rows and 11 variables:
+
+| Variable     |                                              |
+|--------------|----------------------------------------------|
+| manufacturer | manufacturer name                            |
+| model        | model name                                   |
+| displ        | engine displacement, in liters               |
+| year         | year of manufacturer                         |
+| cyl          | number of cylinders                          |
+| trans        | type of transmission                         |
+| drv          | type of drive train, front wheel, rear wheel |
+| cty          | city miles per gallon                        |
+| hwy          | highway miles per gallon                     |
+| fl           | fuel type                                    |
+| class        | "type" of car                                |
 
 ```{r}
 # Load data
 data("mpg")
-mpg
+head(mpg)
 ```
 
 ## Exploring the data
 
 ```{r}
 # Useful functions in exploring the data
+tail(mpg)
 ncol(mpg)
 nrow(mpg)
 dim(mpg)
 str(mpg)
 summary(mpg)
-head(mpg)
-tail(mpg)
-```
-
-## Load your data: Example 2
-
-b\. Flow of the River Nile, measurements of the annual flow of the river Nile at Aswan from Balke, N. S. (1993) and Cobb, G. W. (1978)
-
-## Another example of time series data
-
-```{r}
-data("Nile")
-head(Nile)
-table(Nile)
 ```
 
 ## Creating a tibble
@@ -92,7 +93,7 @@ as_tibble(iris)
 iris.updated<-as_tibble(iris)
 ```
 
-## Finding patterns in data through visualization and transformations
+## 1. Finding patterns in data through visualization and transformations
 
 ### Categorical variable
 
@@ -127,39 +128,26 @@ mpg %>%
   count(manufacturer)
 ```
 
-```{r}
-iris.updated %>% 
-  count(Species)
-```
-
 ### Continuous variable
 
 **Using geom_bar for a continuous variable,**
 
-```{r}
-#| label: fig-threefig
-#| fig-cap: "Displaying continuous variable with iris."
-#| fig-align: "center"
-ggplot(data = iris.updated) +
-  geom_bar(mapping = aes(x = Sepal.Length))
-```
-
-**Using histogram is better here for continuous variable,**
+Note: `geom_bar()` makes the height of the bar proportional to the number of cases in each group
 
 ```{r}
-#| label: fig-fourthfig
-#| fig-cap: "Displaying continuous variable using histogram, with iris."
+#| label: fig-fourfig
+#| fig-cap: "Displaying continuous variable with mpg."
 #| fig-align: "center"
-iris.updated %>%
-  ggplot()+
-  geom_histogram(mapping = aes(x = Sepal.Length),binwidth= 0.1)
+mpg %>%
+ ggplot()+
+ geom_bar(mapping = aes(x = displ), binwidth = 0.5)
 ```
 
-**Using mpg dataset,**
+**Using histogram for continuous variable,**
 
 ```{r}
 #| label: fig-fivefig
-#| fig-cap: "Displaying continuous variable with mpg."
+#| fig-cap: "Displaying continuous variable with mpg, using histogram."
 #| fig-align: "center"
 mpg %>%
  ggplot()+
@@ -169,13 +157,6 @@ mpg %>%
 ### cut_width function
 
 Display how the histogram was made
-
-**For iris dataset,**
-
-```{r}
-iris.updated %>% 
-count(cut_width(Sepal.Length, 0.1))
-```
 
 **For mpg dataset,**
 
@@ -198,14 +179,6 @@ mpg.sub<- mpg %>%
   filter(cty >20)
 ```
 
-```{r}
-iris.updated %>%
-  filter(Petal.Width > 1)
-
-iris.sub<- iris.updated %>%
-  filter(Petal.Width >1)
-```
-
 **Plotting a subset of the dataset,**
 
 ```{r}
@@ -215,15 +188,6 @@ iris.sub<- iris.updated %>%
 # plotting 
 ggplot(data = mpg.sub, mapping = aes(x = cty)) +
   geom_histogram(binwidth = 0.25)
-```
-
-```{r}
-#| label: fig-sevenfig
-#| fig-cap: "Plotting a subset dataset, iris."
-#| fig-align: "center"
-#  plotting 
-ggplot(data = iris.sub, mapping = aes(x = Petal.Width)) +
-  geom_histogram(binwidth = 0.1)
 ```
 
 ### Expanding the x-y limits
@@ -295,9 +259,13 @@ mpg.filtered3
 **You can add multiple columns using mutate function,**
 
 ```{r}
-iris.updated %>%
-  mutate(order.name="Asparagales",
-         height=Sepal.Length*5)
+mpg.filtered3 <- mpg.filtered2.asc %>% 
+  mutate(newcol = ifelse(cty < 10, NA, 0),
+         anotherone= cty*5,
+         randomcol="weird")
+
+mpg.filtered3
+
 ```
 
 ### Boxplot

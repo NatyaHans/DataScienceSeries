@@ -7,7 +7,7 @@ crossref:
   title-delim: "**.**"
 ---
 
-### Plotting in R 
+### Plotting in R
 
 There are 3 main types of plotting in R:
 
@@ -182,7 +182,7 @@ ggplot(data = iris, mapping = aes(x = Species , y = Petal.Length, color=Species)
  geom_point()
 ```
 
-## *HYPOTHESIS: How is sepal length varying with petal length?*
+### HYPOTHESIS: How is sepal length varying with petal length?
 
 ### Adding group aesthetics
 

@@ -3,6 +3,13 @@ project:
   output-dir: docs
 
 website:
+  announcement: 
+    icon: info-circle
+    dismissable: true
+    content: "**Alert** - this is some information that you should pay attention to"
+    type: primary
+    position: below-navbar
+  google-analytics: "G-L1G44K1ND2"
   favicon: bookfavicon.png
   title: "Data Science Series"
   navbar:

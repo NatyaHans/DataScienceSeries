@@ -7,7 +7,7 @@ editor:
 ---
 
 
-This workshop series is creating for beginners.
+This workshop series is creating for beginners. If you need a certificate of completion, please finish the quiz at the end of the four workshops. 
 
 Disclaimer: This workshop series does not teach statistics. Prior knowledge of basic statistics is recommended especially for getting through the fourth workshop
 
@@ -29,6 +29,7 @@ Learn the nuances of ggplot2 for making visually appealing graphics and figures 
 4.  [Exploratory Data
     Analysis](https://natyahans.github.io/DataScienceSeries/workshop4.html)
 Learn how visualization and data transformation techniques can be used for exploring your data and quality. This workshop is open to everyone; Previous experience with R scripting programming language is required.
+
 
 
 

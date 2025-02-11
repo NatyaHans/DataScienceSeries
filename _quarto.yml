@@ -6,7 +6,7 @@ website:
   announcement: 
     icon: info-circle
     dismissable: true
-    content: "**Alert** - Sign up for the upcoming workshops [here](https://libcal.uflib.ufl.edu/profile/104805) "
+    content: "**Alert** - Sign up for the upcoming workshops [here](https://libcal.uflib.ufl.edu/profile/104805)"
     type: primary
     position: below-navbar
   google-analytics: "G-L1G44K1ND2"

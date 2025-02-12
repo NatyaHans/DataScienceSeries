@@ -12,15 +12,27 @@ website:
   google-analytics: "G-L1G44K1ND2"
   favicon: bookfavicon.png
   title: "Data Science Series"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - workshop1.qmd
-      - workshop2.qmd
-      - workshop3.qmd
-      - workshop4.qmd
-      - resources.qmd
+  sidebar:
+    style: floating
+    search: true
+    contents:
+      - text: "Home"
+        href: index.qmd
+      - section: "Workshop1"
+        contents:
+          - workshop1.qmd
+      - section: "Workshop2"
+        contents:
+          - workshop2.qmd
+      - section: "Workshop3"
+        contents:
+          - workshop3.qmd
+      - section: "Workshop4"
+        contents:
+          - workshop4.qmd
+      - section: "Resources"
+        contents:
+          - resources.qmd
     background: "#6e6e8b"
     foreground: "#000000"
 

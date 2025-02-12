@@ -33,7 +33,7 @@ website:
       - section: "Resources"
         contents:
           - resources.qmd
-    background: "#6e6e8b"
+    background: "#d0ebf1"
     foreground: "#000000"
 
 format:

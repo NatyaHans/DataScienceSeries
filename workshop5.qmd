@@ -260,15 +260,17 @@ For a good fit(and symmetrical residuals ) we want the median value to be center
 
 **Estimate**: The linear regression has the formula y=mx+c where y and x are the dependent and independent variables whereas m is the slope and c is the intercept at y.
 
-The coefficients provide estimates for the intercept and the slope. So our equation can be written as y= 0.40892x + 4.3066, this means for each unit change in Petal Length(x), Sepal Length changes by a factor of 0.4, with addition of 4.3066.
+The coefficients provide estimates for the intercept and the slope. So our equation can be written as y= 0.40892x + 4.3066, this means for each unit change in Petal Length(x), Sepal Length changes by a factor of 0.4089, with addition of 4.3066.
 
-**Std. Error:**
+**Std. Error:** It is an estimate of standard deviation of coefficients calculated above. So the estimated slope 0.408 has the standard error of 0.0189 and the estimated intercept 4.3066 has the standard error of 0.07839. For estimates to be accurate, the standard error should be closer to zero.
 
-**t value:**
+**t value:** This is the t-statistic which is calculated as the coefficients divided by std.error, so larger the t statistic, lower the standard error.
 
-**P value**
+**P value:** p value is calculated using the t statistic above from the t-distribution table. Each p value indicates how significant the co-efficient itself is to the model. So for p\<0.05, which shows significance and we can confidently assume that the coefficients are not zero and add value to the model and helps in explaining the variation within the model.
 
 ![](images/Screenshot4.png){width="336"}
+
+Using the significance code we can assume that he p values in our case are significant and both the intercept and slope estimates
 
 ![](images/Screenshot5.png){width="336"}
 
@@ -302,7 +304,3 @@ t.test(dat.iris$Sepal.Length~dat.iris$Species)
 t.test(Sepal.Length~Species, data=dat.iris)
 
 ```
-
-## Sign up for the workshop series:
-
-[Click here to sign up for upcoming workshops](https://libcal.uflib.ufl.edu/profile/104805)

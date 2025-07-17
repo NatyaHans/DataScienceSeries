@@ -30,7 +30,7 @@ Learn the nuances of ggplot2 for making visually appealing graphics and figures 
     Analysis](https://natyahans.github.io/DataScienceSeries/workshop4.html)
 Learn how visualization and data transformation techniques can be used for exploring your data and quality. This workshop is open to everyone; Previous experience with R scripting programming language is required.
 
-5.  [Basic Statistics with  R](https://natyahans.github.io/DataScienceSeries/workshop5.html)
+5.  [Basic Statistics with  R](https://natyahans.github.io/DataScienceSeries/workshop5.html) Learn basics of statistics and data analysis using R. In this workshop you will learn how to use R to get descriptive statistics (mean, median, mode), and perform t-tests, correlation and linear regression. 
 
 
 

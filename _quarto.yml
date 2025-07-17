@@ -30,6 +30,9 @@ website:
       - section: "Workshop4"
         contents:
           - workshop4.qmd
+      - section: "Workshop5"
+        contents:
+          - workshop5.qmd
       - section: "Resources"
         contents:
           - resources.qmd

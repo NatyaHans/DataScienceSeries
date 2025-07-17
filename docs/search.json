@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Data Science Series with R",
     "section": "",
-    "text": "This workshop series is creating for beginners. If you need a certificate of completion, please finish the quiz at the end of the four workshops.\nDisclaimer: This workshop series does not teach statistics. Prior knowledge of basic statistics is recommended especially for getting through the fourth workshop\nLinks to the workshop series:\n\nIntro to R Start your data science journey with learning R. This workshop gets you familiarized with R statistical programming language, R syntax, common data structures in R.  This workshop is open to everyone; No previous experience with R scripting programming language is required.\nIntro to R-2 In this workshop we continue to learn about different data structures in R like data.frame, matrices and lists. The students will also learn uploading and working with different datasets in R.\nData Visualization Learn the nuances of ggplot2 for making visually appealing graphics and figures for publication. This workshop is open to everyone; Previous experience with R scripting programming language is required.\nExploratory Data Analysis Learn how visualization and data transformation techniques can be used for exploring your data and quality. This workshop is open to everyone; Previous experience with R scripting programming language is required.",
+    "text": "This workshop series is creating for beginners. If you need a certificate of completion, please finish the quiz at the end of the workshops.\nDisclaimer: This workshop series does not teach statistics. Prior knowledge of basic statistics is recommended especially for getting through the fourth workshop\nLinks to the workshop series:\n\nIntro to R Start your data science journey with learning R. This workshop gets you familiarized with R statistical programming language, R syntax, common data structures in R.  This workshop is open to everyone; No previous experience with R scripting programming language is required.\nIntro to R-2 In this workshop we continue to learn about different data structures in R like data.frame, matrices and lists. The students will also learn uploading and working with different datasets in R.\nData Visualization Learn the nuances of ggplot2 for making visually appealing graphics and figures for publication. This workshop is open to everyone; Previous experience with R scripting programming language is required.\nExploratory Data Analysis Learn how visualization and data transformation techniques can be used for exploring your data and quality. This workshop is open to everyone; Previous experience with R scripting programming language is required.\nBasic Statistics with R",
     "crumbs": [
       "Home"
     ]
@@ -68,7 +68,7 @@
     "href": "workshop1.html#installing-packages",
     "title": "Intro to R",
     "section": "Installing packages",
-    "text": "Installing packages\n\n#install.packages(\"ggplot2\") # installing packages\nlibrary(ggplot2) # using packages \n\nWarning: package 'ggplot2' was built under R version 4.2.3\n\nrequire(ggplot2) # using packages \n#update.packages(ggplot2) # updating packages\n#remove.packages(ggplot2) # removing packages",
+    "text": "Installing packages\n\n#install.packages(\"ggplot2\") # installing packages\nlibrary(ggplot2) # using packages \nrequire(ggplot2) # using packages \n#update.packages(ggplot2) # updating packages\n#remove.packages(ggplot2) # removing packages",
     "crumbs": [
       "Workshop1",
       "Intro to R"
@@ -110,34 +110,34 @@
   {
     "objectID": "workshop2.html",
     "href": "workshop2.html",
-    "title": "Intro to R-2",
+    "title": "Data Structures in R",
     "section": "",
     "text": "ls() # list all the variables in the environment\nrm(x) # can be used to remove specific var\n#rm(list = ls()) # removes everything",
     "crumbs": [
       "Workshop2",
-      "Intro to R-2"
+      "Data Structures in R"
     ]
   },
   {
     "objectID": "workshop2.html#matrices",
     "href": "workshop2.html#matrices",
-    "title": "Intro to R-2",
+    "title": "Data Structures in R",
     "section": "Matrices",
-    "text": "Matrices\nIn R, a matrix is a collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns. A matrix is two-dimensional, since we are only working with rows and columns.\n\n# Creating a new empty matrix\nmat.example &lt;- matrix(0, ncol=8, nrow=4) \n\n# viewing the matrix\nView(mat.example) \n\n# class\nclass(mat.example) \n\n[1] \"matrix\" \"array\" \n\n# rows and columns\ndim(mat.example) \n\n[1] 4 8\n\n# accessing column number\nncol(mat.example) \n\n[1] 8\n\n# accessing row numbers\nnrow(mat.example) \n\n[1] 4\n\n\n\nCreating data using rnorm function\n\n# Creating a new matrix with data:\n\n# Using rnorm to generate 20 random numbers\nmat.dat&lt;-rnorm(20)\n\n# Note that the random numbers will be different every time you run this code,\n\n# Note check ?rnorm ?pnorm ?dnorm for more information on using probability distribution\nmat.dat\n\n [1] -0.65269098 -1.90099474  0.73975382  1.15074451  2.26803609 -0.08012448\n [7] -2.08247347 -0.68494301  1.43343761 -1.03658527 -0.06570019 -1.35375125\n[13]  0.88449835 -0.72105954  0.40849684  2.19518505 -1.07821254  0.92404786\n[19] -0.29555754  2.03673319\n\n# populating the matrix by row\nmat.example2&lt;-matrix(data = mat.dat, nrow = 4, ncol = 5, byrow = TRUE) \n\n\n\nSubsetting Matrices\n\n# Subsetting rows and columns\nmat.example2[2,4]\n\n[1] 1.433438",
+    "text": "Matrices\nIn R, a matrix is a collection of elements of the same data type (numeric, character, or logical) arranged into a fixed number of rows and columns. A matrix is two-dimensional, since we are only working with rows and columns.\n\n# Creating a new empty matrix\nmat.example &lt;- matrix(0, ncol=8, nrow=4) \n\n# viewing the matrix\nView(mat.example) \n\n# class\nclass(mat.example) \n\n[1] \"matrix\" \"array\" \n\n# rows and columns\ndim(mat.example) \n\n[1] 4 8\n\n# accessing column number\nncol(mat.example) \n\n[1] 8\n\n# accessing row numbers\nnrow(mat.example) \n\n[1] 4\n\n\n\nCreating data using rnorm function\n\n# Creating a new matrix with data:\n\n# Using rnorm to generate 20 random numbers\nmat.dat&lt;-rnorm(20)\n\n# Note that the random numbers will be different every time you run this code,\n\n# Note check ?rnorm ?pnorm ?dnorm for more information on using probability distribution\nmat.dat\n\n [1] -0.03753919  0.19505546 -0.40271567  0.39525381  1.21047045  1.45141048\n [7] -1.98718050 -2.19437748 -1.59779674 -1.05152747  2.06239693  0.62811599\n[13]  1.14914210 -0.63182229  0.44387661  0.21731383 -1.37358543  1.18468305\n[19]  0.09138650  0.66010948\n\n# populating the matrix by row\nmat.example2&lt;-matrix(data = mat.dat, nrow = 4, ncol = 5, byrow = TRUE) \n\n\n\nSubsetting Matrices\n\n# Subsetting rows and columns\nmat.example2[2,4]\n\n[1] -1.597797",
     "crumbs": [
       "Workshop2",
-      "Intro to R-2"
+      "Data Structures in R"
     ]
   },
   {
     "objectID": "workshop2.html#lists-in-r",
     "href": "workshop2.html#lists-in-r",
-    "title": "Intro to R-2",
+    "title": "Data Structures in R",
     "section": "Lists in R",
-    "text": "Lists in R\nLists are the R objects and contain elements of different types, For example a list can have numbers, characters, strings, vectors, matrix and another list inside it. A list can also have a function as one of its elements.\n\nlist_data&lt;-list(\"Red\",\"Green\", c(21,34,22), TRUE, 52.53, 193.8)\nlist_data\n\n[[1]]\n[1] \"Red\"\n\n[[2]]\n[1] \"Green\"\n\n[[3]]\n[1] 21 34 22\n\n[[4]]\n[1] TRUE\n\n[[5]]\n[1] 52.53\n\n[[6]]\n[1] 193.8\n\nlist_data_new&lt;-list(dat.new2, mat.example2)\nlist_data_new\n\n[[1]]\n   name language year\n1  Anna        R    4\n2   Bob        C    5\n3 Chris     Java    9\n\n[[2]]\n            [,1]      [,2]       [,3]       [,4]       [,5]\n[1,] -0.65269098 -1.900995  0.7397538  1.1507445  2.2680361\n[2,] -0.08012448 -2.082473 -0.6849430  1.4334376 -1.0365853\n[3,] -0.06570019 -1.353751  0.8844984 -0.7210595  0.4084968\n[4,]  2.19518505 -1.078213  0.9240479 -0.2955575  2.0367332\n\n\n\nSubsetting lists\n\nlist_data[[3]]\n\n[1] 21 34 22\n\nlist_data_new[[2]]\n\n            [,1]      [,2]       [,3]       [,4]       [,5]\n[1,] -0.65269098 -1.900995  0.7397538  1.1507445  2.2680361\n[2,] -0.08012448 -2.082473 -0.6849430  1.4334376 -1.0365853\n[3,] -0.06570019 -1.353751  0.8844984 -0.7210595  0.4084968\n[4,]  2.19518505 -1.078213  0.9240479 -0.2955575  2.0367332",
+    "text": "Lists in R\nLists are the R objects and contain elements of different types, For example a list can have numbers, characters, strings, vectors, matrix and another list inside it. A list can also have a function as one of its elements.\n\nlist_data&lt;-list(\"Red\",\"Green\", c(21,34,22), TRUE, 52.53, 193.8)\nlist_data\n\n[[1]]\n[1] \"Red\"\n\n[[2]]\n[1] \"Green\"\n\n[[3]]\n[1] 21 34 22\n\n[[4]]\n[1] TRUE\n\n[[5]]\n[1] 52.53\n\n[[6]]\n[1] 193.8\n\nlist_data_new&lt;-list(dat.new2, mat.example2)\nlist_data_new\n\n[[1]]\n   name language year\n1  Anna        R    4\n2   Bob        C    5\n3 Chris     Java    9\n\n[[2]]\n            [,1]       [,2]       [,3]       [,4]       [,5]\n[1,] -0.03753919  0.1950555 -0.4027157  0.3952538  1.2104704\n[2,]  1.45141048 -1.9871805 -2.1943775 -1.5977967 -1.0515275\n[3,]  2.06239693  0.6281160  1.1491421 -0.6318223  0.4438766\n[4,]  0.21731383 -1.3735854  1.1846831  0.0913865  0.6601095\n\n\n\nSubsetting lists\n\nlist_data[[3]]\n\n[1] 21 34 22\n\nlist_data_new[[2]]\n\n            [,1]       [,2]       [,3]       [,4]       [,5]\n[1,] -0.03753919  0.1950555 -0.4027157  0.3952538  1.2104704\n[2,]  1.45141048 -1.9871805 -2.1943775 -1.5977967 -1.0515275\n[3,]  2.06239693  0.6281160  1.1491421 -0.6318223  0.4438766\n[4,]  0.21731383 -1.3735854  1.1846831  0.0913865  0.6601095",
     "crumbs": [
       "Workshop2",
-      "Intro to R-2"
+      "Data Structures in R"
     ]
   },
   {
@@ -150,34 +150,34 @@
   {
     "objectID": "workshop2.html#important-functions",
     "href": "workshop2.html#important-functions",
-    "title": "Intro to R-2",
+    "title": "Data Structures in R",
     "section": "",
     "text": "ls() # list all the variables in the environment\nrm(x) # can be used to remove specific var\n#rm(list = ls()) # removes everything",
     "crumbs": [
       "Workshop2",
-      "Intro to R-2"
+      "Data Structures in R"
     ]
   },
   {
     "objectID": "workshop2.html#inbuild-datasets-in-r",
     "href": "workshop2.html#inbuild-datasets-in-r",
-    "title": "Intro to R-2",
+    "title": "Data Structures in R",
     "section": "Inbuild datasets in R",
     "text": "Inbuild datasets in R\n\n#data() # checking\n\ndata(Orange) # loading\n\n\nView(Orange) # opens a viewing window\nhead(Orange) # prints out first six rows on your console\n\n  Tree  age circumference\n1    1  118            30\n2    1  484            58\n3    1  664            87\n4    1 1004           115\n5    1 1231           120\n6    1 1372           142\n\ntail(Orange) # prints out last six rows on your console\n\n   Tree  age circumference\n30    5  484            49\n31    5  664            81\n32    5 1004           125\n33    5 1231           142\n34    5 1372           174\n35    5 1582           177\n\nstr(Orange)  # tells you about the structure of the data\n\nClasses 'nfnGroupedData', 'nfGroupedData', 'groupedData' and 'data.frame':  35 obs. of  3 variables:\n $ Tree         : Ord.factor w/ 5 levels \"3\"&lt;\"1\"&lt;\"5\"&lt;\"2\"&lt;..: 2 2 2 2 2 2 2 4 4 4 ...\n $ age          : num  118 484 664 1004 1231 ...\n $ circumference: num  30 58 87 115 120 142 145 33 69 111 ...\n - attr(*, \"formula\")=Class 'formula'  language circumference ~ age | Tree\n  .. ..- attr(*, \".Environment\")=&lt;environment: R_EmptyEnv&gt; \n - attr(*, \"labels\")=List of 2\n  ..$ x: chr \"Time since December 31, 1968\"\n  ..$ y: chr \"Trunk circumference\"\n - attr(*, \"units\")=List of 2\n  ..$ x: chr \"(days)\"\n  ..$ y: chr \"(mm)\"\n\ndim(Orange)  # dimensions of the data - in terms of rows and columns\n\n[1] 35  3",
     "crumbs": [
       "Workshop2",
-      "Intro to R-2"
+      "Data Structures in R"
     ]
   },
   {
     "objectID": "workshop2.html#data-frames",
     "href": "workshop2.html#data-frames",
-    "title": "Intro to R-2",
+    "title": "Data Structures in R",
     "section": "Data frames",
     "text": "Data frames\nA data frame is a rectangular collection of values, usually organized so that variables appear in the columns and observations appear in rows.\n\nCreating a data frame\n\n# Creating a new data frame that has 3 vectors of different types\ndat.new &lt;- data.frame(name = c(\"Anna\", \"Bob\", \"Chris\"),\n                    language = c(\"R\", \"C\", \"Java\"),\n                    year = c(4, 5, 9))\n\n# View the dataframe\nhead(dat.new)\n\n   name language year\n1  Anna        R    4\n2   Bob        C    5\n3 Chris     Java    9\n\n\n\n\nReading and writing a dataframe to a file\n\n# This will add additional row names \nwrite.csv(dat.new,file = \"my_data.csv\")\n\nread.csv(\"my_data.csv\")\n\n  X  name language year\n1 1  Anna        R    4\n2 2   Bob        C    5\n3 3 Chris     Java    9\n\n# To avoid adding row names to the data, use row.names=FALSE \nwrite.csv(dat.new,file = \"my_data.csv\", row.names = FALSE) \nread.csv(\"my_data.csv\") # reads into the console\n\n   name language year\n1  Anna        R    4\n2   Bob        C    5\n3 Chris     Java    9\n\n# To save the data into a variable:\ndat.new2&lt;- read.csv(\"my_data.csv\")\n\n\n\nWorking with data frames\n\ndat.new2&lt;- read.csv(\"my_data.csv\") \n\n# Note that you should have your entire path for the data under the quotes \n\n# if your data is not saved in the working directory\n# names of the data \nnames(dat.new2) \n\n[1] \"name\"     \"language\" \"year\"    \n\n# column names \ncolnames(dat.new2) \n\n[1] \"name\"     \"language\" \"year\"    \n\n# rownames\nrownames(dat.new2)\n\n[1] \"1\" \"2\" \"3\"\n\n# type of data\nclass(dat.new2) \n\n[1] \"data.frame\"\n\n# structure of data \nstr(dat.new2) \n\n'data.frame':   3 obs. of  3 variables:\n $ name    : chr  \"Anna\" \"Bob\" \"Chris\"\n $ language: chr  \"R\" \"C\" \"Java\"\n $ year    : int  4 5 9\n\n\n\n\nAccessing values in a dataframe\n\n# accessing a vector in the dataframe\ndat.new2$name \n\n[1] \"Anna\"  \"Bob\"   \"Chris\"\n\n# accessing a second element of a vector in the dataframe\ndat.new2$name[2] \n\n[1] \"Bob\"\n\n# accessing the language in the dataframe\ndat.new2$language \n\n[1] \"R\"    \"C\"    \"Java\"\n\n# accessing a third element of a vector in the dataframe\ndat.new2$language[3] \n\n[1] \"Java\"\n\n# Removing rows\ndat.new2[-2,]\n\n   name language year\n1  Anna        R    4\n3 Chris     Java    9\n\n# Removing columns\ndat.new2[,-1]\n\n  language year\n1        R    4\n2        C    5\n3     Java    9\n\n# Appending to a data frame\ndat.new3&lt;- data.frame(name = c(\"Diego\", \"Evan\", \"Felicia\", \"George\"), language = c(\"Python\", \"Perl\", \"C++\",\"HTML\"),\n                    year = c(4, 5, 9,10))\n\n# Binding by row\nrbind(dat.new2,dat.new3)\n\n     name language year\n1    Anna        R    4\n2     Bob        C    5\n3   Chris     Java    9\n4   Diego   Python    4\n5    Evan     Perl    5\n6 Felicia      C++    9\n7  George     HTML   10\n\nnewdata&lt;-rbind(dat.new2,dat.new3)\n\n# Binding by column\n# cbind(dat.new2,dat.new3) # will give you error\n\n## why this error? Because to bind by column, the number of rows should be equal\n\ndat.new4&lt;-dat.new3[-3,] # removing a row from 3rd data frame and adding to a new data frame\ncbind(dat.new4,dat.new2)\n\n    name language year  name language year\n1  Diego   Python    4  Anna        R    4\n2   Evan     Perl    5   Bob        C    5\n4 George     HTML   10 Chris     Java    9\n\n# Notice that R doesn't care about the content but the structure of data \n\n\n\nSubsetting dataframes\n\n# The notation is nameofdata[row, column]\nnewdata[4,2]\n\n[1] \"Python\"\n\n# accessing more than one value\nnewdata[1:4,] # gets you first four rows and all the columns\n\n   name language year\n1  Anna        R    4\n2   Bob        C    5\n3 Chris     Java    9\n4 Diego   Python    4\n\nnewdata[,1:2] # all the rows and first two columns\n\n     name language\n1    Anna        R\n2     Bob        C\n3   Chris     Java\n4   Diego   Python\n5    Evan     Perl\n6 Felicia      C++\n7  George     HTML\n\n# Extracting specific information: \nnewdata[c(1,3),] # Gets you first and third row and all columns\n\n   name language year\n1  Anna        R    4\n3 Chris     Java    9\n\nnewdata[c(5,4),c(1,2)] # Guess\n\n   name language\n5  Evan     Perl\n4 Diego   Python\n\n## Tip: \n\n# Remember that the order of extraction matters.\n\n## Accessing by name\nnewdata[\"name\"]\n\n     name\n1    Anna\n2     Bob\n3   Chris\n4   Diego\n5    Evan\n6 Felicia\n7  George\n\nnewdata[\"year\"]\n\n  year\n1    4\n2    5\n3    9\n4    4\n5    5\n6    9\n7   10\n\n## Operator\nnewdata$name\n\n[1] \"Anna\"    \"Bob\"     \"Chris\"   \"Diego\"   \"Evan\"    \"Felicia\" \"George\"",
     "crumbs": [
       "Workshop2",
-      "Intro to R-2"
+      "Data Structures in R"
     ]
   },
   {
@@ -250,7 +250,7 @@
     "href": "workshop4.html#creating-a-tibble",
     "title": "Exploratory Data Analysis",
     "section": "Creating a tibble",
-    "text": "Creating a tibble\n\ndata &lt;- data.frame(a = 1:3, b = letters[1:3], c = Sys.Date() - 1:3)\n\ndata\n\n  a b          c\n1 1 a 2025-02-10\n2 2 b 2025-02-09\n3 3 c 2025-02-08\n\n#&gt;   a b          c\n#&gt; 1 1 a 2023-02-21\n#&gt; 2 2 b 2023-02-20\n#&gt; 3 3 c 2023-02-19\n\nas_tibble(data)\n\n# A tibble: 3 × 3\n      a b     c         \n  &lt;int&gt; &lt;chr&gt; &lt;date&gt;    \n1     1 a     2025-02-10\n2     2 b     2025-02-09\n3     3 c     2025-02-08\n\n#&gt; # A tibble: 3 × 3\n#&gt;       a b     c         \n#&gt;   &lt;int&gt; &lt;chr&gt; &lt;date&gt;    \n#&gt; 1     1 a     2023-02-21\n#&gt; 2     2 b     2023-02-20\n#&gt; 3     3 c     2023-02-19\n\n## Creating a tibble from preloaded dataset\ndata(iris)\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\nas_tibble(iris)\n\n# A tibble: 150 × 5\n   Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  \n 1          5.1         3.5          1.4         0.2 setosa \n 2          4.9         3            1.4         0.2 setosa \n 3          4.7         3.2          1.3         0.2 setosa \n 4          4.6         3.1          1.5         0.2 setosa \n 5          5           3.6          1.4         0.2 setosa \n 6          5.4         3.9          1.7         0.4 setosa \n 7          4.6         3.4          1.4         0.3 setosa \n 8          5           3.4          1.5         0.2 setosa \n 9          4.4         2.9          1.4         0.2 setosa \n10          4.9         3.1          1.5         0.1 setosa \n# ℹ 140 more rows\n\n# Saving the tibble a new dataset\niris.updated&lt;-as_tibble(iris)",
+    "text": "Creating a tibble\n\ndata &lt;- data.frame(a = 1:3, b = letters[1:3], c = Sys.Date() - 1:3)\n\ndata\n\n  a b          c\n1 1 a 2025-07-16\n2 2 b 2025-07-15\n3 3 c 2025-07-14\n\n#&gt;   a b          c\n#&gt; 1 1 a 2023-02-21\n#&gt; 2 2 b 2023-02-20\n#&gt; 3 3 c 2023-02-19\n\nas_tibble(data)\n\n# A tibble: 3 × 3\n      a b     c         \n  &lt;int&gt; &lt;chr&gt; &lt;date&gt;    \n1     1 a     2025-07-16\n2     2 b     2025-07-15\n3     3 c     2025-07-14\n\n#&gt; # A tibble: 3 × 3\n#&gt;       a b     c         \n#&gt;   &lt;int&gt; &lt;chr&gt; &lt;date&gt;    \n#&gt; 1     1 a     2023-02-21\n#&gt; 2     2 b     2023-02-20\n#&gt; 3     3 c     2023-02-19\n\n## Creating a tibble from preloaded dataset\ndata(iris)\nhead(iris)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa\n\nas_tibble(iris)\n\n# A tibble: 150 × 5\n   Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n          &lt;dbl&gt;       &lt;dbl&gt;        &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  \n 1          5.1         3.5          1.4         0.2 setosa \n 2          4.9         3            1.4         0.2 setosa \n 3          4.7         3.2          1.3         0.2 setosa \n 4          4.6         3.1          1.5         0.2 setosa \n 5          5           3.6          1.4         0.2 setosa \n 6          5.4         3.9          1.7         0.4 setosa \n 7          4.6         3.4          1.4         0.3 setosa \n 8          5           3.4          1.5         0.2 setosa \n 9          4.4         2.9          1.4         0.2 setosa \n10          4.9         3.1          1.5         0.1 setosa \n# ℹ 140 more rows\n\n# Saving the tibble a new dataset\niris.updated&lt;-as_tibble(iris)",
     "crumbs": [
       "Workshop4",
       "Exploratory Data Analysis"
@@ -382,23 +382,23 @@
   {
     "objectID": "workshop2.html#bonus-activity---plotting-in-r-using-base-r",
     "href": "workshop2.html#bonus-activity---plotting-in-r-using-base-r",
-    "title": "Intro to R-2",
+    "title": "Data Structures in R",
     "section": "Bonus activity - Plotting in R (using base R)",
-    "text": "Bonus activity - Plotting in R (using base R)\nBase R can be used to create simple plots.\n\n#--------Basic scatterplot\n\n# Create data for plot\nx&lt;- seq(1,100, by=3) \ny&lt;- x/2\n\n# Basic x and y plot\nplot(x,y) \n\n\n\n\n\n\n\n# Add title\nplot(x,y,main=\"Title of plot\") \n\n\n\n\n\n\n\n# Add x and y labels\nplot(x,y,main=\"Title of plot\",xlab = \"This is x axis label\",\n     ylab=\"This is y label\")\n\n\n\n\n\n\n\n# Change color\n\nplot(x,y,main=\"Title of plot\",xlab = \"This is x axis label\",\n     ylab=\"This is y label\",col=\"blue\")\n\n\n\n\n\n\n\n\n\nHistograms\n\n# rnorm generates a vector of normally distributed random numbers.\n\nx&lt;-rnorm(1000, mean = 0, sd = 1)\nhist(x)\nhist(x, breaks = 10)\n\n\n\n\n\n\n\nhist(x, breaks = 100)\n\n\n\n\n\n\n\nhist(x, breaks = 100, col = \"orange\", main = \"This is title\", \n     xlab = \"This is x axis\", ylab = \"This is y axis\")",
+    "text": "Bonus activity - Plotting in R (using base R)\nBase R can be used to create simple plots.\n\n#--------Basic scatterplot\n\n# Create data for plot\nx&lt;- seq(1,100, by=3) \ny&lt;- x/2\n\n# Basic x and y plot\nplot(x,y) \n\n\n\n\n\n\n\n# Add title\nplot(x,y,main=\"Title of plot\") \n\n\n\n\n\n\n\n# Add x and y labels\nplot(x,y,main=\"Title of plot\",xlab = \"This is x axis label\",\n     ylab=\"This is y label\")\n\n\n\n\n\n\n\n# Change color\n\nplot(x,y,main=\"Title of plot\",xlab = \"This is x axis label\",\n     ylab=\"This is y label\",col=\"blue\")\n\n\n\n\n\n\n\n\n\nHistograms\n\n# rnorm generates a vector of normally distributed random numbers.\n\nx&lt;-rnorm(1000, mean = 0, sd = 1)\nhist(x)\n\n\n\n\n\n\n\nhist(x, breaks = 10)\nhist(x, breaks = 100)\n\n\n\n\n\n\n\nhist(x, breaks = 100, col = \"orange\", main = \"This is title\", \n     xlab = \"This is x axis\", ylab = \"This is y axis\")",
     "crumbs": [
       "Workshop2",
-      "Intro to R-2"
+      "Data Structures in R"
     ]
   },
   {
     "objectID": "workshop2.html#questions-from-the-workshop",
     "href": "workshop2.html#questions-from-the-workshop",
-    "title": "Intro to R-2",
+    "title": "Data Structures in R",
     "section": "Questions from the workshop",
-    "text": "Questions from the workshop\n\nQ1: How to sort dataframes?\n\n# Use sort function to sort a vector\nx&lt;-c(1:10,8.5,7.6,2.5,1.3,2.4)\nsort(x)\n\n [1]  1.0  1.3  2.0  2.4  2.5  3.0  4.0  5.0  6.0  7.0  7.6  8.0  8.5  9.0 10.0\n\n# For sorting dataframes using the function order\nnewdata[order(newdata$year, decreasing = TRUE), ]\n\n     name language year\n7  George     HTML   10\n3   Chris     Java    9\n6 Felicia      C++    9\n2     Bob        C    5\n5    Evan     Perl    5\n1    Anna        R    4\n4   Diego   Python    4\n\n# Notice that the above function is used at the row position since we are sorting by row\n\n# Another example:\nnewdata2&lt;-data.frame(col1=c(31:40),col2=c(seq(1,30,by=3)))\nnewdata2\n\n   col1 col2\n1    31    1\n2    32    4\n3    33    7\n4    34   10\n5    35   13\n6    36   16\n7    37   19\n8    38   22\n9    39   25\n10   40   28\n\nnewdata2[order(newdata2$col1, decreasing = TRUE),]\n\n   col1 col2\n10   40   28\n9    39   25\n8    38   22\n7    37   19\n6    36   16\n5    35   13\n4    34   10\n3    33    7\n2    32    4\n1    31    1\n\n\n\n\nQ2: How to increase the number of rows displaying on console?\n\n# Using the head command, where n is followed by number of rows\n\nhead(newdata2) # normally yields the first 6 rows\n\n  col1 col2\n1   31    1\n2   32    4\n3   33    7\n4   34   10\n5   35   13\n6   36   16\n\nhead(newdata2,n=9)# would yield the first 9 rows\n\n  col1 col2\n1   31    1\n2   32    4\n3   33    7\n4   34   10\n5   35   13\n6   36   16\n7   37   19\n8   38   22\n9   39   25\n\n\n\n\nQ3: Can I use a graph in list?\n\n# Answer: Not as an image but you can add a figure/graph as an object\n# For example:\nh1&lt;-hist(rnorm(1000))\n\n\n\n\n\n\n\nh2&lt;-hist(rnorm(1000))\nlist.example&lt;-list(h1,h2)\n# The above example won't save the graph but the attributes\nlist.example\n\n[[1]]\n$breaks\n [1] -3.5 -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5\n\n$counts\n [1]   2   1  15  47  83 145 183 195 156 102  48  17   5   1\n\n$density\n [1] 0.004 0.002 0.030 0.094 0.166 0.290 0.366 0.390 0.312 0.204 0.096 0.034\n[13] 0.010 0.002\n\n$mids\n [1] -3.25 -2.75 -2.25 -1.75 -1.25 -0.75 -0.25  0.25  0.75  1.25  1.75  2.25\n[13]  2.75  3.25\n\n$xname\n[1] \"rnorm(1000)\"\n\n$equidist\n[1] TRUE\n\nattr(,\"class\")\n[1] \"histogram\"\n\n[[2]]\n$breaks\n [1] -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0\n\n$counts\n [1]   6  13  30  99 145 187 204 151  99  47  18   1\n\n$density\n [1] 0.012 0.026 0.060 0.198 0.290 0.374 0.408 0.302 0.198 0.094 0.036 0.002\n\n$mids\n [1] -2.75 -2.25 -1.75 -1.25 -0.75 -0.25  0.25  0.75  1.25  1.75  2.25  2.75\n\n$xname\n[1] \"rnorm(1000)\"\n\n$equidist\n[1] TRUE\n\nattr(,\"class\")\n[1] \"histogram\"\n\n# Using ggplot2 you can save the graph information as well\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.2.3\n\n\n\n\n\n\n\n\ndf &lt;- data.frame(x = rnorm(10), y = rnorm(10))\n\nfig1 &lt;- ggplot(df, aes(x, y)) + geom_point() + ggtitle(\"Graph 1\")\nfig2 &lt;- ggplot(df, aes(x, y)) + geom_point() + ggtitle(\"Graph 2\")\n\nfiglist &lt;- list(fig1,fig2)\nfiglist\n\n[[1]]\n\n\n\n\n\n\n\n\n\n\n[[2]]\n\n\n\n\n\n\n\n\n\n\n\nQ4: Difference between data.frame and data.table?\nThe stackoverflow post provided an excellent answer of the syntax differences between data frame and data table, so I highly encourage folks to read the information on this link along with the beginner’s FAQs for data.table here",
+    "text": "Questions from the workshop\n\nQ1: How to sort dataframes?\n\n# Use sort function to sort a vector\nx&lt;-c(1:10,8.5,7.6,2.5,1.3,2.4)\nsort(x)\n\n [1]  1.0  1.3  2.0  2.4  2.5  3.0  4.0  5.0  6.0  7.0  7.6  8.0  8.5  9.0 10.0\n\n# For sorting dataframes using the function order\nnewdata[order(newdata$year, decreasing = TRUE), ]\n\n     name language year\n7  George     HTML   10\n3   Chris     Java    9\n6 Felicia      C++    9\n2     Bob        C    5\n5    Evan     Perl    5\n1    Anna        R    4\n4   Diego   Python    4\n\n# Notice that the above function is used at the row position since we are sorting by row\n\n# Another example:\nnewdata2&lt;-data.frame(col1=c(31:40),col2=c(seq(1,30,by=3)))\nnewdata2\n\n   col1 col2\n1    31    1\n2    32    4\n3    33    7\n4    34   10\n5    35   13\n6    36   16\n7    37   19\n8    38   22\n9    39   25\n10   40   28\n\nnewdata2[order(newdata2$col1, decreasing = TRUE),]\n\n   col1 col2\n10   40   28\n9    39   25\n8    38   22\n7    37   19\n6    36   16\n5    35   13\n4    34   10\n3    33    7\n2    32    4\n1    31    1\n\n\n\n\nQ2: How to increase the number of rows displaying on console?\n\n# Using the head command, where n is followed by number of rows\n\nhead(newdata2) # normally yields the first 6 rows\n\n  col1 col2\n1   31    1\n2   32    4\n3   33    7\n4   34   10\n5   35   13\n6   36   16\n\nhead(newdata2,n=9)# would yield the first 9 rows\n\n  col1 col2\n1   31    1\n2   32    4\n3   33    7\n4   34   10\n5   35   13\n6   36   16\n7   37   19\n8   38   22\n9   39   25\n\n\n\n\nQ3: Can I use a graph in list?\n\n# Answer: Not as an image but you can add a figure/graph as an object\n# For example:\nh1&lt;-hist(rnorm(1000))\n\n\n\n\n\n\n\nh2&lt;-hist(rnorm(1000))\n\n\n\n\n\n\n\nlist.example&lt;-list(h1,h2)\n# The above example won't save the graph but the attributes\nlist.example\n\n[[1]]\n$breaks\n [1] -3.5 -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0\n\n$counts\n [1]   3  10  11  45  92 157 175 197 142 109  39  18   2\n\n$density\n [1] 0.006 0.020 0.022 0.090 0.184 0.314 0.350 0.394 0.284 0.218 0.078 0.036\n[13] 0.004\n\n$mids\n [1] -3.25 -2.75 -2.25 -1.75 -1.25 -0.75 -0.25  0.25  0.75  1.25  1.75  2.25\n[13]  2.75\n\n$xname\n[1] \"rnorm(1000)\"\n\n$equidist\n[1] TRUE\n\nattr(,\"class\")\n[1] \"histogram\"\n\n[[2]]\n$breaks\n [1] -3.0 -2.5 -2.0 -1.5 -1.0 -0.5  0.0  0.5  1.0  1.5  2.0  2.5  3.0  3.5\n\n$counts\n [1]   7  11  40  93 153 194 201 156  89  39  13   1   3\n\n$density\n [1] 0.014 0.022 0.080 0.186 0.306 0.388 0.402 0.312 0.178 0.078 0.026 0.002\n[13] 0.006\n\n$mids\n [1] -2.75 -2.25 -1.75 -1.25 -0.75 -0.25  0.25  0.75  1.25  1.75  2.25  2.75\n[13]  3.25\n\n$xname\n[1] \"rnorm(1000)\"\n\n$equidist\n[1] TRUE\n\nattr(,\"class\")\n[1] \"histogram\"\n\n# Using ggplot2 you can save the graph information as well\nlibrary(ggplot2)\ndf &lt;- data.frame(x = rnorm(10), y = rnorm(10))\n\nfig1 &lt;- ggplot(df, aes(x, y)) + geom_point() + ggtitle(\"Graph 1\")\nfig2 &lt;- ggplot(df, aes(x, y)) + geom_point() + ggtitle(\"Graph 2\")\n\nfiglist &lt;- list(fig1,fig2)\nfiglist\n\n[[1]]\n\n\n\n\n\n\n\n\n\n\n[[2]]\n\n\n\n\n\n\n\n\n\n\n\nQ4: Difference between data.frame and data.table?\nThe stackoverflow post provided an excellent answer of the syntax differences between data frame and data table, so I highly encourage folks to read the information on this link along with the beginner’s FAQs for data.table here",
     "crumbs": [
       "Workshop2",
-      "Intro to R-2"
+      "Data Structures in R"
     ]
   },
   {
@@ -418,5 +418,27 @@
     "title": "Exploratory Data Analysis",
     "section": "Load your data: Example 1",
     "text": "Load your data: Example 1\na. Flow of the River Nile, measurements of the annual flow of the river Nile at Aswan from Balke, N. S. (1993) and Cobb, G. W. (1978)"
+  },
+  {
+    "objectID": "workshop5.html",
+    "href": "workshop5.html",
+    "title": "Basic Statistics with R",
+    "section": "",
+    "text": "Workshop Series Content\n\n\nWarning: package 'DiagrammeR' was built under R version 4.4.3",
+    "crumbs": [
+      "Workshop5",
+      "Basic Statistics with R"
+    ]
+  },
+  {
+    "objectID": "workshop5.html#sign-up-for-the-workshop-series",
+    "href": "workshop5.html#sign-up-for-the-workshop-series",
+    "title": "Basic Statistics with R",
+    "section": "Sign up for the workshop series:",
+    "text": "Sign up for the workshop series:\nClick here to sign up for upcoming workshops",
+    "crumbs": [
+      "Workshop5",
+      "Basic Statistics with R"
+    ]
   }
 ]

@@ -1,5 +1,5 @@
 ---
-title: "Intro to R-2"
+title: "Data Structures in R"
 editor: visual
 crossref: 
   fig-title: '**Figure**'

@@ -32,6 +32,7 @@ Learn how visualization and data transformation techniques can be used for explo
 
 5.  [Basic Statistics with  R](https://natyahans.github.io/DataScienceSeries/workshop5.html) Learn basics of statistics and data analysis using R. In this workshop you will learn how to use R to get descriptive statistics (mean, median, mode), and perform t-tests, correlation and linear regression. 
 
+New workshops coming soon
 
 
 

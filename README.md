@@ -1,6 +1,6 @@
 This is a Data Science Standalone workshop series created by Natya Hans for UF community. 
 Access the workshop content: https://natyahans.github.io/DataScienceSeries/
-
+# Adding a check-NH - delete this later
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
